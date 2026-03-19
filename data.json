@@ -17,6 +17,12 @@
       "name": "Copa de Madrid Escuelas 2026",
       "season": 2026,
       "description": "Pruebas madrileñas de escuelas incluidas en el calendario."
+    },
+    {
+      "id": "mtb-escolar-guadalajara-2026",
+      "name": "Mtb Escolar de Guadalajara 2026",
+      "season": 2026,
+      "description": "Circuito escolar no federado e independiente de las federaciones autonómicas."
     }
   ],
   "races": [
@@ -37,57 +43,6 @@
       "documentsUrl": "https://yosoyciclista.com/index.php/smartweb/inscripciones/documentos/34253-XI-XCO-ILLESCAS-PLATAFORMA-CENTRAL-IBERUM",
       "notes": "Prueba aplazada al 22 de febrero. Inscripción, documentos y clasificación verificadas.",
       "resultUrl": "https://yosoyciclista.com/index.php/smartweb/inscripciones/clasificacion/34253-XI-XCO-ILLESCAS-PLATAFORMA-CENTRAL-IBERUM"
-    },
-    {
-      "id": "pedroneras-2026",
-      "championshipIds": [
-        "clm-xco-2026"
-      ],
-      "categoryType": "mixta",
-      "name": "Las Pedroñeras · Escuelas + XCO",
-      "date": "2026-03-22",
-      "location": "Las Pedroñeras",
-      "province": "Cuenca",
-      "organizer": "Club Deportivo de Ciclismo Ajo y Agua",
-      "registrationUrl": "https://yosoyciclista.com/index.php/smartweb/inscripciones/prueba/34394-II-COPA-XCO-LAS-PEDRONERAS",
-      "technicalGuideUrl": "https://yosoyciclista.com/index.php/smartweb/inscripciones/documentos/34394-II-COPA-XCO-LAS-PEDRONERAS",
-      "documentsUrl": "https://yosoyciclista.com/index.php/smartweb/inscripciones/documentos/34394-II-COPA-XCO-LAS-PEDRONERAS",
-      "notes": "Inscripción verificada. La ficha pública incluye Escuelas y la guía técnica está en documentos.",
-      "resultUrl": "https://yosoyciclista.com/index.php/smartweb/inscripciones/clasificacion/34394-II-COPA-XCO-LAS-PEDRONERAS"
-    },
-    {
-      "id": "guadalajara-2026",
-      "championshipIds": [
-        "clm-xco-2026"
-      ],
-      "categoryType": "mixta",
-      "name": "Guadalajara · Escuelas + XCO",
-      "date": "2026-05-24",
-      "location": "Guadalajara",
-      "province": "Guadalajara",
-      "organizer": "",
-      "registrationUrl": "",
-      "technicalGuideUrl": "",
-      "documentsUrl": "",
-      "notes": "Pendiente de publicación de la ficha exacta.",
-      "resultUrl": ""
-    },
-    {
-      "id": "quintanar-2026",
-      "championshipIds": [
-        "clm-xco-2026"
-      ],
-      "categoryType": "mixta",
-      "name": "Quintanar del Rey · Escuelas + XCO",
-      "date": "",
-      "location": "Quintanar del Rey",
-      "province": "Cuenca",
-      "organizer": "",
-      "registrationUrl": "",
-      "technicalGuideUrl": "",
-      "documentsUrl": "",
-      "notes": "Fecha y enlaces pendientes.",
-      "resultUrl": ""
     },
     {
       "id": "san-martin-2026",
@@ -143,6 +98,57 @@
       "resultUrl": "https://fmciclismo.com/index.php/smartweb/inscripciones/clasificacion/34516-COPA-DE-MADRID-MTB--KIDS---X-SAUCE-SERIES-COLMENAR-VIEJO"
     },
     {
+      "id": "pedroneras-2026",
+      "championshipIds": [
+        "clm-xco-2026"
+      ],
+      "categoryType": "mixta",
+      "name": "Las Pedroñeras · Escuelas + XCO",
+      "date": "2026-03-22",
+      "location": "Las Pedroñeras",
+      "province": "Cuenca",
+      "organizer": "Club Deportivo de Ciclismo Ajo y Agua",
+      "registrationUrl": "https://yosoyciclista.com/index.php/smartweb/inscripciones/prueba/34394-II-COPA-XCO-LAS-PEDRONERAS",
+      "technicalGuideUrl": "https://yosoyciclista.com/index.php/smartweb/inscripciones/documentos/34394-II-COPA-XCO-LAS-PEDRONERAS",
+      "documentsUrl": "https://yosoyciclista.com/index.php/smartweb/inscripciones/documentos/34394-II-COPA-XCO-LAS-PEDRONERAS",
+      "notes": "Inscripción verificada. La ficha pública incluye Escuelas y la guía técnica está en documentos.",
+      "resultUrl": "https://yosoyciclista.com/index.php/smartweb/inscripciones/clasificacion/34394-II-COPA-XCO-LAS-PEDRONERAS"
+    },
+    {
+      "id": "mondejar-2026",
+      "championshipIds": [
+        "mtb-escolar-guadalajara-2026"
+      ],
+      "categoryType": "escuelas",
+      "name": "Mondéjar · Escuelas",
+      "date": "2026-03-28",
+      "location": "Mondéjar",
+      "province": "Guadalajara",
+      "organizer": "",
+      "registrationUrl": "https://www.rockthesport.com/",
+      "technicalGuideUrl": "",
+      "documentsUrl": "",
+      "notes": "Prueba del Mtb Escolar de Guadalajara. Campeonato no federado. De momento solo está localizado el enlace general de inscripción en RockTheSport.",
+      "resultUrl": ""
+    },
+    {
+      "id": "azuqueca-2026",
+      "championshipIds": [
+        "mtb-escolar-guadalajara-2026"
+      ],
+      "categoryType": "escuelas",
+      "name": "Azuqueca · Escuelas",
+      "date": "2026-04-11",
+      "location": "Azuqueca de Henares",
+      "province": "Guadalajara",
+      "organizer": "",
+      "registrationUrl": "",
+      "technicalGuideUrl": "",
+      "documentsUrl": "",
+      "notes": "Prueba del Mtb Escolar de Guadalajara. Campeonato no federado. Inscripción y guía técnica pendientes.",
+      "resultUrl": ""
+    },
+    {
       "id": "alpedrete-2026",
       "championshipIds": [
         "x-sauce-series-2026",
@@ -179,6 +185,23 @@
       "resultUrl": ""
     },
     {
+      "id": "siguenza-2026",
+      "championshipIds": [
+        "mtb-escolar-guadalajara-2026"
+      ],
+      "categoryType": "escuelas",
+      "name": "Sigüenza · Escuelas",
+      "date": "2026-05-09",
+      "location": "Sigüenza",
+      "province": "Guadalajara",
+      "organizer": "",
+      "registrationUrl": "",
+      "technicalGuideUrl": "",
+      "documentsUrl": "",
+      "notes": "Prueba del Mtb Escolar de Guadalajara. Campeonato no federado. Inscripción y guía técnica pendientes.",
+      "resultUrl": ""
+    },
+    {
       "id": "arroyomolinos-2026",
       "championshipIds": [
         "x-sauce-series-2026",
@@ -194,6 +217,23 @@
       "technicalGuideUrl": "",
       "documentsUrl": "",
       "notes": "Figura en la Copa de Madrid Escuelas, pero no está localizada la ficha exacta de 2026.",
+      "resultUrl": ""
+    },
+    {
+      "id": "guadalajara-2026",
+      "championshipIds": [
+        "clm-xco-2026"
+      ],
+      "categoryType": "mixta",
+      "name": "Guadalajara · Escuelas + XCO",
+      "date": "2026-05-24",
+      "location": "Guadalajara",
+      "province": "Guadalajara",
+      "organizer": "",
+      "registrationUrl": "",
+      "technicalGuideUrl": "",
+      "documentsUrl": "",
+      "notes": "Pendiente de publicación de la ficha exacta.",
       "resultUrl": ""
     },
     {
@@ -231,6 +271,24 @@
       "documentsUrl": "",
       "notes": "Pendiente de publicación oficial de la ficha.",
       "resultUrl": ""
+    },
+    {
+      "id": "quintanar-2026",
+      "championshipIds": [
+        "clm-xco-2026"
+      ],
+      "categoryType": "mixta",
+      "name": "Quintanar del Rey · Escuelas + XCO",
+      "date": "",
+      "location": "Quintanar del Rey",
+      "province": "Cuenca",
+      "organizer": "",
+      "registrationUrl": "",
+      "technicalGuideUrl": "",
+      "documentsUrl": "",
+      "notes": "Fecha y enlaces pendientes.",
+      "resultUrl": ""
     }
-  ]
+  ],
+  "lastUpdatedUtc": "2026-03-19T12:45:00Z"
 }

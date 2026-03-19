@@ -1,204 +1,294 @@
 window.APP_DATA = {
-  championships: [
+  "championships": [
     {
-      id: "clm-xco-2026",
-      name: "Copa Castilla-La Mancha XCO 2026",
-      season: 2026,
-      description: "Pruebas del campeonato de Castilla-La Mancha que incluyen escuelas."
+      "id": "clm-xco-2026",
+      "name": "Copa Castilla-La Mancha XCO 2026",
+      "season": 2026,
+      "description": "Pruebas del campeonato de Castilla-La Mancha que incluyen escuelas."
     },
     {
-      id: "x-sauce-series-2026",
-      name: "X-Sauce Series 2026",
-      season: 2026,
-      description: "Circuito X-Sauce Series centrado en carreras de escuelas."
+      "id": "x-sauce-series-2026",
+      "name": "X-Sauce Series 2026",
+      "season": 2026,
+      "description": "Circuito X-Sauce Series centrado en carreras de escuelas."
     },
     {
-      id: "copa-madrid-escuelas-2026",
-      name: "Copa de Madrid Escuelas 2026",
-      season: 2026,
-      description: "Pruebas madrileñas de escuelas incluidas en el calendario."
+      "id": "copa-madrid-escuelas-2026",
+      "name": "Copa de Madrid Escuelas 2026",
+      "season": 2026,
+      "description": "Pruebas madrileñas de escuelas incluidas en el calendario."
+    },
+    {
+      "id": "mtb-escolar-guadalajara-2026",
+      "name": "Mtb Escolar de Guadalajara 2026",
+      "season": 2026,
+      "description": "Circuito escolar no federado e independiente de las federaciones autonómicas."
     }
   ],
-  races: [
+  "races": [
     {
-      id: "illescas-2026",
-      championshipIds: ["clm-xco-2026", "x-sauce-series-2026"],
-      categoryType: "mixta",
-      name: "Illescas · Escuelas + XCO",
-      date: "2026-02-22",
-      location: "Illescas",
-      province: "Toledo",
-      organizer: "MTB Ilarcuris C.D.E.",
-      registrationUrl: "https://yosoyciclista.com/index.php/smartweb/inscripciones/prueba/34253-XI-XCO-ILLESCAS-PLATAFORMA-CENTRAL-IBERUM",
-      technicalGuideUrl: "https://yosoyciclista.com/index.php/smartweb/inscripciones/documentos/34253-XI-XCO-ILLESCAS-PLATAFORMA-CENTRAL-IBERUM",
-      documentsUrl: "https://yosoyciclista.com/index.php/smartweb/inscripciones/documentos/34253-XI-XCO-ILLESCAS-PLATAFORMA-CENTRAL-IBERUM",
-      notes: "Prueba aplazada al 22 de febrero. Inscripción, documentos y clasificación verificadas.",
-      resultUrl: "https://yosoyciclista.com/index.php/smartweb/inscripciones/clasificacion/34253-XI-XCO-ILLESCAS-PLATAFORMA-CENTRAL-IBERUM"
+      "id": "illescas-2026",
+      "championshipIds": [
+        "clm-xco-2026",
+        "x-sauce-series-2026"
+      ],
+      "categoryType": "mixta",
+      "name": "Illescas · Escuelas + XCO",
+      "date": "2026-02-22",
+      "location": "Illescas",
+      "province": "Toledo",
+      "organizer": "MTB Ilarcuris C.D.E.",
+      "registrationUrl": "https://yosoyciclista.com/index.php/smartweb/inscripciones/prueba/34253-XI-XCO-ILLESCAS-PLATAFORMA-CENTRAL-IBERUM",
+      "technicalGuideUrl": "https://yosoyciclista.com/index.php/smartweb/inscripciones/documentos/34253-XI-XCO-ILLESCAS-PLATAFORMA-CENTRAL-IBERUM",
+      "documentsUrl": "https://yosoyciclista.com/index.php/smartweb/inscripciones/documentos/34253-XI-XCO-ILLESCAS-PLATAFORMA-CENTRAL-IBERUM",
+      "notes": "Prueba aplazada al 22 de febrero. Inscripción, documentos y clasificación verificadas.",
+      "resultUrl": "https://yosoyciclista.com/index.php/smartweb/inscripciones/clasificacion/34253-XI-XCO-ILLESCAS-PLATAFORMA-CENTRAL-IBERUM"
     },
     {
-      id: "pedroneras-2026",
-      championshipIds: ["clm-xco-2026"],
-      categoryType: "mixta",
-      name: "Las Pedroñeras · Escuelas + XCO",
-      date: "2026-03-22",
-      location: "Las Pedroñeras",
-      province: "Cuenca",
-      organizer: "Club Deportivo de Ciclismo Ajo y Agua",
-      registrationUrl: "https://yosoyciclista.com/index.php/smartweb/inscripciones/prueba/34394-II-COPA-XCO-LAS-PEDRONERAS",
-      technicalGuideUrl: "https://yosoyciclista.com/index.php/smartweb/inscripciones/documentos/34394-II-COPA-XCO-LAS-PEDRONERAS",
-      documentsUrl: "https://yosoyciclista.com/index.php/smartweb/inscripciones/documentos/34394-II-COPA-XCO-LAS-PEDRONERAS",
-      notes: "Inscripción verificada. La ficha pública incluye Escuelas y la guía técnica está en documentos.",
-      resultUrl: "https://yosoyciclista.com/index.php/smartweb/inscripciones/clasificacion/34394-II-COPA-XCO-LAS-PEDRONERAS"
+      "id": "san-martin-2026",
+      "championshipIds": [
+        "x-sauce-series-2026",
+        "copa-madrid-escuelas-2026"
+      ],
+      "categoryType": "escuelas",
+      "name": "San Martín de Valdeiglesias · Escuelas",
+      "date": "2026-03-01",
+      "location": "San Martín de Valdeiglesias",
+      "province": "Madrid",
+      "organizer": "Valdeiglesias C.C.",
+      "registrationUrl": "https://fmciclismo.com/index.php/smartweb/inscripciones/prueba/34492-COPA-MADRID-MTB-KIDS---X-SAUCE-SERIES-SAN-MARTIN-DE-VALDEIGLESIAS",
+      "technicalGuideUrl": "https://fmciclismo.com/index.php/smartweb/inscripciones/documentos/34492-COPA-MADRID-MTB-KIDS---X-SAUCE-SERIES-SAN-MARTIN-DE-VALDEIGLESIAS",
+      "documentsUrl": "https://fmciclismo.com/index.php/smartweb/inscripciones/documentos/34492-COPA-MADRID-MTB-KIDS---X-SAUCE-SERIES-SAN-MARTIN-DE-VALDEIGLESIAS",
+      "notes": "Ficha verificada de escuelas con documentos y clasificación.",
+      "resultUrl": "https://fmciclismo.com/index.php/smartweb/inscripciones/clasificacion/34492-COPA-MADRID-MTB-KIDS---X-SAUCE-SERIES-SAN-MARTIN-DE-VALDEIGLESIAS"
     },
     {
-      id: "guadalajara-2026",
-      championshipIds: ["clm-xco-2026"],
-      categoryType: "mixta",
-      name: "Guadalajara · Escuelas + XCO",
-      date: "2026-05-24",
-      location: "Guadalajara",
-      province: "Guadalajara",
-      organizer: "",
-      registrationUrl: "",
-      technicalGuideUrl: "",
-      documentsUrl: "",
-      notes: "Pendiente de publicación de la ficha exacta.",
-      resultUrl: ""
+      "id": "candeleda-2026",
+      "championshipIds": [
+        "x-sauce-series-2026"
+      ],
+      "categoryType": "escuelas",
+      "name": "Candeleda · Escuelas",
+      "date": "2026-03-07",
+      "location": "Candeleda",
+      "province": "Ávila",
+      "organizer": "",
+      "registrationUrl": "",
+      "technicalGuideUrl": "",
+      "documentsUrl": "",
+      "notes": "Confirmada la jornada de Escuelas el 7 de marzo, pero la ficha exacta no está localizada con seguridad.",
+      "resultUrl": ""
     },
     {
-      id: "quintanar-2026",
-      championshipIds: ["clm-xco-2026"],
-      categoryType: "mixta",
-      name: "Quintanar del Rey · Escuelas + XCO",
-      date: "",
-      location: "Quintanar del Rey",
-      province: "Cuenca",
-      organizer: "",
-      registrationUrl: "",
-      technicalGuideUrl: "",
-      documentsUrl: "",
-      notes: "Fecha y enlaces pendientes.",
-      resultUrl: ""
+      "id": "colmenar-2026",
+      "championshipIds": [
+        "x-sauce-series-2026",
+        "copa-madrid-escuelas-2026"
+      ],
+      "categoryType": "escuelas",
+      "name": "Colmenar Viejo · Escuelas",
+      "date": "2026-03-15",
+      "location": "Colmenar Viejo",
+      "province": "Madrid",
+      "organizer": "C.D.E. MTB Colmenar Viejo",
+      "registrationUrl": "https://fmciclismo.com/index.php/smartweb/inscripciones/prueba/34516-COPA-DE-MADRID-MTB--KIDS---X-SAUCE-SERIES-COLMENAR-VIEJO",
+      "technicalGuideUrl": "https://fmciclismo.com/index.php/smartweb/inscripciones/documentos/34516-COPA-DE-MADRID-MTB--KIDS---X-SAUCE-SERIES-COLMENAR-VIEJO",
+      "documentsUrl": "https://fmciclismo.com/index.php/smartweb/inscripciones/documentos/34516-COPA-DE-MADRID-MTB--KIDS---X-SAUCE-SERIES-COLMENAR-VIEJO",
+      "notes": "Ficha verificada de escuelas con documentos y clasificación.",
+      "resultUrl": "https://fmciclismo.com/index.php/smartweb/inscripciones/clasificacion/34516-COPA-DE-MADRID-MTB--KIDS---X-SAUCE-SERIES-COLMENAR-VIEJO"
     },
     {
-      id: "san-martin-2026",
-      championshipIds: ["x-sauce-series-2026", "copa-madrid-escuelas-2026"],
-      categoryType: "escuelas",
-      name: "San Martín de Valdeiglesias · Escuelas",
-      date: "2026-03-01",
-      location: "San Martín de Valdeiglesias",
-      province: "Madrid",
-      organizer: "Valdeiglesias C.C.",
-      registrationUrl: "https://fmciclismo.com/index.php/smartweb/inscripciones/prueba/34492-COPA-MADRID-MTB-KIDS---X-SAUCE-SERIES-SAN-MARTIN-DE-VALDEIGLESIAS",
-      technicalGuideUrl: "https://fmciclismo.com/index.php/smartweb/inscripciones/documentos/34492-COPA-MADRID-MTB-KIDS---X-SAUCE-SERIES-SAN-MARTIN-DE-VALDEIGLESIAS",
-      documentsUrl: "https://fmciclismo.com/index.php/smartweb/inscripciones/documentos/34492-COPA-MADRID-MTB-KIDS---X-SAUCE-SERIES-SAN-MARTIN-DE-VALDEIGLESIAS",
-      notes: "Ficha verificada de escuelas con documentos y clasificación.",
-      resultUrl: "https://fmciclismo.com/index.php/smartweb/inscripciones/clasificacion/34492-COPA-MADRID-MTB-KIDS---X-SAUCE-SERIES-SAN-MARTIN-DE-VALDEIGLESIAS"
+      "id": "pedroneras-2026",
+      "championshipIds": [
+        "clm-xco-2026"
+      ],
+      "categoryType": "mixta",
+      "name": "Las Pedroñeras · Escuelas + XCO",
+      "date": "2026-03-22",
+      "location": "Las Pedroñeras",
+      "province": "Cuenca",
+      "organizer": "Club Deportivo de Ciclismo Ajo y Agua",
+      "registrationUrl": "https://yosoyciclista.com/index.php/smartweb/inscripciones/prueba/34394-II-COPA-XCO-LAS-PEDRONERAS",
+      "technicalGuideUrl": "https://yosoyciclista.com/index.php/smartweb/inscripciones/documentos/34394-II-COPA-XCO-LAS-PEDRONERAS",
+      "documentsUrl": "https://yosoyciclista.com/index.php/smartweb/inscripciones/documentos/34394-II-COPA-XCO-LAS-PEDRONERAS",
+      "notes": "Inscripción verificada. La ficha pública incluye Escuelas y la guía técnica está en documentos.",
+      "resultUrl": "https://yosoyciclista.com/index.php/smartweb/inscripciones/clasificacion/34394-II-COPA-XCO-LAS-PEDRONERAS"
     },
     {
-      id: "candeleda-2026",
-      championshipIds: ["x-sauce-series-2026"],
-      categoryType: "escuelas",
-      name: "Candeleda · Escuelas",
-      date: "2026-03-07",
-      location: "Candeleda",
-      province: "Ávila",
-      organizer: "",
-      registrationUrl: "",
-      technicalGuideUrl: "",
-      documentsUrl: "",
-      notes: "Confirmada la jornada de Escuelas el 7 de marzo, pero la ficha exacta no está localizada con seguridad.",
-      resultUrl: ""
+      "id": "mondejar-2026",
+      "championshipIds": [
+        "mtb-escolar-guadalajara-2026"
+      ],
+      "categoryType": "escuelas",
+      "name": "Mondéjar · Escuelas",
+      "date": "2026-03-28",
+      "location": "Mondéjar",
+      "province": "Guadalajara",
+      "organizer": "",
+      "registrationUrl": "https://www.rockthesport.com/",
+      "technicalGuideUrl": "",
+      "documentsUrl": "",
+      "notes": "Prueba del Mtb Escolar de Guadalajara. Campeonato no federado. De momento solo está localizado el enlace general de inscripción en RockTheSport.",
+      "resultUrl": ""
     },
     {
-      id: "colmenar-2026",
-      championshipIds: ["x-sauce-series-2026", "copa-madrid-escuelas-2026"],
-      categoryType: "escuelas",
-      name: "Colmenar Viejo · Escuelas",
-      date: "2026-03-15",
-      location: "Colmenar Viejo",
-      province: "Madrid",
-      organizer: "C.D.E. MTB Colmenar Viejo",
-      registrationUrl: "https://fmciclismo.com/index.php/smartweb/inscripciones/prueba/34516-COPA-DE-MADRID-MTB--KIDS---X-SAUCE-SERIES-COLMENAR-VIEJO",
-      technicalGuideUrl: "https://fmciclismo.com/index.php/smartweb/inscripciones/documentos/34516-COPA-DE-MADRID-MTB--KIDS---X-SAUCE-SERIES-COLMENAR-VIEJO",
-      documentsUrl: "https://fmciclismo.com/index.php/smartweb/inscripciones/documentos/34516-COPA-DE-MADRID-MTB--KIDS---X-SAUCE-SERIES-COLMENAR-VIEJO",
-      notes: "Ficha verificada de escuelas con documentos y clasificación.",
-      resultUrl: "https://fmciclismo.com/index.php/smartweb/inscripciones/clasificacion/34516-COPA-DE-MADRID-MTB--KIDS---X-SAUCE-SERIES-COLMENAR-VIEJO"
+      "id": "azuqueca-2026",
+      "championshipIds": [
+        "mtb-escolar-guadalajara-2026"
+      ],
+      "categoryType": "escuelas",
+      "name": "Azuqueca · Escuelas",
+      "date": "2026-04-11",
+      "location": "Azuqueca de Henares",
+      "province": "Guadalajara",
+      "organizer": "",
+      "registrationUrl": "",
+      "technicalGuideUrl": "",
+      "documentsUrl": "",
+      "notes": "Prueba del Mtb Escolar de Guadalajara. Campeonato no federado. Inscripción y guía técnica pendientes.",
+      "resultUrl": ""
     },
     {
-      id: "alpedrete-2026",
-      championshipIds: ["x-sauce-series-2026", "copa-madrid-escuelas-2026"],
-      categoryType: "escuelas",
-      name: "Alpedrete · Escuelas",
-      date: "2026-04-18",
-      location: "Alpedrete",
-      province: "Madrid",
-      organizer: "C.D.E. X.SAUCE",
-      registrationUrl: "https://fmciclismo.com/index.php/smartweb/inscripciones/prueba/34562-COPA-MADRID-MTB-KIDS---X-SAUCE-SERIES-ALPEDRETE",
-      technicalGuideUrl: "https://fmciclismo.com/index.php/smartweb/inscripciones/documentos/34562-COPA-MADRID-MTB-KIDS---X-SAUCE-SERIES-ALPEDRETE",
-      documentsUrl: "https://fmciclismo.com/index.php/smartweb/inscripciones/documentos/34562-COPA-MADRID-MTB-KIDS---X-SAUCE-SERIES-ALPEDRETE",
-      notes: "Inscripción y documentos verificados; clasificación aún no aplica porque la prueba es futura.",
-      resultUrl: ""
+      "id": "alpedrete-2026",
+      "championshipIds": [
+        "x-sauce-series-2026",
+        "copa-madrid-escuelas-2026"
+      ],
+      "categoryType": "escuelas",
+      "name": "Alpedrete · Escuelas",
+      "date": "2026-04-18",
+      "location": "Alpedrete",
+      "province": "Madrid",
+      "organizer": "C.D.E. X.SAUCE",
+      "registrationUrl": "https://fmciclismo.com/index.php/smartweb/inscripciones/prueba/34562-COPA-MADRID-MTB-KIDS---X-SAUCE-SERIES-ALPEDRETE",
+      "technicalGuideUrl": "https://fmciclismo.com/index.php/smartweb/inscripciones/documentos/34562-COPA-MADRID-MTB-KIDS---X-SAUCE-SERIES-ALPEDRETE",
+      "documentsUrl": "https://fmciclismo.com/index.php/smartweb/inscripciones/documentos/34562-COPA-MADRID-MTB-KIDS---X-SAUCE-SERIES-ALPEDRETE",
+      "notes": "Inscripción y documentos verificados; clasificación aún no aplica porque la prueba es futura.",
+      "resultUrl": ""
     },
     {
-      id: "ciempozuelos-2026",
-      championshipIds: ["x-sauce-series-2026", "copa-madrid-escuelas-2026"],
-      categoryType: "mixta",
-      name: "Ciempozuelos · Escuelas + XCO",
-      date: "2026-04-26",
-      location: "Ciempozuelos",
-      province: "Madrid",
-      organizer: "",
-      registrationUrl: "",
-      technicalGuideUrl: "",
-      documentsUrl: "",
-      notes: "Prueba incluida en X-Sauce Series y Liga Multidisciplinar 2026. Ficha exacta pendiente.",
-      resultUrl: ""
+      "id": "ciempozuelos-2026",
+      "championshipIds": [
+        "x-sauce-series-2026",
+        "copa-madrid-escuelas-2026"
+      ],
+      "categoryType": "mixta",
+      "name": "Ciempozuelos · Escuelas + XCO",
+      "date": "2026-04-26",
+      "location": "Ciempozuelos",
+      "province": "Madrid",
+      "organizer": "",
+      "registrationUrl": "",
+      "technicalGuideUrl": "",
+      "documentsUrl": "",
+      "notes": "Prueba incluida en X-Sauce Series y Liga Multidisciplinar 2026. Ficha exacta pendiente.",
+      "resultUrl": ""
     },
     {
-      id: "arroyomolinos-2026",
-      championshipIds: ["x-sauce-series-2026", "copa-madrid-escuelas-2026"],
-      categoryType: "escuelas",
-      name: "Arroyomolinos · Escuelas",
-      date: "2026-05-10",
-      location: "Arroyomolinos",
-      province: "Madrid",
-      organizer: "",
-      registrationUrl: "",
-      technicalGuideUrl: "",
-      documentsUrl: "",
-      notes: "Figura en la Copa de Madrid Escuelas, pero no está localizada la ficha exacta de 2026.",
-      resultUrl: ""
+      "id": "siguenza-2026",
+      "championshipIds": [
+        "mtb-escolar-guadalajara-2026"
+      ],
+      "categoryType": "escuelas",
+      "name": "Sigüenza · Escuelas",
+      "date": "2026-05-09",
+      "location": "Sigüenza",
+      "province": "Guadalajara",
+      "organizer": "",
+      "registrationUrl": "",
+      "technicalGuideUrl": "",
+      "documentsUrl": "",
+      "notes": "Prueba del Mtb Escolar de Guadalajara. Campeonato no federado. Inscripción y guía técnica pendientes.",
+      "resultUrl": ""
     },
     {
-      id: "paracuellos-2026",
-      championshipIds: ["x-sauce-series-2026", "copa-madrid-escuelas-2026"],
-      categoryType: "mixta",
-      name: "Paracuellos del Jarama · Escuelas + XCO",
-      date: "2026-06-14",
-      location: "Paracuellos del Jarama",
-      province: "Madrid",
-      organizer: "Stecchino MTB C.C.",
-      registrationUrl: "",
-      technicalGuideUrl: "",
-      documentsUrl: "",
-      notes: "Confirmada en el calendario de la FMC como XCO Kids y XCO el mismo día; ficha exacta pendiente.",
-      resultUrl: ""
+      "id": "arroyomolinos-2026",
+      "championshipIds": [
+        "x-sauce-series-2026",
+        "copa-madrid-escuelas-2026"
+      ],
+      "categoryType": "escuelas",
+      "name": "Arroyomolinos · Escuelas",
+      "date": "2026-05-10",
+      "location": "Arroyomolinos",
+      "province": "Madrid",
+      "organizer": "",
+      "registrationUrl": "",
+      "technicalGuideUrl": "",
+      "documentsUrl": "",
+      "notes": "Figura en la Copa de Madrid Escuelas, pero no está localizada la ficha exacta de 2026.",
+      "resultUrl": ""
     },
     {
-      id: "arroyomolinos-julio-2026",
-      championshipIds: ["x-sauce-series-2026", "copa-madrid-escuelas-2026"],
-      categoryType: "mixta",
-      name: "Arroyomolinos · Escuelas + Cadetes",
-      date: "2026-07-19",
-      location: "Arroyomolinos",
-      province: "Madrid",
-      organizer: "",
-      registrationUrl: "",
-      technicalGuideUrl: "",
-      documentsUrl: "",
-      notes: "Pendiente de publicación oficial de la ficha.",
-      resultUrl: ""
+      "id": "guadalajara-2026",
+      "championshipIds": [
+        "clm-xco-2026"
+      ],
+      "categoryType": "mixta",
+      "name": "Guadalajara · Escuelas + XCO",
+      "date": "2026-05-24",
+      "location": "Guadalajara",
+      "province": "Guadalajara",
+      "organizer": "",
+      "registrationUrl": "",
+      "technicalGuideUrl": "",
+      "documentsUrl": "",
+      "notes": "Pendiente de publicación de la ficha exacta.",
+      "resultUrl": ""
+    },
+    {
+      "id": "paracuellos-2026",
+      "championshipIds": [
+        "x-sauce-series-2026",
+        "copa-madrid-escuelas-2026"
+      ],
+      "categoryType": "mixta",
+      "name": "Paracuellos del Jarama · Escuelas + XCO",
+      "date": "2026-06-14",
+      "location": "Paracuellos del Jarama",
+      "province": "Madrid",
+      "organizer": "Stecchino MTB C.C.",
+      "registrationUrl": "",
+      "technicalGuideUrl": "",
+      "documentsUrl": "",
+      "notes": "Confirmada en el calendario de la FMC como XCO Kids y XCO el mismo día; ficha exacta pendiente.",
+      "resultUrl": ""
+    },
+    {
+      "id": "arroyomolinos-julio-2026",
+      "championshipIds": [
+        "x-sauce-series-2026",
+        "copa-madrid-escuelas-2026"
+      ],
+      "categoryType": "mixta",
+      "name": "Arroyomolinos · Escuelas + Cadetes",
+      "date": "2026-07-19",
+      "location": "Arroyomolinos",
+      "province": "Madrid",
+      "organizer": "",
+      "registrationUrl": "",
+      "technicalGuideUrl": "",
+      "documentsUrl": "",
+      "notes": "Pendiente de publicación oficial de la ficha.",
+      "resultUrl": ""
+    },
+    {
+      "id": "quintanar-2026",
+      "championshipIds": [
+        "clm-xco-2026"
+      ],
+      "categoryType": "mixta",
+      "name": "Quintanar del Rey · Escuelas + XCO",
+      "date": "",
+      "location": "Quintanar del Rey",
+      "province": "Cuenca",
+      "organizer": "",
+      "registrationUrl": "",
+      "technicalGuideUrl": "",
+      "documentsUrl": "",
+      "notes": "Fecha y enlaces pendientes.",
+      "resultUrl": ""
     }
-  ]
+  ],
+  "lastUpdatedUtc": "2026-03-19T12:45:00Z"
 };

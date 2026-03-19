@@ -83,7 +83,12 @@ function getToday() {
   return new Date(2026, 2, 16);
 }
 
+function isNonFederatedRace(race) {
+  return getRaceChampionshipIds(race).includes("mtb-escolar-guadalajara-2026");
+}
+
 function getRaceStatus(race) {
+
   const date = parseDate(race.date);
   if (!date) return { key: "pending", label: "Pendiente de información", className: "badge-pending" };
   if (date < getToday()) return { key: "past", label: "Celebrada", className: "badge-past" };
@@ -164,6 +169,7 @@ function getChampionshipColorClass(id) {
   if (id === "x-sauce-series-2026") return "champ-xsauce";
   if (id === "copa-madrid-escuelas-2026") return "champ-madrid";
   if (id === "clm-xco-2026") return "champ-clm";
+  if (id === "mtb-escolar-guadalajara-2026") return "champ-guadalajara";
   return "";
 }
 
@@ -173,6 +179,7 @@ function getRaceCardClass(race, contextChampionshipId = null) {
   if (ids[0] === "x-sauce-series-2026") return "champ-single-xsauce";
   if (ids[0] === "copa-madrid-escuelas-2026") return "champ-single-madrid";
   if (ids[0] === "clm-xco-2026") return "champ-single-clm";
+  if (ids[0] === "mtb-escolar-guadalajara-2026") return "champ-single-guadalajara";
   return "";
 }
 
@@ -263,6 +270,13 @@ function renderOrderPrefix(order) {
   return order ? `<span class="order-prefix">${order}<sup>º</sup></span> ` : "";
 }
 
+function renderOrderMedal(order) {
+  if (!order) return "";
+  if (order === 1) return `<span class="order-medal" title="1º del campeonato">🥇</span>`;
+  if (order === 2) return `<span class="order-medal" title="2º del campeonato">🥈</span>`;
+  if (order === 3) return `<span class="order-medal" title="3º del campeonato">🥉</span>`;
+  return `<span class="order-medal order-medal-generic" title="${order}º del campeonato">🏅${order}º</span>`;
+}
 
 function getChampionshipBadgeTitle(race) {
   const ids = race.championshipIds || [];
@@ -270,6 +284,7 @@ function getChampionshipBadgeTitle(race) {
   if (ids.includes("clm-xco-2026")) labels.push("Castilla-La Mancha");
   if (ids.includes("copa-madrid-escuelas-2026")) labels.push("Madrid");
   if (ids.includes("x-sauce-series-2026")) labels.push("X-Sauce");
+  if (ids.includes("mtb-escolar-guadalajara-2026")) labels.push("Mtb Escolar Guadalajara");
   return labels.join(" + ");
 }
 
@@ -278,12 +293,14 @@ function getPrimaryChampClass(race) {
   const hasCLM = ids.includes("clm-xco-2026");
   const hasMadrid = ids.includes("copa-madrid-escuelas-2026");
   const hasXSauce = ids.includes("x-sauce-series-2026");
+  const hasGuadalajara = ids.includes("mtb-escolar-guadalajara-2026");
 
   if (hasCLM && hasXSauce) return "champ-clm-xsauce";
   if (hasMadrid && hasXSauce) return "champ-madrid-xsauce";
   if (hasCLM) return "champ-clm";
   if (hasMadrid) return "champ-madrid";
   if (hasXSauce) return "champ-xsauce";
+  if (hasGuadalajara) return "champ-guadalajara";
   return "";
 }
 
@@ -301,7 +318,7 @@ function renderRaceCard(race, compact = false, contextChampionshipId = null) {
       <details class="race-details">
         <summary class="race-summary">
           <div class="race-summary-main">
-            <h3>${escapeHtml(race.name)}</h3>
+            <h3>${renderOrderMedal(order)}${escapeHtml(race.name)}</h3>
             <p class="race-summary-date">${escapeHtml(formatDate(race.date))}</p>
           </div>
           <div class="race-summary-toggle" aria-hidden="true">+</div>
@@ -310,7 +327,8 @@ function renderRaceCard(race, compact = false, contextChampionshipId = null) {
         <div class="race-details-body">
           <div class="badge-row">
             <span class="badge ${status.className}">${status.label}</span>
-            ${race.categoryType === "mixta" ? `<span class="badge badge-docs">Escuelas + otras categorías</span>` : ``}
+            ${race.categoryType === "mixta" ? `<span class="badge badge-docs">Escuelas + otras categorías</span>` : `<span class="badge badge-docs">Escuelas</span>`}
+            ${isNonFederatedRace(race) ? `<span class="badge badge-nonfed">No federado</span>` : ``}
           </div>
 
           <p class="meta">
@@ -647,6 +665,7 @@ function renderRaceDetail(raceId) {
         <div class="badge-row">
           <span class="badge ${status.className}">${status.label}</span>
           ${race.categoryType === "mixta" ? `<span class="badge badge-docs">Incluye escuelas</span>` : `<span class="badge badge-docs">Escuelas</span>`}
+          ${isNonFederatedRace(race) ? `<span class="badge badge-nonfed">No federado</span>` : ``}
         </div>
         <h2>${renderOrderPrefix(getRaceOrder(race))}${escapeHtml(race.name)}</h2>
         <p class="meta">${raceChampionships.map(c => escapeHtml(c.name)).join(" · ")}</p>
@@ -662,7 +681,7 @@ function renderRaceDetail(raceId) {
           </div>
           <div class="info-box">
             <span class="info-label">Tipo</span>
-            <strong>${race.categoryType === "mixta" ? "Escuelas + otras categorías" : "Escuelas"}</strong>
+            <strong>${race.categoryType === "mixta" ? "Escuelas + otras categorías" : "Escuelas"}${isNonFederatedRace(race) ? " · No federado" : ""}</strong>
           </div>
           <div class="info-box">
             <span class="info-label">Fecha</span>

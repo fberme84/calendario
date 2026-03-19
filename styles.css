@@ -1223,6 +1223,29 @@ button {
 }
 
 
+
+.champ-guadalajara { background:#166534; color:#fff; }
+.champ-single-guadalajara { border-top:4px solid #166534; }
+.badge-nonfed { background:#dcfce7; color:#166534; border-color:#86efac; }
+.order-medal {
+  display:inline-flex;
+  align-items:center;
+  justify-content:center;
+  margin-right:6px;
+  font-size:1.05em;
+  vertical-align:middle;
+}
+.order-medal-generic {
+  font-size:0.86em;
+  font-weight:700;
+  background:#fef3c7;
+  color:#92400e;
+  border:1px solid #fcd34d;
+  border-radius:999px;
+  padding:2px 8px;
+  line-height:1.2;
+}
+
 .app-footer {
   margin: 24px 14px 10px;
   padding: 14px 16px;
@@ -1237,7 +1260,8 @@ button {
 }
 
 @media (max-width: 768px) {
-  .app-footer {
+  
+.app-footer {
     margin: 18px 10px 10px;
     font-size: 0.8rem;
     padding: 12px;
