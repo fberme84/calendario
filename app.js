@@ -297,25 +297,38 @@ function renderRaceCard(race, compact = false, contextChampionshipId = null) {
   const order = getRaceOrder(race, contextChampionshipId || null);
 
   return `
-    <article class="card race-card ${getRaceCardClass(race, contextChampionshipId)}">
-      ${order ? `<div class="race-order-corner ${getPrimaryChampClass(race)}" title="${escapeHtml(getChampionshipBadgeTitle(race))}">#${order}</div>` : ``}
-      <div class="badge-row">
-        <span class="badge ${status.className}">${status.label}</span>
-        ${race.categoryType === "mixta" ? `<span class="badge badge-docs">Escuelas + otras categorías</span>` : ``}
-      </div>
-      <h3>${escapeHtml(race.name)}</h3>
-      <p class="meta">
-        ${escapeHtml(formatDate(race.date))} · ${escapeHtml(race.location)} (${escapeHtml(race.province)})<br>
-        ${escapeHtml(champText)}
-        ${days !== null && days >= 0 ? `<br><strong>Faltan ${days} días</strong>` : ""}
-      </p>
-      ${compact ? "" : `<p class="small">${escapeHtml(race.notes || "")}</p>`}
-      <div class="card-actions">
-        <a class="btn btn-secondary" href="#/carrera/${race.id}">Detalle</a>
-        ${linkButton(race.registrationUrl, "Inscripción")}
-        ${linkButton(buildTechnicalGuideUrl(race), "Guía técnica", "secondary")}
-        ${resultButton(race)}
-      </div>
+    <article class="card race-card ${getRaceCardClass(race, contextChampionshipId)} race-accordion-card">
+      <details class="race-details">
+        <summary class="race-summary">
+          <div class="race-summary-main">
+            <h3>${escapeHtml(race.name)}</h3>
+            <p class="race-summary-date">${escapeHtml(formatDate(race.date))}</p>
+          </div>
+          <div class="race-summary-toggle" aria-hidden="true">+</div>
+        </summary>
+
+        <div class="race-details-body">
+          <div class="badge-row">
+            <span class="badge ${status.className}">${status.label}</span>
+            ${race.categoryType === "mixta" ? `<span class="badge badge-docs">Escuelas + otras categorías</span>` : ``}
+          </div>
+
+          <p class="meta">
+            ${escapeHtml(race.location)} (${escapeHtml(race.province)})<br>
+            ${escapeHtml(champText)}
+            ${days !== null && days >= 0 ? `<br><strong>Faltan ${days} días</strong>` : ""}
+          </p>
+
+          ${compact ? "" : `<p class="small">${escapeHtml(race.notes || "")}</p>`}
+
+          <div class="card-actions">
+            <a class="btn btn-secondary" href="#/carrera/${race.id}">Detalle</a>
+            ${linkButton(race.registrationUrl, "Inscripción")}
+            ${linkButton(buildTechnicalGuideUrl(race), "Guía técnica", "secondary")}
+            ${resultButton(race)}
+          </div>
+        </div>
+      </details>
     </article>
   `;
 }
