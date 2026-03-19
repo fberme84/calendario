@@ -761,30 +761,7 @@ body {
   line-height: 1.25;
 }
 
-@media (max-width: 900px) {
-  .calendar-weekdays {
-    display: none;
-  }
-  .calendar-grid {
-    grid-template-columns: 1fr;
-    gap: 10px;
-  }
-  .calendar-cell,
-  .calendar-cell.has-races,
-  .empty-cell {
-    min-height: auto;
-  }
-  .empty-cell {
-    display: none;
-  }
-  .calendar-day {
-    margin-bottom: 6px;
-  }
-  .calendar-event {
-    padding: 10px;
-    font-size: 0.88rem;
-  }
-}
+
 
 
 .monthly-title-wrap {
@@ -1264,5 +1241,119 @@ button {
     margin: 18px 10px 10px;
     font-size: 0.8rem;
     padding: 12px;
+  }
+}
+
+
+/* Corrección móvil de la rejilla mensual: mantener 7 columnas */
+@media (max-width: 900px) {
+  .calendar-weekdays {
+    display: grid !important;
+    grid-template-columns: repeat(7, minmax(0, 1fr)) !important;
+    gap: 4px !important;
+    margin-bottom: 6px;
+  }
+
+  .calendar-weekday {
+    display: flex !important;
+    align-items: center;
+    justify-content: center;
+    font-size: 0.66rem !important;
+    padding: 4px 0 !important;
+    text-align: center;
+  }
+
+  .calendar-grid {
+    display: grid !important;
+    grid-template-columns: repeat(7, minmax(0, 1fr)) !important;
+    gap: 4px !important;
+  }
+
+  .calendar-cell,
+  .calendar-cell.has-races,
+  .empty-cell {
+    min-height: 72px !important;
+    padding: 4px !important;
+    border-radius: 10px !important;
+  }
+
+  .empty-cell {
+    display: block !important;
+    opacity: 0.35;
+  }
+
+  .calendar-day {
+    font-size: 0.68rem !important;
+    margin-bottom: 4px !important;
+  }
+
+  .calendar-events {
+    display: grid;
+    gap: 3px;
+  }
+
+  .calendar-event {
+    padding: 3px 4px !important;
+    font-size: 0.58rem !important;
+    border-radius: 8px !important;
+    min-height: unset !important;
+  }
+
+  .calendar-event-order {
+    font-size: 0.55rem !important;
+    margin-bottom: 2px !important;
+  }
+
+  .calendar-event-title {
+    line-height: 1.08 !important;
+    display: -webkit-box;
+    -webkit-line-clamp: 2;
+    -webkit-box-orient: vertical;
+    overflow: hidden;
+    word-break: break-word;
+  }
+
+  .monthly-header {
+    gap: 8px;
+    align-items: center;
+  }
+
+  .monthly-title-wrap h3 {
+    font-size: 0.98rem !important;
+  }
+
+  .month-nav-btn {
+    min-width: 36px !important;
+    min-height: 36px !important;
+  }
+}
+
+@media (max-width: 640px) {
+  .calendar-grid {
+    gap: 3px !important;
+  }
+
+  .calendar-cell,
+  .calendar-cell.has-races,
+  .empty-cell {
+    min-height: 66px !important;
+    padding: 3px !important;
+  }
+
+  .calendar-weekday {
+    font-size: 0.6rem !important;
+  }
+
+  .calendar-day {
+    font-size: 0.64rem !important;
+  }
+
+  .calendar-event {
+    padding: 2px 3px !important;
+    font-size: 0.54rem !important;
+  }
+
+  .calendar-event-title {
+    -webkit-line-clamp: 2;
   }
 }
