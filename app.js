@@ -194,11 +194,7 @@ function escapeHtml(text) {
 function linkButton(url, label, variant = "primary") {
   if (!url) return "";
   const cls = variant === "secondary" ? "btn btn-secondary" : "btn btn-primary";
-  return `<a class="${cls}" href="${url}" target="_blank" rel="noopener noreferrer">${label}</a>
-<footer class="app-footer">
-  Última actualización: ${escapeHtml(formatLastUpdated(lastUpdatedUtc))}
-</footer>
-`;
+  return `<a class="${cls}" href="${url}" target="_blank" rel="noopener noreferrer">${label}</a>`;
 }
 
 function buildTechnicalGuideUrlFromUrl(url) {
@@ -244,11 +240,7 @@ function resultButton(race) {
 }
 
 function renderBackBar(label = "Volver") {
-  return `<div class="card-actions"><button class="btn btn-secondary" onclick="goBack()">← ${label}</button></div>
-<footer class="app-footer">
-  Última actualización: ${escapeHtml(formatLastUpdated(lastUpdatedUtc))}
-</footer>
-`;
+  return `<div class="card-actions"><button class="btn btn-secondary" onclick="goBack()">← ${label}</button></div>`;
 }
 
 function renderBreadcrumb(items) {
@@ -256,11 +248,7 @@ function renderBreadcrumb(items) {
     item.href
       ? `<a href="${item.href}" style="color: inherit; text-decoration:none;"><strong>${escapeHtml(item.label)}</strong></a>`
       : `<strong>${escapeHtml(item.label)}</strong>`
-  ).join(" &gt; ")}</div>
-<footer class="app-footer">
-  Última actualización: ${escapeHtml(formatLastUpdated(lastUpdatedUtc))}
-</footer>
-`;
+  ).join(" &gt; ")}</div>`;
 }
 
 function renderChampionshipPills(race) {
@@ -268,11 +256,7 @@ function renderChampionshipPills(race) {
   if (!raceChampionships.length) return "";
   return `<div class="badge-row">${raceChampionships.map(ch =>
     `<a class="champ-pill ${getChampionshipColorClass(ch.id)}" href="#/campeonato/${ch.id}">${escapeHtml(ch.name)}</a>`
-  ).join("")}</div>
-<footer class="app-footer">
-  Última actualización: ${escapeHtml(formatLastUpdated(lastUpdatedUtc))}
-</footer>
-`;
+  ).join("")}</div>`;
 }
 
 function renderOrderPrefix(order) {
@@ -346,11 +330,7 @@ function renderRaceCard(race, compact = false, contextChampionshipId = null) {
         </div>
       </details>
     </article>
-  
-<footer class="app-footer">
-  Última actualización: ${escapeHtml(formatLastUpdated(lastUpdatedUtc))}
-</footer>
-`;
+  `;
 }
 
 
@@ -444,11 +424,7 @@ function renderMonthlyGrid(racesForView, monthValue = "") {
       </div>
       <div class="calendar-grid">${cells}</div>
     </div>
-  
-<footer class="app-footer">
-  Última actualización: ${escapeHtml(formatLastUpdated(lastUpdatedUtc))}
-</footer>
-`;
+  `;
 }
 
 function changeCalendarMonth(step) {
@@ -476,7 +452,6 @@ function renderHome() {
           <p class="muted-light">Escuela del club</p>
           <h2>${escapeHtml(APP_NAME)}</h2>
           <p class="muted-light">Solo carreras de escuelas, con inscripciones, guías técnicas y clasificaciones.</p>
-          
           <div class="card-actions">
             <a class="btn btn-secondary" href="#/calendario">Ver calendario</a>
             <a class="btn btn-secondary" href="#/campeonatos">Ver campeonatos</a>
@@ -553,11 +528,7 @@ function renderHome() {
         </div>
       </section>
     </section>
-  
-<footer class="app-footer">
-  Última actualización: ${escapeHtml(formatLastUpdated(lastUpdatedUtc))}
-</footer>
-`;
+  `;
 }
 
 function renderCalendar() {
@@ -579,11 +550,7 @@ function renderCalendar() {
       <div id="calendarMonthly"></div>
       <div id="calendarResults" class="race-grid"></div>
     </section>
-  
-<footer class="app-footer">
-  Última actualización: ${escapeHtml(formatLastUpdated(lastUpdatedUtc))}
-</footer>
-`;
+  `;
 }
 
 function applyCalendarFilters() {
@@ -600,11 +567,7 @@ function applyCalendarFilters() {
   const container = document.getElementById("calendarResults");
   container.innerHTML = filtered.length
     ? filtered.map(r => renderRaceCard(r)).join("")
-    : `<div class="card empty">No hay carreras para este filtro.</div>
-<footer class="app-footer">
-  Última actualización: ${escapeHtml(formatLastUpdated(lastUpdatedUtc))}
-</footer>
-`;
+    : `<div class="card empty">No hay carreras para este filtro.</div>`;
 }
 
 function renderChampionships() {
@@ -635,11 +598,7 @@ function renderChampionships() {
     `;
   }).join("");
 
-  return `<section class="page"><div class="champ-grid">${html}</div></section>
-<footer class="app-footer">
-  Última actualización: ${escapeHtml(formatLastUpdated(lastUpdatedUtc))}
-</footer>
-`;
+  return `<section class="page"><div class="champ-grid">${html}</div></section>`;
 }
 
 function renderChampionshipDetail(championshipId) {
@@ -664,11 +623,7 @@ function renderChampionshipDetail(championshipId) {
         ${champRaces.map(r => renderRaceCard(r, true, champ.id)).join("")}
       </div>
     </section>
-  
-<footer class="app-footer">
-  Última actualización: ${escapeHtml(formatLastUpdated(lastUpdatedUtc))}
-</footer>
-`;
+  `;
 }
 
 
@@ -748,11 +703,7 @@ function renderRaceDetail(raceId) {
         ${renderChampionshipPills(race)}
       </div>
     </section>
-  
-<footer class="app-footer">
-  Última actualización: ${escapeHtml(formatLastUpdated(lastUpdatedUtc))}
-</footer>
-`;
+  `;
 }
 
 function updateNav(route) {
@@ -770,37 +721,37 @@ function render() {
   const hash = window.location.hash || "#/";
   updateNav(hash);
 
+  let content = "";
+
   if (hash === "#/" || hash === "#") {
-    app.innerHTML = renderHome();
-    return;
+    content = renderHome();
+  } else if (hash === "#/calendario") {
+    content = renderCalendar();
+  } else if (hash === "#/campeonatos") {
+    content = renderChampionships();
+  } else if (hash.startsWith("#/campeonato/")) {
+    const id = hash.split("/")[2];
+    content = renderChampionshipDetail(id);
+  } else if (hash.startsWith("#/carrera/")) {
+    const id = hash.split("/")[2];
+    content = renderRaceDetail(id);
+  } else {
+    content = `<section class="page"><div class="card empty">Página no encontrada.</div></section>`;
   }
+
+  app.innerHTML = `
+    ${content}
+    <footer class="app-footer">
+      Última actualización: ${escapeHtml(formatLastUpdated(lastUpdatedUtc))}
+    </footer>
+  `;
+
   if (hash === "#/calendario") {
-    app.innerHTML = renderCalendar();
     document.getElementById("filterChampionship").addEventListener("change", applyCalendarFilters);
     document.getElementById("filterMonth").addEventListener("change", applyCalendarFilters);
     document.getElementById("filterText").addEventListener("input", applyCalendarFilters);
     applyCalendarFilters();
-    return;
   }
-  if (hash === "#/campeonatos") {
-    app.innerHTML = renderChampionships();
-    return;
-  }
-  if (hash.startsWith("#/campeonato/")) {
-    const id = hash.split("/")[2];
-    app.innerHTML = renderChampionshipDetail(id);
-    return;
-  }
-  if (hash.startsWith("#/carrera/")) {
-    const id = hash.split("/")[2];
-    app.innerHTML = renderRaceDetail(id);
-    return;
-  }
-  app.innerHTML = `<section class="page"><div class="card empty">Página no encontrada.</div></section>
-<footer class="app-footer">
-  Última actualización: ${escapeHtml(formatLastUpdated(lastUpdatedUtc))}
-</footer>
-`;
 }
 
 
