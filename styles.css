@@ -1158,3 +1158,10 @@ button {
     min-height: 40px;
   }
 }
+
+
+.last-updated {
+  margin-top: 10px;
+  color: #64748b;
+  font-size: 0.9rem;
+}

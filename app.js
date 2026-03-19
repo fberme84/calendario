@@ -3,6 +3,7 @@ let races = [];
 
 const APP_NAME = "Calendario Escuela CC Mejorada";
 let currentCalendarMonth = "";
+let lastUpdatedUtc = "";
 let dataLoaded = false;
 
 const monthNames = [
@@ -20,6 +21,7 @@ async function loadData() {
   const data = await response.json();
   championships = Array.isArray(data.championships) ? data.championships : [];
   races = Array.isArray(data.races) ? data.races : [];
+  lastUpdatedUtc = data.lastUpdatedUtc || "";
   dataLoaded = true;
 }
 
@@ -50,6 +52,19 @@ function formatDate(dateString) {
     day: "2-digit",
     month: "long",
     year: "numeric"
+  }).format(date);
+}
+
+
+
+function formatLastUpdated(dateString) {
+  if (!dateString) return "Sin actualizar aún";
+  const date = new Date(dateString);
+  if (Number.isNaN(date.getTime())) return "Fecha no disponible";
+
+  return new Intl.DateTimeFormat("es-ES", {
+    dateStyle: "medium",
+    timeStyle: "short"
   }).format(date);
 }
 
@@ -424,6 +439,7 @@ function renderHome() {
           <p class="muted-light">Escuela del club</p>
           <h2>${escapeHtml(APP_NAME)}</h2>
           <p class="muted-light">Solo carreras de escuelas, con inscripciones, guías técnicas y clasificaciones.</p>
+          <p class="small last-updated">Última actualización: ${escapeHtml(formatLastUpdated(lastUpdatedUtc))}</p>
           <div class="card-actions">
             <a class="btn btn-secondary" href="#/calendario">Ver calendario</a>
             <a class="btn btn-secondary" href="#/campeonatos">Ver campeonatos</a>
