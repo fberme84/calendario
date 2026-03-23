@@ -1569,3 +1569,18 @@ button {
   font-weight: 700;
 }
 
+
+
+/* Contraste reforzado en tarjetas de campeonatos */
+.championship-card .info-label {
+  color: #64748b;
+}
+
+.championship-card .info-box strong {
+  color: #0f172a;
+}
+
+.championship-card.champ-xsauce .info-box strong { color: #5a3b00; }
+.championship-card.champ-clm .info-box strong { color: #43206b; }
+.championship-card.champ-madrid .info-box strong { color: #6f1d1b; }
+.championship-card.champ-guadalajara .info-box strong { color: #1f5133; }
