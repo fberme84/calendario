@@ -80,7 +80,35 @@ function sortRaces(items) {
 }
 
 function getToday() {
-  return new Date(2026, 2, 16);
+  const now = new Date();
+  return new Date(now.getFullYear(), now.getMonth(), now.getDate());
+}
+
+function getCountdownDisplay(dateString) {
+  const date = parseDate(dateString);
+  if (!date) return "—";
+
+  const target = new Date(date.getFullYear(), date.getMonth(), date.getDate(), 9, 0, 0);
+  const nowRaw = new Date();
+  const now = new Date(nowRaw.getFullYear(), nowRaw.getMonth(), nowRaw.getDate(), nowRaw.getHours(), nowRaw.getMinutes(), nowRaw.getSeconds());
+
+  let diffMs = target - now;
+  if (diffMs <= 0) {
+    const today = getToday();
+    if (date.getTime() === today.getTime()) return "Hoy";
+    return "—";
+  }
+
+  const dayMs = 24 * 60 * 60 * 1000;
+  const hourMs = 60 * 60 * 1000;
+  const days = Math.floor(diffMs / dayMs);
+  diffMs -= days * dayMs;
+  const hours = Math.ceil(diffMs / hourMs);
+
+  if (days <= 0) {
+    return `${hours}h`;
+  }
+  return `${days}d ${hours}h`;
 }
 
 function isNonFederatedRace(race) {
@@ -375,7 +403,7 @@ function renderRaceCard(race, compact = false, contextChampionshipId = null) {
           <p class="meta">
             ${escapeHtml(race.location)} (${escapeHtml(race.province)})<br>
             ${escapeHtml(champText)}
-            ${days !== null && days >= 0 ? `<br><strong>Faltan ${days} días</strong>` : ""}
+            ${days !== null && days >= 0 ? `<br><strong>${escapeHtml(getCountdownDisplay(race.date))} para la prueba</strong>` : ""}
           </p>
 
           ${compact ? "" : `<p class="small">${escapeHtml(race.notes || "")}</p>`}
@@ -528,7 +556,7 @@ function renderHome() {
                     <p class="meta">${escapeHtml(formatDate(nextRace.date))} · ${escapeHtml(nextRace.location)} (${escapeHtml(nextRace.province)})</p>
                   </div>
                   <div class="next-race-countdown">
-                    <div class="countdown">${getDaysUntil(nextRace.date)} días</div>
+                    <div class="countdown">${getCountdownDisplay(nextRace.date)}</div>
                     <p class="small">hasta la próxima prueba</p>
                   </div>
                 </div>
@@ -762,7 +790,7 @@ function renderRaceDetail(raceId) {
           </div>
           <div class="info-box">
             <span class="info-label">Cuenta atrás</span>
-            <strong>${days !== null && days >= 0 ? `${days} días` : "—"}</strong>
+            <strong>${escapeHtml(getCountdownDisplay(race.date))}</strong>
           </div>
           <div class="info-box">
             <span class="info-label">Localidad</span>
