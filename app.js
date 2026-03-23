@@ -272,10 +272,7 @@ function renderOrderPrefix(order) {
 
 function renderOrderMedal(order) {
   if (!order) return "";
-  if (order === 1) return `<span class="order-medal" title="1º del campeonato">🥇</span>`;
-  if (order === 2) return `<span class="order-medal" title="2º del campeonato">🥈</span>`;
-  if (order === 3) return `<span class="order-medal" title="3º del campeonato">🥉</span>`;
-  return `<span class="order-medal order-medal-generic" title="${order}º del campeonato">🏅${order}º</span>`;
+  return `<span class="order-medal order-medal-generic" title="${order}º del campeonato">${order}º</span>`;
 }
 
 function getChampionshipBadgeTitle(race) {
