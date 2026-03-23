@@ -1398,3 +1398,135 @@ button {
     -webkit-line-clamp: 2;
   }
 }
+
+
+/* Logos de campeonatos */
+.championship-card-head,
+.championship-detail-head,
+.race-detail-head,
+.race-summary-head {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 14px;
+}
+
+.race-summary-head {
+  align-items: flex-start;
+  margin-bottom: 4px;
+}
+
+.race-summary-head h3,
+.championship-card-head h2,
+.championship-detail-head h2,
+.race-detail-head h2 {
+  margin: 0;
+}
+
+.championship-card {
+  overflow: hidden;
+}
+
+.championship-card.champ-xsauce {
+  background: #fff8ea;
+  border-color: #efc27d;
+}
+.championship-card.champ-clm {
+  background: #faf6ff;
+  border-color: #d8c2ef;
+}
+.championship-card.champ-madrid {
+  background: #fff3f1;
+  border-color: #e7b4ab;
+}
+.championship-card.champ-guadalajara {
+  background: #f3fbf4;
+  border-color: #b9dcc0;
+}
+
+.champ-logos {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  flex-wrap: wrap;
+  flex-shrink: 0;
+}
+
+.champ-logo-badge {
+  display: block;
+  width: auto;
+  object-fit: contain;
+  background: rgba(255,255,255,0.9);
+  border: 1px solid rgba(15,23,42,0.08);
+  box-shadow: 0 4px 14px rgba(15,23,42,0.08);
+}
+
+.champ-logos-sm .champ-logo-badge {
+  height: 30px;
+  max-width: 68px;
+  padding: 3px 6px;
+  border-radius: 8px;
+}
+
+.champ-logos-md .champ-logo-badge {
+  height: 46px;
+  max-width: 110px;
+  padding: 5px 8px;
+  border-radius: 10px;
+}
+
+.champ-logos-lg .champ-logo-badge {
+  height: 72px;
+  max-width: 180px;
+  padding: 7px 10px;
+  border-radius: 12px;
+}
+
+.race-summary-main {
+  min-width: 0;
+  flex: 1 1 auto;
+}
+
+.race-summary-head h3 {
+  flex: 1 1 auto;
+}
+
+.race-summary-toggle {
+  flex: 0 0 auto;
+}
+
+@media (max-width: 900px) {
+  .championship-card-head,
+  .championship-detail-head,
+  .race-detail-head {
+    align-items: flex-start;
+    flex-direction: column;
+  }
+
+  .race-summary-head {
+    gap: 10px;
+  }
+
+  .champ-logos-md .champ-logo-badge {
+    height: 40px;
+    max-width: 98px;
+  }
+
+  .champ-logos-lg .champ-logo-badge {
+    height: 60px;
+    max-width: 150px;
+  }
+}
+
+@media (max-width: 640px) {
+  .race-summary-head {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+
+  .champ-logos-sm .champ-logo-badge {
+    height: 26px;
+    max-width: 60px;
+    padding: 2px 5px;
+  }
+}

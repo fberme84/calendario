@@ -173,6 +173,30 @@ function getChampionshipColorClass(id) {
   return "";
 }
 
+
+function getChampionshipLogoPath(id) {
+  if (id === "x-sauce-series-2026") return "img/logo_xsauce.png";
+  if (id === "copa-madrid-escuelas-2026") return "img/logo_madrid.png";
+  if (id === "clm-xco-2026") return "img/logo_clm.png";
+  if (id === "mtb-escolar-guadalajara-2026") return "img/logo_guada.png";
+  return "";
+}
+
+function renderChampionshipLogosByIds(ids, size = "sm") {
+  const uniqueIds = [...new Set((ids || []).filter(Boolean))];
+  if (!uniqueIds.length) return "";
+  return `<div class="champ-logos champ-logos-${size}">${uniqueIds.map(id => {
+    const champ = getChampionshipById(id);
+    const src = getChampionshipLogoPath(id);
+    if (!src || !champ) return "";
+    return `<img class="champ-logo-badge" src="${src}" alt="${escapeHtml(champ.name)}" title="${escapeHtml(champ.name)}" loading="lazy">`;
+  }).join("")}</div>`;
+}
+
+function renderChampionshipLogosForRace(race, size = "sm") {
+  return renderChampionshipLogosByIds(getRaceChampionshipIds(race), size);
+}
+
 function getRaceCardClass(race, contextChampionshipId = null) {
   const ids = contextChampionshipId ? [contextChampionshipId] : getRaceChampionshipIds(race);
   if (ids.length > 1) return "champ-multi";
@@ -305,6 +329,7 @@ function renderRaceCard(race, compact = false, contextChampionshipId = null) {
   const status = getRaceStatus(race);
   const days = getDaysUntil(race.date);
   const raceChampionships = getChampionshipsForRace(race);
+  const displayIds = contextChampionshipId ? [contextChampionshipId] : getRaceChampionshipIds(race);
   const champText = contextChampionshipId
     ? (getChampionshipById(contextChampionshipId)?.name || "")
     : raceChampionships.map(c => c.name).join(" · ");
@@ -315,7 +340,10 @@ function renderRaceCard(race, compact = false, contextChampionshipId = null) {
       <details class="race-details">
         <summary class="race-summary">
           <div class="race-summary-main">
-            <h3>${renderOrderMedal(order)}${escapeHtml(race.name)}</h3>
+            <div class="race-summary-head">
+              <h3>${renderOrderMedal(order)}${escapeHtml(race.name)}</h3>
+              ${renderChampionshipLogosByIds(displayIds, "sm")}
+            </div>
             <p class="race-summary-date">${escapeHtml(formatDate(race.date))}</p>
           </div>
           <div class="race-summary-toggle" aria-hidden="true">+</div>
@@ -593,9 +621,13 @@ function renderChampionships() {
       return d && d >= getToday();
     });
     return `
-      <article class="card">
-        <h2>${escapeHtml(champ.name)}</h2>
-        <p class="meta">Temporada ${champ.season}</p>
+      <article class="card championship-card ${getChampionshipColorClass(champ.id)}">
+        <div class="championship-card-head">
+          ${renderChampionshipLogosByIds([champ.id], "md")}
+          <div>
+            <h2>${escapeHtml(champ.name)}</h2>
+              </div>
+        </div>
         <div class="info-grid">
           <div class="info-box">
             <span class="info-label">Carreras de escuela</span>
@@ -630,8 +662,13 @@ function renderChampionshipDetail(championshipId) {
           { label: "Campeonatos", href: "#/campeonatos" },
           { label: champ.name }
         ])}
-        <h2>${escapeHtml(champ.name)}</h2>
-        <p class="meta">Temporada ${champ.season} · ${champRaces.length} carreras de escuela</p>
+        <div class="championship-detail-head">
+          ${renderChampionshipLogosByIds([champ.id], "lg")}
+          <div>
+            <h2>${escapeHtml(champ.name)}</h2>
+            <p class="meta">Temporada ${champ.season} · ${champRaces.length} carreras de escuela</p>
+          </div>
+        </div>
         <p class="small">${escapeHtml(champ.description || "")}</p>
       </div>
       <div class="race-grid">
@@ -664,8 +701,13 @@ function renderRaceDetail(raceId) {
           ${race.categoryType === "mixta" ? `<span class="badge badge-docs">Incluye escuelas</span>` : `<span class="badge badge-docs">Escuelas</span>`}
           ${isNonFederatedRace(race) ? `<span class="badge badge-nonfed">No federado</span>` : ``}
         </div>
-        <h2>${renderOrderPrefix(getRaceOrder(race))}${escapeHtml(race.name)}</h2>
-        <p class="meta">${raceChampionships.map(c => escapeHtml(c.name)).join(" · ")}</p>
+        <div class="race-detail-head">
+          <div>
+            <h2>${renderOrderPrefix(getRaceOrder(race))}${escapeHtml(race.name)}</h2>
+            <p class="meta">${raceChampionships.map(c => escapeHtml(c.name)).join(" · ")}</p>
+          </div>
+          ${renderChampionshipLogosForRace(race, "md")}
+        </div>
 
         <div class="info-grid">
           <div class="info-box">
