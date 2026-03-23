@@ -1584,3 +1584,206 @@ button {
 .championship-card.champ-clm .info-box strong { color: #43206b; }
 .championship-card.champ-madrid .info-box strong { color: #6f1d1b; }
 .championship-card.champ-guadalajara .info-box strong { color: #1f5133; }
+
+
+/* Inicio reorganizado */
+.home-overview {
+  display: grid;
+  grid-template-columns: minmax(0, 1.45fr) minmax(320px, 0.95fr);
+  gap: 18px;
+}
+
+.home-section-head {
+  display: flex;
+  align-items: flex-start;
+  justify-content: space-between;
+  gap: 14px;
+  margin-bottom: 14px;
+}
+
+.compact-head {
+  margin-bottom: 12px;
+}
+
+.next-race-home-card,
+.home-summary-card,
+.home-upcoming-card {
+  overflow: hidden;
+}
+
+.next-race-home-card {
+  background:
+    linear-gradient(135deg, rgba(255,255,255,0.96), rgba(247,250,252,0.98)),
+    linear-gradient(180deg, rgba(255,255,255,0.96), rgba(248,250,252,0.95));
+}
+
+.next-race-home-main {
+  display: flex;
+  align-items: flex-start;
+  justify-content: space-between;
+  gap: 16px;
+}
+
+.next-race-home-main h3 {
+  margin: 0 0 8px;
+  font-size: 1.55rem;
+  line-height: 1.18;
+}
+
+.next-race-countdown {
+  flex: 0 0 auto;
+  min-width: 160px;
+  padding: 14px 16px;
+  border-radius: 16px;
+  background: #f8fafc;
+  border: 1px solid var(--line);
+  text-align: center;
+}
+
+.next-race-countdown .countdown {
+  margin: 0 0 4px;
+  line-height: 1;
+}
+
+.home-actions-row {
+  margin-top: 16px;
+}
+
+.home-stat-grid {
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: 12px;
+}
+
+.stat-compact {
+  padding: 14px;
+  border-radius: 14px;
+  box-shadow: none;
+  background: #f8fafc;
+}
+
+.stat-compact .stat-label {
+  font-size: 0.9rem;
+  margin-bottom: 6px;
+}
+
+.stat-compact .stat-value {
+  font-size: 1.7rem;
+}
+
+.home-champ-links {
+  display: grid;
+  gap: 10px;
+  margin-top: 16px;
+}
+
+.home-champ-link {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  padding: 10px 12px;
+  border-radius: 14px;
+  text-decoration: none;
+  border: 1px solid transparent;
+  transition: transform 0.15s ease, box-shadow 0.15s ease;
+}
+
+.home-champ-link:hover {
+  transform: translateY(-1px);
+  box-shadow: 0 6px 16px rgba(15,23,42,0.08);
+}
+
+.home-champ-link span {
+  font-weight: 700;
+}
+
+.home-champ-link.champ-xsauce {
+  background: #fff7e7;
+  border-color: #f1d08b;
+  color: #5a3b00;
+}
+
+.home-champ-link.champ-clm {
+  background: #faf4ff;
+  border-color: #dbc7f1;
+  color: #43206b;
+}
+
+.home-champ-link.champ-madrid {
+  background: #fff1ee;
+  border-color: #e6b3ab;
+  color: #6f1d1b;
+}
+
+.home-champ-link.champ-guadalajara {
+  background: #eff9f0;
+  border-color: #bfdcc3;
+  color: #1f5133;
+}
+
+.home-upcoming-item {
+  align-items: center;
+}
+
+.home-upcoming-main {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  min-width: 0;
+}
+
+.home-upcoming-side {
+  text-align: right;
+  flex: 0 0 auto;
+}
+
+.home-upcoming-date {
+  font-weight: 700;
+  margin-bottom: 4px;
+}
+
+.home-upcoming-link {
+  text-decoration: none;
+  color: var(--accent);
+  font-weight: 700;
+}
+
+.home-inline-btn {
+  width: auto !important;
+}
+
+@media (max-width: 900px) {
+  .home-overview {
+    grid-template-columns: 1fr;
+  }
+
+  .home-stat-grid {
+    grid-template-columns: 1fr 1fr 1fr;
+  }
+}
+
+@media (max-width: 640px) {
+  .home-section-head,
+  .next-race-home-main,
+  .home-upcoming-item,
+  .home-upcoming-main {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+
+  .home-upcoming-side {
+    text-align: left;
+  }
+
+  .next-race-countdown {
+    width: 100%;
+    min-width: 0;
+  }
+
+  .home-stat-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .home-inline-btn {
+    width: 100% !important;
+  }
+}

@@ -503,88 +503,102 @@ function changeCalendarMonth(step) {
 
 function renderHome() {
   const nextRace = getNextRace();
-  const firstChamp = championships[0];
+  const upcomingRaces = sortRaces(getSchoolRaces()).filter(r => {
+    const d = parseDate(r.date);
+    return d && d >= getToday();
+  }).slice(0, 4);
+
   return `
-    <section class="page">
-      <div class="hero">
-        <section class="card hero-card">
-          <p class="muted-light">Escuela del club</p>
-          <h2>${escapeHtml(APP_NAME)}</h2>
-          <p class="muted-light">Solo carreras de escuelas, con inscripciones, guías técnicas y clasificaciones.</p>
-          <div class="card-actions">
-            <a class="btn btn-secondary" href="#/calendario">Ver calendario</a>
-            <a class="btn btn-secondary" href="#/campeonatos">Ver campeonatos</a>
+    <section class="page home-page">
+      <div class="home-overview">
+        <section class="card next-race-home-card">
+          <div class="home-section-head">
+            <div>
+              <h2 class="section-title">Próxima carrera de la escuela</h2>
+              <p class="section-subtitle">La siguiente cita del calendario escolar.</p>
+            </div>
+            ${nextRace ? renderChampionshipLogosByIds(getRaceChampionshipIds(nextRace), "md") : ""}
           </div>
-        </section>
-        <section class="card">
-          <h2>Próxima carrera de la escuela</h2>
           ${
             nextRace
               ? `
-                <h3>${renderOrderPrefix(getRaceOrder(nextRace))}${escapeHtml(nextRace.name)}</h3>
-                <p class="meta">${escapeHtml(formatDate(nextRace.date))} · ${escapeHtml(nextRace.location)} (${escapeHtml(nextRace.province)})</p>
-                <div class="countdown">${getDaysUntil(nextRace.date)} días</div>
-                <p class="small">hasta la próxima prueba</p>
-                ${renderChampionshipPills(nextRace)}
-                <div class="card-actions">
+                <div class="next-race-home-main">
+                  <div>
+                    <h3>${renderOrderPrefix(getRaceOrder(nextRace))}${escapeHtml(nextRace.name)}</h3>
+                    <p class="meta">${escapeHtml(formatDate(nextRace.date))} · ${escapeHtml(nextRace.location)} (${escapeHtml(nextRace.province)})</p>
+                  </div>
+                  <div class="next-race-countdown">
+                    <div class="countdown">${getDaysUntil(nextRace.date)} días</div>
+                    <p class="small">hasta la próxima prueba</p>
+                  </div>
+                </div>
+                <div class="card-actions home-actions-row">
                   <a class="btn btn-secondary" href="#/carrera/${nextRace.id}">Abrir detalle</a>
                   ${linkButton(nextRace.registrationUrl, "Inscripción")}
+                  <a class="btn btn-secondary" href="#/calendario">Calendario completo</a>
                 </div>
               `
               : `<div class="empty">No hay próxima carrera definida.</div>`
           }
         </section>
+
+        <section class="card home-summary-card">
+          <div class="home-section-head compact-head">
+            <div>
+              <h2 class="section-title">Resumen 2026</h2>
+              <p class="section-subtitle">Vista rápida del calendario de escuelas.</p>
+            </div>
+          </div>
+          <div class="stat-grid home-stat-grid">
+            <div class="stat stat-compact">
+              <span class="stat-label">Carreras</span>
+              <span class="stat-value">${getSchoolRaces().length}</span>
+            </div>
+            <div class="stat stat-compact">
+              <span class="stat-label">Próximas</span>
+              <span class="stat-value">${countUpcoming()}</span>
+            </div>
+            <div class="stat stat-compact">
+              <span class="stat-label">Clasificaciones</span>
+              <span class="stat-value">${countPastWithResults()}</span>
+            </div>
+          </div>
+          <div class="home-champ-links">
+            ${championships.map(champ => `
+              <a class="home-champ-link ${getChampionshipColorClass(champ.id)}" href="#/campeonato/${champ.id}" title="${escapeHtml(champ.name)}">
+                ${renderChampionshipLogosByIds([champ.id], "sm")}
+                <span>${escapeHtml(champ.name)}</span>
+              </a>
+            `).join("")}
+          </div>
+        </section>
       </div>
 
-      <section class="stat-grid">
-        <div class="stat">
-          <span class="stat-label">Total de carreras de escuela</span>
-          <span class="stat-value">${getSchoolRaces().length}</span>
-        </div>
-        <div class="stat">
-          <span class="stat-label">Próximas pruebas</span>
-          <span class="stat-value">${countUpcoming()}</span>
-        </div>
-        <div class="stat">
-          <span class="stat-label">Clasificaciones publicadas</span>
-          <span class="stat-value">${countPastWithResults()}</span>
-        </div>
-      </section>
-
-      <section class="quick-grid">
-        <div class="card">
-          <h2 class="section-title">Accesos rápidos</h2>
-          <p class="section-subtitle">Consulta en segundos la información útil para la escuela.</p>
-          <div class="card-actions" style="margin-top:14px">
-            <a class="btn btn-primary" href="#/calendario">Calendario</a>
-            <a class="btn btn-secondary" href="#/campeonatos">Campeonatos</a>
+      <section class="card home-upcoming-card">
+        <div class="home-section-head">
+          <div>
+            <h2 class="section-title">Siguientes pruebas</h2>
+            <p class="section-subtitle">Próximas carreras del calendario escolar.</p>
           </div>
+          <a class="btn btn-secondary home-inline-btn" href="#/campeonatos">Ver campeonatos</a>
         </div>
-        <div class="card">
-          <h2 class="section-title">Siguientes pruebas</h2>
-          <ul class="list-clean">
-            ${sortRaces(getSchoolRaces()).filter(r => {
-              const d = parseDate(r.date);
-              return d && d >= getToday();
-            }).slice(0,3).map(r => `
-              <li class="list-item">
+        <ul class="list-clean home-upcoming-list">
+          ${upcomingRaces.map(r => `
+            <li class="list-item home-upcoming-item">
+              <div class="home-upcoming-main">
+                ${renderChampionshipLogosByIds(getRaceChampionshipIds(r), "sm")}
                 <div>
                   <strong>${getRaceOrder(r) ? `${getRaceOrder(r)}º ` : ""}${escapeHtml(r.name)}</strong><br>
                   <span class="small">${escapeHtml(r.location)} (${escapeHtml(r.province)})</span>
                 </div>
-                <div>${escapeHtml(formatDate(r.date))}</div>
-              </li>
-            `).join("") || `<li class="empty">No hay pruebas futuras.</li>`}
-          </ul>
-        </div>
-      </section>
-
-      <section class="card">
-        <h2 class="section-title">Campeonato destacado</h2>
-        <p class="section-subtitle">La app está filtrada para mostrar solo carreras de escuelas.</p>
-        <div class="card-actions" style="margin-top:14px">
-          <a class="btn btn-primary" href="#/campeonato/${firstChamp.id}">${escapeHtml(firstChamp.name)}</a>
-        </div>
+              </div>
+              <div class="home-upcoming-side">
+                <div class="home-upcoming-date">${escapeHtml(formatDate(r.date))}</div>
+                <a class="small home-upcoming-link" href="#/carrera/${r.id}">Ver detalle</a>
+              </div>
+            </li>
+          `).join("") || `<li class="empty">No hay pruebas futuras.</li>`}
+        </ul>
       </section>
     </section>
   `;
