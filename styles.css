@@ -1241,7 +1241,7 @@ button {
 
 
 
-.champ-guadalajara { background:#166534; color:#fff; }
+.champ-guadalajara { background:#7dbb88; color:#1f5133; }
 .champ-single-guadalajara { border-top:4px solid #166534; }
 .badge-nonfed { background:#dcfce7; color:#166534; border-color:#86efac; }
 .order-medal {
@@ -1530,3 +1530,42 @@ button {
     padding: 2px 5px;
   }
 }
+
+
+/* Ajustes de contraste en tarjetas de campeonatos */
+.championship-card.champ-xsauce h2 { color: #5a3b00; }
+.championship-card.champ-clm h2 { color: #43206b; }
+.championship-card.champ-madrid h2 { color: #6f1d1b; }
+.championship-card.champ-guadalajara h2 { color: #1f5133; }
+
+.championship-detail-head .title-xsauce { color: #5a3b00; }
+.championship-detail-head .title-clm { color: #43206b; }
+.championship-detail-head .title-madrid { color: #6f1d1b; }
+.championship-detail-head .title-guadalajara { color: #1f5133; }
+
+/* Colores por campeonato en la rejilla mensual */
+.calendar-event.champ-single-guadalajara {
+  background: #eaf7eb;
+  border-left: 4px solid #4a9c62;
+}
+.calendar-event.champ-single-clm {
+  background: #f4ecff;
+  border-left: 4px solid #8b5bc7;
+}
+.calendar-event.champ-single-xsauce {
+  background: #fff4d6;
+  border-left: 4px solid #e3a021;
+}
+.calendar-event.champ-single-madrid {
+  background: #ffe9e6;
+  border-left: 4px solid #cd6558;
+}
+.calendar-event.champ-multi {
+  background: linear-gradient(135deg, #f4ecff 0%, #f4ecff 50%, #fff4d6 50%, #fff4d6 100%);
+  border-left: 4px solid #8b5bc7;
+}
+.calendar-event-title {
+  color: #1f2937;
+  font-weight: 700;
+}
+

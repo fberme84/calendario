@@ -182,6 +182,22 @@ function getChampionshipLogoPath(id) {
   return "";
 }
 
+function getChampionshipTitleColorClass(id) {
+  if (id === "x-sauce-series-2026") return "title-xsauce";
+  if (id === "copa-madrid-escuelas-2026") return "title-madrid";
+  if (id === "clm-xco-2026") return "title-clm";
+  if (id === "mtb-escolar-guadalajara-2026") return "title-guadalajara";
+  return "";
+}
+
+function championshipGeneralButton(champ, variant = "secondary") {
+  if (!champ) return "";
+  if (champ.generalClassificationUrl) {
+    return linkButton(champ.generalClassificationUrl, "Clasificación general", variant);
+  }
+  return `<span class="btn btn-disabled" aria-disabled="true" title="Aún no disponible">Clasificación general próximamente</span>`;
+}
+
 function renderChampionshipLogosByIds(ids, size = "sm") {
   const uniqueIds = [...new Set((ids || []).filter(Boolean))];
   if (!uniqueIds.length) return "";
@@ -341,7 +357,7 @@ function renderRaceCard(race, compact = false, contextChampionshipId = null) {
         <summary class="race-summary">
           <div class="race-summary-main">
             <div class="race-summary-head">
-              <h3>${renderOrderMedal(order)}${escapeHtml(race.name)}</h3>
+              <h3>${renderOrderPrefix(order)}${escapeHtml(race.name)}</h3>
               ${renderChampionshipLogosByIds(displayIds, "sm")}
             </div>
             <p class="race-summary-date">${escapeHtml(formatDate(race.date))}</p>
@@ -625,8 +641,8 @@ function renderChampionships() {
         <div class="championship-card-head">
           ${renderChampionshipLogosByIds([champ.id], "md")}
           <div>
-            <h2>${escapeHtml(champ.name)}</h2>
-              </div>
+            <h2 class="${getChampionshipTitleColorClass(champ.id)}">${escapeHtml(champ.name)}</h2>
+          </div>
         </div>
         <div class="info-grid">
           <div class="info-box">
@@ -640,6 +656,7 @@ function renderChampionships() {
         </div>
         <div class="card-actions" style="margin-top:14px">
           <a class="btn btn-primary" href="#/campeonato/${champ.id}">Ver campeonato</a>
+          ${championshipGeneralButton(champ)}
         </div>
       </article>
     `;
@@ -665,11 +682,14 @@ function renderChampionshipDetail(championshipId) {
         <div class="championship-detail-head">
           ${renderChampionshipLogosByIds([champ.id], "lg")}
           <div>
-            <h2>${escapeHtml(champ.name)}</h2>
+            <h2 class="${getChampionshipTitleColorClass(champ.id)}">${escapeHtml(champ.name)}</h2>
             <p class="meta">Temporada ${champ.season} · ${champRaces.length} carreras de escuela</p>
           </div>
         </div>
         <p class="small">${escapeHtml(champ.description || "")}</p>
+        <div class="card-actions" style="margin-top:16px">
+          ${championshipGeneralButton(champ)}
+        </div>
       </div>
       <div class="race-grid">
         ${champRaces.map(r => renderRaceCard(r, true, champ.id)).join("")}
