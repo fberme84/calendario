@@ -198,6 +198,7 @@ function getChampionshipColorClass(id) {
   if (id === "copa-madrid-escuelas-2026") return "champ-madrid";
   if (id === "clm-xco-2026") return "champ-clm";
   if (id === "mtb-escolar-guadalajara-2026") return "champ-guadalajara";
+  if (id === "mtb-racing-cup-2026") return "champ-racingcup";
   return "";
 }
 
@@ -207,6 +208,7 @@ function getChampionshipLogoPath(id) {
   if (id === "copa-madrid-escuelas-2026") return "img/logo_madrid.png";
   if (id === "clm-xco-2026") return "img/logo_clm.png";
   if (id === "mtb-escolar-guadalajara-2026") return "img/logo_guada.png";
+  if (id === "mtb-racing-cup-2026") return "img/logo_mtb_racing_cup.png";
   return "";
 }
 
@@ -215,14 +217,14 @@ function getChampionshipTitleColorClass(id) {
   if (id === "copa-madrid-escuelas-2026") return "title-madrid";
   if (id === "clm-xco-2026") return "title-clm";
   if (id === "mtb-escolar-guadalajara-2026") return "title-guadalajara";
+  if (id === "mtb-racing-cup-2026") return "title-racingcup";
   return "";
 }
 
 function championshipGeneralButton(champ, variant = "secondary") {
-  if (!champ) return "";
-  if (champ.generalClassificationUrl) {
-    return linkButton(champ.generalClassificationUrl, "Clasificación general", variant);
-  }
+  if (!champ || !champ.generalClassificationUrl) return "";
+  return linkButton(champ.generalClassificationUrl, "Clasificación general", variant);
+}
   return `<span class="btn btn-disabled" aria-disabled="true" title="Aún no disponible">Clasificación general próximamente</span>`;
 }
 
@@ -248,6 +250,7 @@ function getRaceCardClass(race, contextChampionshipId = null) {
   if (ids[0] === "copa-madrid-escuelas-2026") return "champ-single-madrid";
   if (ids[0] === "clm-xco-2026") return "champ-single-clm";
   if (ids[0] === "mtb-escolar-guadalajara-2026") return "champ-single-guadalajara";
+  if (ids[0] === "mtb-racing-cup-2026") return "champ-single-racingcup";
   return "";
 }
 

@@ -27,9 +27,33 @@
       "season": 2026,
       "description": "Circuito escolar no federado e independiente de las federaciones autonómicas.",
       "generalClassificationUrl": "https://aciclismoinfantil.blogspot.com/"
+    },
+    {
+      "id": "mtb-racing-cup-2026",
+      "name": "MTB Racing Cup 2026",
+      "season": 2026,
+      "description": "Nuevo campeonato federado con pruebas en Arroyomolinos, Los Molinos y Ruta del Agua.",
+      "generalClassificationUrl": ""
     }
   ],
   "races": [
+    {
+      "id": "quintanar-2026",
+      "championshipIds": [
+        "clm-xco-2026"
+      ],
+      "categoryType": "mixta",
+      "name": "Quintanar del Rey · Escuelas + XCO",
+      "date": "",
+      "location": "Quintanar del Rey",
+      "province": "Cuenca",
+      "organizer": "",
+      "registrationUrl": "",
+      "technicalGuideUrl": "",
+      "documentsUrl": "",
+      "notes": "Fecha y enlaces pendientes.",
+      "resultUrl": ""
+    },
     {
       "id": "illescas-2026",
       "championshipIds": [
@@ -209,18 +233,19 @@
       "id": "arroyomolinos-2026",
       "championshipIds": [
         "x-sauce-series-2026",
-        "copa-madrid-escuelas-2026"
+        "copa-madrid-escuelas-2026",
+        "mtb-racing-cup-2026"
       ],
       "categoryType": "escuelas",
       "name": "Arroyomolinos · Escuelas",
       "date": "2026-05-10",
       "location": "Arroyomolinos",
       "province": "Madrid",
-      "organizer": "",
+      "organizer": "Sportpla Kids Arroyomolinos C.D.E.",
       "registrationUrl": "",
       "technicalGuideUrl": "",
       "documentsUrl": "",
-      "notes": "Figura en la Copa de Madrid Escuelas, pero no está localizada la ficha exacta de 2026.",
+      "notes": "Prueba federada incluida en Copa de Madrid y también en MTB Racing Cup.",
       "resultUrl": ""
     },
     {
@@ -238,6 +263,40 @@
       "technicalGuideUrl": "",
       "documentsUrl": "",
       "notes": "Pendiente de publicación de la ficha exacta.",
+      "resultUrl": ""
+    },
+    {
+      "id": "los-molinos-2026",
+      "championshipIds": [
+        "mtb-racing-cup-2026"
+      ],
+      "categoryType": "escuelas",
+      "name": "Los Molinos · MTB Racing Cup",
+      "date": "2026-05-30",
+      "location": "Los Molinos",
+      "province": "Madrid",
+      "organizer": "Teams Bikers C.D.E.",
+      "registrationUrl": "",
+      "technicalGuideUrl": "",
+      "documentsUrl": "",
+      "notes": "Prueba federada del calendario FMC: MTB Racing Cup Escuelas - III Trofeo MTB Los Molinos.",
+      "resultUrl": ""
+    },
+    {
+      "id": "ruta-del-agua-2026",
+      "championshipIds": [
+        "mtb-racing-cup-2026"
+      ],
+      "categoryType": "escuelas",
+      "name": "Ruta del Agua · MTB Racing Cup",
+      "date": "2026-06-07",
+      "location": "Torrelaguna",
+      "province": "Madrid",
+      "organizer": "Multideporte Madrid C.D.E.",
+      "registrationUrl": "",
+      "technicalGuideUrl": "",
+      "documentsUrl": "",
+      "notes": "Prueba federada cargada dentro de MTB Racing Cup según la planificación indicada para el campeonato.",
       "resultUrl": ""
     },
     {
@@ -275,24 +334,7 @@
       "documentsUrl": "",
       "notes": "Pendiente de publicación oficial de la ficha.",
       "resultUrl": ""
-    },
-    {
-      "id": "quintanar-2026",
-      "championshipIds": [
-        "clm-xco-2026"
-      ],
-      "categoryType": "mixta",
-      "name": "Quintanar del Rey · Escuelas + XCO",
-      "date": "",
-      "location": "Quintanar del Rey",
-      "province": "Cuenca",
-      "organizer": "",
-      "registrationUrl": "",
-      "technicalGuideUrl": "",
-      "documentsUrl": "",
-      "notes": "Fecha y enlaces pendientes.",
-      "resultUrl": ""
     }
   ],
-  "lastUpdatedUtc": "2026-03-19T12:45:00Z"
+  "lastUpdatedUtc": "2026-03-24T07:15:00Z"
 }

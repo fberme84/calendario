@@ -1787,3 +1787,31 @@ button {
     width: 100% !important;
   }
 }
+
+
+/* MTB Racing Cup */
+.champ-racingcup { background:#ffe9dc; color:#7a2f00; }
+
+.race-card.champ-single-racingcup {
+  background: linear-gradient(135deg, rgba(255,140,66,0.16), rgba(255,255,255,0.96));
+  border-color: rgba(232,114,37,0.38);
+}
+
+.championship-card.champ-racingcup {
+  background: #fff7f2;
+  border-color: #f1c7b1;
+}
+
+.championship-card.champ-racingcup h2 { color: #7a2f00; }
+.championship-detail-head .title-racingcup { color: #7a2f00; }
+
+.calendar-event.champ-single-racingcup {
+  background: #fff1e8;
+  border-left: 4px solid #e88233;
+}
+
+.home-champ-link.champ-racingcup {
+  background: #fff4ed;
+  border-color: #efc1a6;
+  color: #7a2f00;
+}
