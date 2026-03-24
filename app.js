@@ -6,7 +6,7 @@ let currentCalendarMonth = "";
 let lastUpdatedUtc = "";
 let ccMejoradaRidersByCategory = {};
 let dataLoaded = false;
-const APP_VERSION = window.APP_VERSION || "20260324-1";
+const APP_VERSION = window.APP_VERSION || "20260324-3";
 
 const monthNames = [
   "Todos", "Enero", "Febrero", "Marzo", "Abril", "Mayo", "Junio",
@@ -52,14 +52,27 @@ function getCategoryLabel(categoryKey) {
   return labels[categoryKey] || categoryKey;
 }
 
-function isMejoradaRider(name, categoryKey) {
-  const normalized = normalizeText(name);
+function tokenizeName(value) {
+  return normalizeText(value).split(" ").filter(Boolean);
+}
+
+function hasSameNameTokens(a, b) {
+  const ta = tokenizeName(a);
+  const tb = tokenizeName(b);
+  if (!ta.length || !tb.length) return false;
+  return ta.length === tb.length && ta.every(token => tb.includes(token));
+}
+
+function isMejoradaRider(name, categoryKey, club = "") {
+  const normalizedClub = normalizeText(club);
+  if (normalizedClub.includes("MEJORADA")) return true;
+
   const list = (ccMejoradaRidersByCategory && ccMejoradaRidersByCategory[categoryKey]) || [];
-  return list.map(normalizeText).includes(normalized);
+  return list.some(savedName => hasSameNameTokens(savedName, name));
 }
 
 function renderStandingsRow(item, categoryKey) {
-  const isMejorada = isMejoradaRider(item.name, categoryKey);
+  const isMejorada = isMejoradaRider(item.name, categoryKey, item.club);
   return `<div class="standing-row ${isMejorada ? "standing-mejorada" : ""}">
     <div class="standing-pos-wrap">
       ${isMejorada ? `<img class="standing-club-badge" src="${withAppVersion('img/logo_cc_mejorada_badge.svg')}" alt="CC Mejorada">` : `<span class="standing-club-badge placeholder"></span>`}
@@ -79,7 +92,7 @@ function renderGeneralCategoryBlock(categoryKey, items) {
     return `<details class="standings-category"><summary>${escapeHtml(getCategoryLabel(categoryKey))}</summary><div class="standings-empty">Sin clasificación disponible.</div></details>`;
   }
   const top5 = rows.slice(0, 5);
-  const mejoradaExtra = rows.filter(item => isMejoradaRider(item.name, categoryKey) && !top5.some(t => normalizeText(t.name) === normalizeText(item.name)));
+  const mejoradaExtra = rows.filter(item => isMejoradaRider(item.name, categoryKey, item.club) && !top5.some(t => normalizeText(t.name) === normalizeText(item.name)));
   return `
     <details class="standings-category">
       <summary>${escapeHtml(getCategoryLabel(categoryKey))}</summary>
