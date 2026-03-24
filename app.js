@@ -4,8 +4,8 @@ let races = [];
 const APP_NAME = "Calendario Escuela CC Mejorada";
 let currentCalendarMonth = "";
 let lastUpdatedUtc = "";
-let dataLoaded = false;
 let ccMejoradaRidersByCategory = {};
+let dataLoaded = false;
 const APP_VERSION = window.APP_VERSION || "20260324-1";
 
 const monthNames = [
@@ -25,6 +25,90 @@ async function loadData() {
   ccMejoradaRidersByCategory = data.ccMejoradaRidersByCategory || {};
   lastUpdatedUtc = data.lastUpdatedUtc || "";
   dataLoaded = true;
+}
+
+
+function normalizeText(value) {
+  return (value || "")
+    .toString()
+    .normalize("NFD")
+    .replace(/[̀-ͯ]/g, "")
+    .toUpperCase()
+    .replace(/\s+/g, " ")
+    .trim();
+}
+
+function getCategoryLabel(categoryKey) {
+  const labels = {
+    promesa_masculino: "Promesa masculino",
+    promesa_femenino: "Promesa femenino",
+    principiante_masculino: "Principiante masculino",
+    principiante_femenino: "Principiante femenino",
+    alevin_masculino: "Alevín masculino",
+    alevin_femenino: "Alevín femenino",
+    infantil_masculino: "Infantil masculino",
+    infantil_femenino: "Infantil femenino"
+  };
+  return labels[categoryKey] || categoryKey;
+}
+
+function isMejoradaRider(name, categoryKey) {
+  const normalized = normalizeText(name);
+  const list = (ccMejoradaRidersByCategory && ccMejoradaRidersByCategory[categoryKey]) || [];
+  return list.map(normalizeText).includes(normalized);
+}
+
+function renderStandingsRow(item, categoryKey) {
+  const isMejorada = isMejoradaRider(item.name, categoryKey);
+  return `<div class="standing-row ${isMejorada ? "standing-mejorada" : ""}">
+    <div class="standing-pos-wrap">
+      ${isMejorada ? `<img class="standing-club-badge" src="${withAppVersion('img/logo_cc_mejorada_badge.svg')}" alt="CC Mejorada">` : `<span class="standing-club-badge placeholder"></span>`}
+      <span class="standing-position">${escapeHtml(String(item.position || "—"))}</span>
+    </div>
+    <div class="standing-main">
+      <div class="standing-name">${escapeHtml(item.name || "")}</div>
+      <div class="standing-meta">${escapeHtml(item.club || "")}</div>
+    </div>
+    <div class="standing-points">${escapeHtml(String(item.points ?? ""))} pts</div>
+  </div>`;
+}
+
+function renderGeneralCategoryBlock(categoryKey, items) {
+  const rows = Array.isArray(items) ? items : [];
+  if (!rows.length) {
+    return `<details class="standings-category"><summary>${escapeHtml(getCategoryLabel(categoryKey))}</summary><div class="standings-empty">Sin clasificación disponible.</div></details>`;
+  }
+  const top5 = rows.slice(0, 5);
+  const mejoradaExtra = rows.filter(item => isMejoradaRider(item.name, categoryKey) && !top5.some(t => normalizeText(t.name) === normalizeText(item.name)));
+  return `
+    <details class="standings-category">
+      <summary>${escapeHtml(getCategoryLabel(categoryKey))}</summary>
+      <div class="standings-subtitle">Top 5 general</div>
+      <div class="standings-list">${top5.map(item => renderStandingsRow(item, categoryKey)).join("")}</div>
+      ${mejoradaExtra.length ? `<div class="standings-subtitle">CC Mejorada</div><div class="standings-list">${mejoradaExtra.map(item => renderStandingsRow(item, categoryKey)).join("")}</div>` : ``}
+    </details>
+  `;
+}
+
+function renderGeneralStandingsSection(champ) {
+  const standings = champ && champ.generalStandingsByCategory ? champ.generalStandingsByCategory : null;
+  const orderedKeys = [
+    'promesa_masculino','promesa_femenino','principiante_masculino','principiante_femenino',
+    'alevin_masculino','alevin_femenino','infantil_masculino','infantil_femenino'
+  ];
+  const hasAny = standings && orderedKeys.some(key => Array.isArray(standings[key]) && standings[key].length);
+  return `
+    <section class="card standings-card">
+      <div class="standings-head">
+        <div>
+          <h3>La marea amarilla en la clasificación</h3>
+          <p class="small">Resumen de la general del campeonato: Top 5 y puestos de CC Mejorada sin salir a la web externa.</p>
+        </div>
+        <div class="card-actions">${championshipGeneralButton(champ, 'secondary')}</div>
+      </div>
+      ${hasAny ? orderedKeys.map(key => renderGeneralCategoryBlock(key, standings[key] || [])).join('') : `<div class="standings-empty">Pendiente de cargar la general acumulada de este campeonato.</div>`}
+    </section>
+  `;
 }
 
 function renderLoading() {
@@ -74,132 +158,6 @@ function formatLastUpdated(dateString) {
     dateStyle: "medium",
     timeStyle: "short"
   }).format(date);
-}
-
-const CATEGORY_LABELS = {
-  promesa_masculino: "Promesa masculino",
-  promesa_femenino: "Promesa femenino",
-  principiante_masculino: "Principiante masculino",
-  principiante_femenino: "Principiante femenino",
-  alevin_masculino: "Alevín masculino",
-  alevin_femenino: "Alevín femenino",
-  infantil_masculino: "Infantil masculino",
-  infantil_femenino: "Infantil femenino"
-};
-
-function normalizeText(value) {
-  return String(value || "")
-    .normalize("NFD")
-    .replace(/[̀-ͯ]/g, "")
-    .toUpperCase()
-    .replace(/\s+/g, " ")
-    .trim();
-}
-
-function getCategoryLabel(key) {
-  return CATEGORY_LABELS[key] || key || "Categoría";
-}
-
-function getMejoradaNormalizedSet(categoryKey) {
-  return new Set((ccMejoradaRidersByCategory?.[categoryKey] || []).map(normalizeText));
-}
-
-function splitGeneralStandings(categoryResults, categoryKey) {
-  const sorted = Array.isArray(categoryResults) ? [...categoryResults].sort((a, b) => (a.puesto || 9999) - (b.puesto || 9999)) : [];
-  const top5 = sorted.slice(0, 5);
-  const mejoradaSet = getMejoradaNormalizedSet(categoryKey);
-  const mejoradaAll = sorted.filter(item => mejoradaSet.has(normalizeText(item.nombre)));
-  const top5Names = new Set(top5.map(item => normalizeText(item.nombre)));
-  const mejoradaOutsideTop5 = mejoradaAll.filter(item => !top5Names.has(normalizeText(item.nombre)));
-  return { top5, mejoradaAll, mejoradaOutsideTop5 };
-}
-
-function isMejoradaStandingItem(item, categoryKey) {
-  const mejoradaSet = getMejoradaNormalizedSet(categoryKey);
-  return mejoradaSet.has(normalizeText(item?.nombre));
-}
-
-function renderMejoradaMarker(show = false) {
-  return `
-    <span class="mejorada-marker${show ? ' is-visible' : ''}" aria-hidden="true">
-      <img src="${withAppVersion('img/escudo_cc_mejorada.png')}" alt="">
-      <span class="mejorada-marker-fallback">CCM</span>
-    </span>
-  `;
-}
-
-function renderStandingRows(items, categoryKey, compact = false) {
-  if (!items || !items.length) return `<div class="general-standings-empty">Sin datos.</div>`;
-  return `<ol class="general-standings-list${compact ? ' general-standings-list-compact' : ''}">${items.map(item => {
-    const isMejorada = isMejoradaStandingItem(item, categoryKey);
-    return `
-      <li class="standing-row${isMejorada ? ' standing-row-mejorada' : ''}">
-        ${renderMejoradaMarker(isMejorada)}
-        <span class="standing-position"><strong>${escapeHtml(String(item.puesto || '—'))}.</strong></span>
-        <span class="standing-text">
-          <span class="standing-main">${escapeHtml(item.nombre || 'Sin nombre')}</span>
-          <span class="standing-club">${escapeHtml(item.club || '')}</span>
-        </span>
-      </li>
-    `;
-  }).join('')}</ol>`;
-}
-
-function renderMejoradaRows(items) {
-  if (!items || !items.length) return `<div class="general-standings-empty">Sin corredores de CC Mejorada fuera del Top 5.</div>`;
-  return `<ul class="general-standings-mejorada">${items.map(item => `
-    <li class="standing-row standing-row-mejorada">
-      ${renderMejoradaMarker(true)}
-      <span class="standing-position"><strong>${escapeHtml(String(item.puesto || '—'))}.</strong></span>
-      <span class="standing-text">
-        <span class="standing-main">${escapeHtml(item.nombre || 'Sin nombre')}</span>
-        <span class="standing-club">${escapeHtml(item.club || 'CC Mejorada')}</span>
-      </span>
-    </li>
-  `).join('')}</ul>`;
-}
-
-function renderGeneralStandingsBlock(champ) {
-  const standings = champ?.generalStandingsByCategory || {};
-  const keys = Object.keys(standings).filter(key => Array.isArray(standings[key]) && standings[key].length);
-
-  const cards = keys.map(key => {
-    const summary = splitGeneralStandings(standings[key], key);
-    return `
-      <details class="general-standings-card general-standings-details">
-        <summary class="general-standings-summary">
-          <h3>${escapeHtml(getCategoryLabel(key))}</h3>
-          <div class="race-summary-toggle" aria-hidden="true">+</div>
-        </summary>
-        <div class="general-standings-body">
-          <div class="general-standings-subtitle">Top 5 general</div>
-          ${renderStandingRows(summary.top5, key, true)}
-          <div class="general-standings-subtitle">CC Mejorada</div>
-          ${renderMejoradaRows(summary.mejoradaOutsideTop5)}
-        </div>
-      </details>
-    `;
-  }).join('');
-
-  const empty = `
-    <div class="card empty">
-      Resumen de clasificación general pendiente de cargar.
-      ${champ?.generalClassificationUrl ? '<div style="margin-top:12px">' + championshipGeneralButton(champ) + '</div>' : ''}
-    </div>
-  `;
-
-  return `
-    <section class="general-standings-section">
-      <div class="section-head-inline standings-head-inline">
-        <div>
-          <h2 class="section-title">La marea roja en la clasificación</h2>
-          <p class="small">Top 5 de cada categoría y presencia de CC Mejorada sin salir de la app.</p>
-        </div>
-        ${champ?.generalClassificationUrl ? `<div class="section-head-actions">${championshipGeneralButton(champ, 'secondary')}</div>` : ''}
-      </div>
-      ${cards ? `<div class="general-standings-grid">${cards}</div>` : empty}
-    </section>
-  `;
 }
 
 function sortRaces(items) {
@@ -871,7 +829,7 @@ function renderChampionshipDetail(championshipId) {
       <div class="race-grid">
         ${champRaces.map(r => renderRaceCard(r, true, champ.id)).join("")}
       </div>
-      ${renderGeneralStandingsBlock(champ)}
+      ${renderGeneralStandingsSection(champ)}
     </section>
   `;
 }

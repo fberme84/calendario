@@ -1817,202 +1817,29 @@ button {
 }
 
 
-.general-standings-section {
-  margin: 22px 0 8px;
-}
-
-.section-head-inline {
-  display: flex;
-  justify-content: space-between;
-  align-items: flex-start;
-  gap: 16px;
-  margin-bottom: 12px;
-}
-
-.standings-head-inline {
-  margin-top: 8px;
-}
-
-.section-head-actions {
-  flex: 0 0 auto;
-}
-
-.general-standings-grid {
-  display: grid;
-  grid-template-columns: 1fr;
-  gap: 12px;
-}
-
-.general-standings-card {
-  background: #fff;
-  border: 1px solid #e6e8ec;
-  border-radius: 16px;
-  box-shadow: 0 8px 20px rgba(11, 31, 53, 0.05);
-  overflow: hidden;
-}
-
-.general-standings-details summary {
-  list-style: none;
-}
-
-.general-standings-details summary::-webkit-details-marker {
-  display: none;
-}
-
-.general-standings-summary {
-  display: flex;
-  align-items: center;
-  justify-content: space-between;
-  gap: 12px;
-  cursor: pointer;
-  padding: 14px 16px;
-}
-
-.general-standings-summary h3 {
-  margin: 0;
-  font-size: 1rem;
-}
-
-.general-standings-details[open] .race-summary-toggle {
-  transform: rotate(45deg);
-  background: rgba(220, 38, 38, 0.10);
-}
-
-.general-standings-body {
-  padding: 0 16px 16px;
-}
-
-.general-standings-subtitle {
-  font-size: 0.86rem;
-  font-weight: 700;
-  color: #516173;
-  margin: 12px 0 8px;
-}
-
-.general-standings-list,
-.general-standings-mejorada {
-  margin: 0;
-  padding: 0;
-  list-style: none;
-}
-
-.standing-row {
-  display: grid;
-  grid-template-columns: 28px 42px minmax(0, 1fr);
-  align-items: start;
-  gap: 10px;
-  margin-bottom: 7px;
-  padding: 8px 10px;
-  border-radius: 12px;
-}
-
-.standing-row-mejorada {
-  background: #fff6bf;
-  border: 1px solid #f2da63;
-}
-
-.mejorada-marker {
-  position: relative;
-  width: 28px;
-  height: 28px;
-  display: inline-flex;
-  align-items: center;
-  justify-content: center;
-  opacity: 0;
-}
-
-.mejorada-marker.is-visible {
-  opacity: 1;
-}
-
-.mejorada-marker img,
-.mejorada-marker-fallback {
-  width: 24px;
-  height: 24px;
-  border-radius: 999px;
-}
-
-.mejorada-marker img {
-  display: block;
-  object-fit: cover;
-  background: #fff;
-  border: 1px solid rgba(15, 23, 42, 0.08);
-}
-
-.mejorada-marker img[src=""],
-.mejorada-marker img:not([src]) {
-  display: none;
-}
-
-.mejorada-marker-fallback {
-  display: inline-flex;
-  align-items: center;
-  justify-content: center;
-  background: linear-gradient(135deg, #ef4444, #b91c1c);
-  color: #fff7a8;
-  font-size: 0.52rem;
-  font-weight: 900;
-  letter-spacing: 0.02em;
-  position: absolute;
-}
-
-.mejorada-marker img + .mejorada-marker-fallback {
-  display: none;
-}
-
-.mejorada-marker img[onerror] {
-  position: relative;
-}
-
-.standing-position {
-  display: inline-flex;
-  align-items: center;
-  min-height: 24px;
-  font-variant-numeric: tabular-nums;
-}
-
-.standing-text {
-  min-width: 0;
-  display: flex;
-  flex-direction: column;
-  gap: 2px;
-}
-
-.standing-main {
-  line-height: 1.25;
-  font-weight: 700;
-}
-
-.standing-club {
-  font-size: 0.82rem;
-  color: #667789;
-}
-
-.general-standings-empty {
-  color: #667789;
-  font-size: 0.92rem;
-  padding: 6px 2px;
-}
-
-@media (max-width: 640px) {
-  .section-head-inline {
-    flex-direction: column;
-  }
-
-  .section-head-actions {
-    width: 100%;
-  }
-
-  .standing-row {
-    grid-template-columns: 24px 38px minmax(0, 1fr);
-    gap: 8px;
-    padding: 8px;
-  }
-
-  .mejorada-marker,
-  .mejorada-marker img,
-  .mejorada-marker-fallback {
-    width: 20px;
-    height: 20px;
-  }
+.standings-card { margin-top: 18px; }
+.standings-head { display:flex; gap:12px; justify-content:space-between; align-items:flex-start; margin-bottom:10px; }
+.standings-head h3 { margin:0 0 4px; }
+.standings-category { border:1px solid rgba(0,0,0,.08); border-radius:14px; background:#fff; margin-top:12px; overflow:hidden; }
+.standings-category summary { cursor:pointer; padding:14px 16px; font-weight:700; list-style:none; }
+.standings-category summary::-webkit-details-marker { display:none; }
+.standings-category summary::after { content:'+'; float:right; font-size:18px; line-height:1; }
+.standings-category[open] summary::after { content:'−'; }
+.standings-subtitle { padding:0 16px; margin:4px 0 8px; font-size:.88rem; font-weight:700; color:#6b7280; }
+.standings-list { padding:0 10px 12px; }
+.standing-row { display:grid; grid-template-columns: 92px 1fr auto; gap:10px; align-items:center; padding:10px 8px; border-radius:12px; }
+.standing-row + .standing-row { margin-top:4px; }
+.standing-mejorada { background:#fff5bf; }
+.standing-pos-wrap { display:flex; align-items:center; gap:8px; min-width:0; }
+.standing-club-badge { width:20px; height:20px; flex:0 0 20px; object-fit:contain; }
+.standing-club-badge.placeholder { visibility:hidden; }
+.standing-position { width:40px; text-align:right; font-weight:800; font-variant-numeric: tabular-nums; }
+.standing-name { font-weight:700; }
+.standing-meta { font-size:.86rem; color:#6b7280; }
+.standing-points { font-weight:800; white-space:nowrap; font-variant-numeric: tabular-nums; }
+.standings-empty { padding:12px 16px; color:#6b7280; }
+@media (max-width: 680px) {
+  .standings-head { flex-direction:column; }
+  .standing-row { grid-template-columns: 84px 1fr; }
+  .standing-points { grid-column: 2; justify-self:start; font-size:.92rem; }
 }
