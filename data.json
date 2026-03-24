@@ -7,15 +7,322 @@
       "description": "Pruebas del campeonato de Castilla-La Mancha que incluyen escuelas.",
       "generalClassificationUrl": "https://yosoyciclista.com/index.php/es/smartweb/seccion/clasificacionescircuito/castillalamancha/2026/Copa_BTT_XC_CLM_Escuelas/6274-Principiantes",
       "generalStandingsByCategory": {
-        "promesa_masculino": [],
-        "promesa_femenino": [],
-        "principiante_masculino": [],
-        "principiante_femenino": [],
-        "alevin_masculino": [],
-        "alevin_femenino": [],
-        "infantil_masculino": [],
-        "infantil_femenino": []
-      }
+        "promesa_masculino": [
+          {
+            "position": 1,
+            "name": "Perez Sanchez Angel",
+            "club": "SPORTPLA KIDS ARROYOMOLINOS CD",
+            "points": 200
+          },
+          {
+            "position": 2,
+            "name": "Gonzalez Martinez Marcos",
+            "club": "ACADEMIA CICLISTA C.D.E.",
+            "points": 175
+          },
+          {
+            "position": 3,
+            "name": "Garcia Martin Noe",
+            "club": "X-SAUCE C.D.E.",
+            "points": 155
+          },
+          {
+            "position": 4,
+            "name": "Sanz Alcober Lucas",
+            "club": "ALCARREÑA DE CICLISMO",
+            "points": 140
+          },
+          {
+            "position": 5,
+            "name": "Garcia Briso-Montiano Aritz",
+            "club": "MTB COLMENAR VIEJO C.D.E.",
+            "points": 128
+          },
+          {
+            "position": 10,
+            "name": "Canuelo Vazquez Samuel",
+            "club": "MEJORADA C.C.",
+            "points": 88
+          }
+        ],
+        "promesa_femenino": [
+          {
+            "position": 1,
+            "name": "Retamosa Reviejo Helena",
+            "club": "SPORTPLA KIDS ARROYOMOLINOS CD",
+            "points": 200
+          },
+          {
+            "position": 2,
+            "name": "Bote Arias Ingrid",
+            "club": "ESCUELA DE CICLISMO AZUQUECA E",
+            "points": 175
+          },
+          {
+            "position": 3,
+            "name": "Maldonado Toro Julia",
+            "club": "SPORTPLA KIDS ARROYOMOLINOS CD",
+            "points": 155
+          },
+          {
+            "position": 4,
+            "name": "Valiente Grande Sofia",
+            "club": "ACADEMIA CICLISTA C.D.E.",
+            "points": 140
+          },
+          {
+            "position": 5,
+            "name": "De La Fuente Cercas Claudia",
+            "club": "VALDEIGLESIAS C.C.",
+            "points": 128
+          }
+        ],
+        "principiante_masculino": [
+          {
+            "position": 1,
+            "name": "De La Barrera Guindel Marc",
+            "club": "MEJORADA C.C.",
+            "points": 200
+          },
+          {
+            "position": 2,
+            "name": "Lozano Alvarez Mateo",
+            "club": "TR3CE BIKE CDE",
+            "points": 175
+          },
+          {
+            "position": 3,
+            "name": "Gamo Izquierdo David",
+            "club": "MTB COLMENAR VIEJO C.D.E.",
+            "points": 155
+          },
+          {
+            "position": 4,
+            "name": "Bermejo Sanchez Pablo",
+            "club": "MEJORADA C.C.",
+            "points": 140
+          },
+          {
+            "position": 5,
+            "name": "Rodriguez Barquero Oscar",
+            "club": "CACERES BIKE, E.C",
+            "points": 128
+          },
+          {
+            "position": 27,
+            "name": "Escribano Arinero Manuel",
+            "club": "MEJORADA C.C.",
+            "points": 16
+          }
+        ],
+        "principiante_femenino": [
+          {
+            "position": 1,
+            "name": "Porras Merida Celia",
+            "club": "MEJORADA C.C.",
+            "points": 200
+          },
+          {
+            "position": 2,
+            "name": "Blanco San Inocente Vera",
+            "club": "SPORTPLA KIDS ARROYOMOLINOS CD",
+            "points": 175
+          },
+          {
+            "position": 3,
+            "name": "Alcocer Llamas Vega",
+            "club": "SPORTPLA KIDS ARROYOMOLINOS CD",
+            "points": 155
+          },
+          {
+            "position": 4,
+            "name": "Balmaceda Blanco Violeta",
+            "club": "SAN SEBASTIAN DE LOS REYES U.C",
+            "points": 140
+          },
+          {
+            "position": 5,
+            "name": "Perez Del Val Sofia",
+            "club": "SPORTPLA KIDS ARROYOMOLINOS CD",
+            "points": 128
+          }
+        ],
+        "alevin_masculino": [
+          {
+            "position": 1,
+            "name": "Gonzalez Martinez Hector",
+            "club": "ACADEMIA CICLISTA C.D.E.",
+            "points": 200
+          },
+          {
+            "position": 2,
+            "name": "Alvarez Gil Asier",
+            "club": "SAN SEBASTIAN DE LOS REYES U.C",
+            "points": 175
+          },
+          {
+            "position": 3,
+            "name": "Garcia Del Rio Hugo",
+            "club": "MEJORADA C.C.",
+            "points": 155
+          },
+          {
+            "position": 4,
+            "name": "Escalante Moron Ivan",
+            "club": "MEJORADA C.C.",
+            "points": 140
+          },
+          {
+            "position": 5,
+            "name": "Korzynnikov Shypak Valentin",
+            "club": "SAN SEBASTIAN DE LOS REYES U.C",
+            "points": 128
+          },
+          {
+            "position": 36,
+            "name": "Sanchez Sanchez Guillermo",
+            "club": "MEJORADA C.C.",
+            "points": 10
+          }
+        ],
+        "alevin_femenino": [
+          {
+            "position": 1,
+            "name": "Aguilera Cuartango Adriana",
+            "club": "ACADEMIA CICLISTA C.D.E.",
+            "points": 200
+          },
+          {
+            "position": 2,
+            "name": "Hernandez Diaz Alejandra",
+            "club": "SPORTPLA KIDS ARROYOMOLINOS CD",
+            "points": 175
+          },
+          {
+            "position": 3,
+            "name": "Sanchez-Quiñones Riesco Valeria",
+            "club": "SPORTPLA KIDS ARROYOMOLINOS CD",
+            "points": 155
+          },
+          {
+            "position": 4,
+            "name": "Ciordia Noriego Noa",
+            "club": "ALCARREÑA DE CICLISMO",
+            "points": 140
+          },
+          {
+            "position": 5,
+            "name": "Torres Llerena Paula",
+            "club": "PEDALBIKES CDE",
+            "points": 128
+          },
+          {
+            "position": 6,
+            "name": "Garrido Sanchez Lia",
+            "club": "MEJORADA C.C.",
+            "points": 120
+          }
+        ],
+        "infantil_masculino": [
+          {
+            "position": 1,
+            "name": "Saez Caballero Daniel",
+            "club": "ACADEMIA CICLISTA C.D.E.",
+            "points": 200
+          },
+          {
+            "position": 2,
+            "name": "Rey Pelayo Gonzalo Maria",
+            "club": "MTB ILARCURIS, C.D.E.",
+            "points": 175
+          },
+          {
+            "position": 3,
+            "name": "Torres Llerena Diego",
+            "club": "PEDALBIKES CDE",
+            "points": 155
+          },
+          {
+            "position": 4,
+            "name": "Diaz Lopez Daniel",
+            "club": "TR3CE BIKE CDE",
+            "points": 140
+          },
+          {
+            "position": 5,
+            "name": "Crespo Aguado Adrian",
+            "club": "MTB COLMENAR VIEJO C.D.E.",
+            "points": 128
+          },
+          {
+            "position": 14,
+            "name": "Porras Merida Asier",
+            "club": "MEJORADA C.C.",
+            "points": 64
+          },
+          {
+            "position": 22,
+            "name": "Hervas Estringana Miguel",
+            "club": "MEJORADA C.C.",
+            "points": 34
+          },
+          {
+            "position": 30,
+            "name": "Garcia Amaya Pablo",
+            "club": "MEJORADA C.C.",
+            "points": 12
+          },
+          {
+            "position": 31,
+            "name": "Torres Sancho Nacho",
+            "club": "MEJORADA C.C.",
+            "points": 10
+          }
+        ],
+        "infantil_femenino": [
+          {
+            "position": 1,
+            "name": "Martinez Perales Candela",
+            "club": "SAN SEBASTIAN DE LOS REYES U.C",
+            "points": 200
+          },
+          {
+            "position": 2,
+            "name": "Garzon Ranero Eva",
+            "club": "TR3CE BIKE CDE",
+            "points": 175
+          },
+          {
+            "position": 3,
+            "name": "Garcia Artiles Daida",
+            "club": "D3.4-EKIPARTE",
+            "points": 155
+          },
+          {
+            "position": 4,
+            "name": "Conde Capitan Vera",
+            "club": "MTB ILARCURIS, C.D.E.",
+            "points": 140
+          },
+          {
+            "position": 5,
+            "name": "Diaz Moreno Naia",
+            "club": "DAIMIEL CLUB CICLISTA",
+            "points": 128
+          }
+        ]
+      },
+      "generalClassificationUrlsByCategory": {
+        "alevin_masculino": "https://yosoyciclista.com/index.php/es/smartweb/seccion/clasificacionescircuito/castillalamancha/2026/Copa_BTT_XC_CLM_Escuelas/6249-Alevin",
+        "alevin_femenino": "https://yosoyciclista.com/index.php/es/smartweb/seccion/clasificacionescircuito/castillalamancha/2026/Copa_BTT_XC_CLM_Escuelas/6250-Alevin-Fem",
+        "infantil_masculino": "https://yosoyciclista.com/index.php/es/smartweb/seccion/clasificacionescircuito/castillalamancha/2026/Copa_BTT_XC_CLM_Escuelas/6261-Infantil",
+        "infantil_femenino": "https://yosoyciclista.com/index.php/es/smartweb/seccion/clasificacionescircuito/castillalamancha/2026/Copa_BTT_XC_CLM_Escuelas/6262-Infantil-Fem",
+        "principiante_masculino": "https://yosoyciclista.com/index.php/es/smartweb/seccion/clasificacionescircuito/castillalamancha/2026/Copa_BTT_XC_CLM_Escuelas/6274-Principiantes",
+        "principiante_femenino": "https://yosoyciclista.com/index.php/es/smartweb/seccion/clasificacionescircuito/castillalamancha/2026/Copa_BTT_XC_CLM_Escuelas/6275-Principiantes-Fem",
+        "promesa_masculino": "https://yosoyciclista.com/index.php/es/smartweb/seccion/clasificacionescircuito/castillalamancha/2026/Copa_BTT_XC_CLM_Escuelas/6276-Promesas",
+        "promesa_femenino": "https://yosoyciclista.com/index.php/es/smartweb/seccion/clasificacionescircuito/castillalamancha/2026/Copa_BTT_XC_CLM_Escuelas/6277-Promesas-Fem"
+      },
+      "generalClassificationSourceType": "yosoyciclista-circuito"
     },
     {
       "id": "x-sauce-series-2026",
@@ -2048,12 +2355,6 @@
             "points": 38
           },
           {
-            "position": 57,
-            "name": "Fernandez Martin Aran",
-            "club": "INDEPENDIENTE",
-            "points": 36
-          },
-          {
             "position": 58,
             "name": "Gonzalez Rodriguez Oliver",
             "club": "MTB COLMENAR VIEJO C.D.E.",
@@ -2250,7 +2551,7 @@
         ]
       },
       "generalClassificationSourceType": "clax",
-      "generalClassificationDataUrl": "https://cronosportradio.es/RESULTADOS26/GENERALES/arrastre kids.clax"
+      "generalClassificationDataUrl": "https://cronosportradio.es/RESULTADOS26/GENERALES/arrastre%20kids.clax"
     },
     {
       "id": "copa-madrid-escuelas-2026",
