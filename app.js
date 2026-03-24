@@ -225,8 +225,6 @@ function championshipGeneralButton(champ, variant = "secondary") {
   if (!champ || !champ.generalClassificationUrl) return "";
   return linkButton(champ.generalClassificationUrl, "Clasificación general", variant);
 }
-  return `<span class="btn btn-disabled" aria-disabled="true" title="Aún no disponible">Clasificación general próximamente</span>`;
-}
 
 function renderChampionshipLogosByIds(ids, size = "sm") {
   const uniqueIds = [...new Set((ids || []).filter(Boolean))];
