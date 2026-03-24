@@ -75,7 +75,7 @@ function renderStandingsRow(item, categoryKey) {
   const isMejorada = isMejoradaRider(item.name, categoryKey, item.club);
   return `<div class="standing-row ${isMejorada ? "standing-mejorada" : ""}">
     <div class="standing-pos-wrap">
-      ${isMejorada ? `<img class="standing-club-badge" src="${withAppVersion('img/logo_cc_mejorada_badge.svg')}" alt="CC Mejorada">` : `<span class="standing-club-badge placeholder"></span>`}
+      ${isMejorada ? `<img class="standing-club-badge" src="${withAppVersion('img/escudo_cc_mejorada.png')}" alt="CC Mejorada">` : `<span class="standing-club-badge placeholder"></span>`}
       <span class="standing-position">${escapeHtml(String(item.position || "—"))}</span>
     </div>
     <div class="standing-main">

@@ -1830,10 +1830,10 @@ button {
 .standing-row { display:grid; grid-template-columns: 92px 1fr auto; gap:10px; align-items:center; padding:10px 8px; border-radius:12px; }
 .standing-row + .standing-row { margin-top:4px; }
 .standing-mejorada { background:#fff5bf; }
-.standing-pos-wrap { display:flex; align-items:center; gap:8px; min-width:0; }
-.standing-club-badge { width:20px; height:20px; flex:0 0 20px; object-fit:contain; }
-.standing-club-badge.placeholder { visibility:hidden; }
-.standing-position { width:40px; text-align:right; font-weight:800; font-variant-numeric: tabular-nums; }
+
+
+
+
 .standing-name { font-weight:700; }
 .standing-meta { font-size:.86rem; color:#6b7280; }
 .standing-points { font-weight:800; white-space:nowrap; font-variant-numeric: tabular-nums; }
@@ -1842,4 +1842,33 @@ button {
   .standings-head { flex-direction:column; }
   .standing-row { grid-template-columns: 84px 1fr; }
   .standing-points { grid-column: 2; justify-self:start; font-size:.92rem; }
+}
+
+
+.standing-pos-wrap {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  min-width: 68px;
+}
+
+.standing-club-badge {
+  width: 16px;
+  height: 16px;
+  object-fit: contain;
+  flex: 0 0 16px;
+  display: inline-block;
+}
+
+.standing-club-badge.placeholder {
+  width: 16px;
+  height: 16px;
+  flex: 0 0 16px;
+  display: inline-block;
+}
+
+.standing-position {
+  min-width: 28px;
+  display: inline-block;
+  text-align: right;
 }
