@@ -5,6 +5,7 @@ const APP_NAME = "Calendario Escuela CC Mejorada";
 let currentCalendarMonth = "";
 let lastUpdatedUtc = "";
 let dataLoaded = false;
+const APP_VERSION = window.APP_VERSION || "20260324-1";
 
 const monthNames = [
   "Todos", "Enero", "Febrero", "Marzo", "Abril", "Mayo", "Junio",
@@ -13,8 +14,7 @@ const monthNames = [
 
 
 async function loadData() {
-  const cacheBuster = new Date().toISOString().slice(0, 13);
-  const response = await fetch(`./data.json?v=${cacheBuster}`, { cache: "no-store" });
+  const response = await fetch(withAppVersion("./data.json"), { cache: "no-store" });
   if (!response.ok) {
     throw new Error(`No se pudo cargar data.json (${response.status})`);
   }
@@ -37,6 +37,12 @@ function renderLoadError(error) {
   if (app) {
     app.innerHTML = `<section class="page"><div class="card empty">No se pudieron cargar los datos. Revisa data.json.<br><span class="small">${escapeHtml(error?.message || "Error desconocido")}</span></div></section>`;
   }
+}
+
+function withAppVersion(path) {
+  if (!path) return "";
+  const separator = path.includes("?") ? "&" : "?";
+  return `${path}${separator}v=${encodeURIComponent(APP_VERSION)}`;
 }
 
 function parseDate(dateString) {
@@ -204,11 +210,11 @@ function getChampionshipColorClass(id) {
 
 
 function getChampionshipLogoPath(id) {
-  if (id === "x-sauce-series-2026") return "img/logo_xsauce.png";
-  if (id === "copa-madrid-escuelas-2026") return "img/logo_madrid.png";
-  if (id === "clm-xco-2026") return "img/logo_clm.png";
-  if (id === "mtb-escolar-guadalajara-2026") return "img/logo_guada.png";
-  if (id === "mtb-racing-cup-2026") return "img/logo_mtb_racing_cup.png";
+  if (id === "x-sauce-series-2026") return withAppVersion("img/logo_xsauce.png");
+  if (id === "copa-madrid-escuelas-2026") return withAppVersion("img/logo_madrid.png");
+  if (id === "clm-xco-2026") return withAppVersion("img/logo_clm.png");
+  if (id === "mtb-escolar-guadalajara-2026") return withAppVersion("img/logo_guada.png");
+  if (id === "mtb-racing-cup-2026") return withAppVersion("img/logo_mtb_racing_cup.png");
   return "";
 }
 
