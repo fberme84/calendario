@@ -35,6 +35,10 @@ DEFAULT_CATEGORY_KEYS = [
 ]
 MANUAL_STANDINGS_PATCHES = {
     "clm-xco-2026": {
+    "alevin_masculino": [
+        {"name": "Garcia Gonzalez Marcos", "club": "MEJORADA C.C.", "points": 54, "position": 41}
+    ],
+
         "infantil_masculino": [
             {"name": "Garcia Amaya Pablo", "club": "MEJORADA C.C.", "points": 12, "position": 30}
         ]
