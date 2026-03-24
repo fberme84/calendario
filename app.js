@@ -114,20 +114,48 @@ function splitGeneralStandings(categoryResults, categoryKey) {
   return { top5, mejoradaAll, mejoradaOutsideTop5 };
 }
 
-function renderStandingRows(items, compact = false) {
+function isMejoradaStandingItem(item, categoryKey) {
+  const mejoradaSet = getMejoradaNormalizedSet(categoryKey);
+  return mejoradaSet.has(normalizeText(item?.nombre));
+}
+
+function renderMejoradaMarker(show = false) {
+  return `
+    <span class="mejorada-marker${show ? ' is-visible' : ''}" aria-hidden="true">
+      <img src="${withAppVersion('img/escudo_cc_mejorada.png')}" alt="">
+      <span class="mejorada-marker-fallback">CCM</span>
+    </span>
+  `;
+}
+
+function renderStandingRows(items, categoryKey, compact = false) {
   if (!items || !items.length) return `<div class="general-standings-empty">Sin datos.</div>`;
-  return `<ol class="general-standings-list${compact ? ' general-standings-list-compact' : ''}">${items.map(item => `
-    <li>
-      <span class="standing-main"><strong>${escapeHtml(String(item.puesto || '—'))}.</strong> ${escapeHtml(item.nombre || 'Sin nombre')}</span>
-      <span class="standing-club">${escapeHtml(item.club || '')}</span>
-    </li>
-  `).join('')}</ol>`;
+  return `<ol class="general-standings-list${compact ? ' general-standings-list-compact' : ''}">${items.map(item => {
+    const isMejorada = isMejoradaStandingItem(item, categoryKey);
+    return `
+      <li class="standing-row${isMejorada ? ' standing-row-mejorada' : ''}">
+        ${renderMejoradaMarker(isMejorada)}
+        <span class="standing-position"><strong>${escapeHtml(String(item.puesto || '—'))}.</strong></span>
+        <span class="standing-text">
+          <span class="standing-main">${escapeHtml(item.nombre || 'Sin nombre')}</span>
+          <span class="standing-club">${escapeHtml(item.club || '')}</span>
+        </span>
+      </li>
+    `;
+  }).join('')}</ol>`;
 }
 
 function renderMejoradaRows(items) {
   if (!items || !items.length) return `<div class="general-standings-empty">Sin corredores de CC Mejorada fuera del Top 5.</div>`;
   return `<ul class="general-standings-mejorada">${items.map(item => `
-    <li><strong>${escapeHtml(String(item.puesto || '—'))}.</strong> ${escapeHtml(item.nombre || 'Sin nombre')}</li>
+    <li class="standing-row standing-row-mejorada">
+      ${renderMejoradaMarker(true)}
+      <span class="standing-position"><strong>${escapeHtml(String(item.puesto || '—'))}.</strong></span>
+      <span class="standing-text">
+        <span class="standing-main">${escapeHtml(item.nombre || 'Sin nombre')}</span>
+        <span class="standing-club">${escapeHtml(item.club || 'CC Mejorada')}</span>
+      </span>
+    </li>
   `).join('')}</ul>`;
 }
 
@@ -138,13 +166,18 @@ function renderGeneralStandingsBlock(champ) {
   const cards = keys.map(key => {
     const summary = splitGeneralStandings(standings[key], key);
     return `
-      <article class="general-standings-card">
-        <h3>${escapeHtml(getCategoryLabel(key))}</h3>
-        <div class="general-standings-subtitle">Top 5 general</div>
-        ${renderStandingRows(summary.top5, true)}
-        <div class="general-standings-subtitle">CC Mejorada</div>
-        ${renderMejoradaRows(summary.mejoradaOutsideTop5)}
-      </article>
+      <details class="general-standings-card general-standings-details">
+        <summary class="general-standings-summary">
+          <h3>${escapeHtml(getCategoryLabel(key))}</h3>
+          <div class="race-summary-toggle" aria-hidden="true">+</div>
+        </summary>
+        <div class="general-standings-body">
+          <div class="general-standings-subtitle">Top 5 general</div>
+          ${renderStandingRows(summary.top5, key, true)}
+          <div class="general-standings-subtitle">CC Mejorada</div>
+          ${renderMejoradaRows(summary.mejoradaOutsideTop5)}
+        </div>
+      </details>
     `;
   }).join('');
 
@@ -157,10 +190,10 @@ function renderGeneralStandingsBlock(champ) {
 
   return `
     <section class="general-standings-section">
-      <div class="section-head-inline">
+      <div class="section-head-inline standings-head-inline">
         <div>
-          <h2 class="section-title">Clasificación general del campeonato</h2>
-          <p class="small">Resumen automático: Top 5 de cada categoría y puestos de CC Mejorada fuera de ese Top 5.</p>
+          <h2 class="section-title">La marea roja en la clasificación</h2>
+          <p class="small">Top 5 de cada categoría y presencia de CC Mejorada sin salir de la app.</p>
         </div>
         ${champ?.generalClassificationUrl ? `<div class="section-head-actions">${championshipGeneralButton(champ, 'secondary')}</div>` : ''}
       </div>
@@ -835,10 +868,10 @@ function renderChampionshipDetail(championshipId) {
           ${championshipGeneralButton(champ)}
         </div>
       </div>
-      ${renderGeneralStandingsBlock(champ)}
       <div class="race-grid">
         ${champRaces.map(r => renderRaceCard(r, true, champ.id)).join("")}
       </div>
+      ${renderGeneralStandingsBlock(champ)}
     </section>
   `;
 }
