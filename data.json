@@ -5,35 +5,287 @@
       "name": "Copa Castilla-La Mancha XCO 2026",
       "season": 2026,
       "description": "Pruebas del campeonato de Castilla-La Mancha que incluyen escuelas.",
-      "generalClassificationUrl": "https://yosoyciclista.com/index.php/es/smartweb/seccion/clasificacionescircuito/castillalamancha/2026/Copa_BTT_XC_CLM_Escuelas/6274-Principiantes"
+      "generalClassificationUrl": "https://yosoyciclista.com/index.php/es/smartweb/seccion/clasificacionescircuito/castillalamancha/2026/Copa_BTT_XC_CLM_Escuelas/6274-Principiantes",
+      "generalStandingsByCategory": {
+        "principiante_masculino": [
+          {
+            "puesto": 1,
+            "nombre": "MARC DE LA BARRERA GUINDEL",
+            "club": "MEJORADA C.C."
+          },
+          {
+            "puesto": 2,
+            "nombre": "MATEO LOZANO ALVAREZ",
+            "club": "TR3CE BIKE CDE"
+          },
+          {
+            "puesto": 3,
+            "nombre": "DAVID GAMO IZQUIERDO",
+            "club": "MTB COLMENAR VIEJO C.D.E."
+          },
+          {
+            "puesto": 4,
+            "nombre": "PABLO BERMEJO SANCHEZ",
+            "club": "MEJORADA C.C."
+          },
+          {
+            "puesto": 5,
+            "nombre": "OSCAR RODRIGUEZ BARQUERO",
+            "club": "CACERES BIKE, E.C"
+          },
+          {
+            "puesto": 27,
+            "nombre": "MANUEL ESCRIBANO ARINERO",
+            "club": "MEJORADA C.C."
+          }
+        ],
+        "principiante_femenino": [
+          {
+            "puesto": 1,
+            "nombre": "CELIA PORRAS MERIDA",
+            "club": "MEJORADA C.C."
+          },
+          {
+            "puesto": 2,
+            "nombre": "VERA BLANCO SAN INOCENTE",
+            "club": "SPORTPLA KIDS ARROYOMOLINOS CD"
+          },
+          {
+            "puesto": 3,
+            "nombre": "VEGA ALCOCER LLAMAS",
+            "club": "SPORTPLA KIDS ARROYOMOLINOS CD"
+          },
+          {
+            "puesto": 4,
+            "nombre": "VIOLETA BALMACEDA BLANCO",
+            "club": "SAN SEBASTIAN DE LOS REYES U.C"
+          },
+          {
+            "puesto": 5,
+            "nombre": "SOFIA PEREZ DEL VAL",
+            "club": "SPORTPLA KIDS ARROYOMOLINOS CD"
+          }
+        ],
+        "alevin_masculino": [
+          {
+            "puesto": 1,
+            "nombre": "HECTOR GONZALEZ MARTINEZ",
+            "club": "ACADEMIA CICLISTA C.D.E."
+          },
+          {
+            "puesto": 2,
+            "nombre": "ASIER ALVAREZ GIL",
+            "club": "SAN SEBASTIAN DE LOS REYES U.C"
+          },
+          {
+            "puesto": 3,
+            "nombre": "HUGO GARCIA DEL RIO",
+            "club": "MEJORADA C.C."
+          },
+          {
+            "puesto": 4,
+            "nombre": "IVAN ESCALANTE MORON",
+            "club": "MEJORADA C.C."
+          },
+          {
+            "puesto": 5,
+            "nombre": "VALENTIN KORZYNNIKOV SHYPAK",
+            "club": "SAN SEBASTIAN DE LOS REYES U.C"
+          }
+        ],
+        "alevin_femenino": [
+          {
+            "puesto": 1,
+            "nombre": "ADRIANA AGUILERA CUARTANGO",
+            "club": "ACADEMIA CICLISTA C.D.E."
+          },
+          {
+            "puesto": 2,
+            "nombre": "ALEJANDRA HERNANDEZ DIAZ",
+            "club": "SPORTPLA KIDS ARROYOMOLINOS CD"
+          },
+          {
+            "puesto": 3,
+            "nombre": "VALERIA SANCHEZ-QUIÑONES RIESCO",
+            "club": "SPORTPLA KIDS ARROYOMOLINOS CD"
+          },
+          {
+            "puesto": 4,
+            "nombre": "NOA CIORDIA NORIEGO",
+            "club": "ALCARREÑA DE CICLISMO"
+          },
+          {
+            "puesto": 5,
+            "nombre": "PAULA TORRES LLERENA",
+            "club": "PEDALBIKES CDE"
+          },
+          {
+            "puesto": 6,
+            "nombre": "LIA GARRIDO SANCHEZ",
+            "club": "MEJORADA C.C."
+          }
+        ],
+        "infantil_masculino": [
+          {
+            "puesto": 1,
+            "nombre": "DANIEL SAEZ CABALLERO",
+            "club": "ACADEMIA CICLISTA C.D.E."
+          },
+          {
+            "puesto": 2,
+            "nombre": "GONZALO MARIA REY PELAYO",
+            "club": "MTB ILARCURIS, C.D.E."
+          },
+          {
+            "puesto": 3,
+            "nombre": "DIEGO TORRES LLERENA",
+            "club": "PEDALBIKES CDE"
+          },
+          {
+            "puesto": 4,
+            "nombre": "DANIEL DIAZ LOPEZ",
+            "club": "TR3CE BIKE CDE"
+          },
+          {
+            "puesto": 5,
+            "nombre": "ADRIAN CRESPO AGUADO",
+            "club": "MTB COLMENAR VIEJO C.D.E."
+          },
+          {
+            "puesto": 14,
+            "nombre": "ASIER PORRAS MERIDA",
+            "club": "MEJORADA C.C."
+          },
+          {
+            "puesto": 22,
+            "nombre": "MIGUEL HERVAS ESTRINGANA",
+            "club": "MEJORADA C.C."
+          },
+          {
+            "puesto": 31,
+            "nombre": "NACHO TORRES SANCHO",
+            "club": "MEJORADA C.C."
+          }
+        ],
+        "infantil_femenino": [
+          {
+            "puesto": 1,
+            "nombre": "CANDELA MARTINEZ PERALES",
+            "club": "SAN SEBASTIAN DE LOS REYES U.C"
+          },
+          {
+            "puesto": 2,
+            "nombre": "EVA GARZON RANERO",
+            "club": "TR3CE BIKE CDE"
+          },
+          {
+            "puesto": 3,
+            "nombre": "DAIDA GARCIA ARTILES",
+            "club": "D3.4-EKIPARTE"
+          },
+          {
+            "puesto": 4,
+            "nombre": "VERA CONDE CAPITAN",
+            "club": "MTB ILARCURIS, C.D.E."
+          },
+          {
+            "puesto": 5,
+            "nombre": "NAIA DIAZ MORENO",
+            "club": "DAIMIEL CLUB CICLISTA"
+          }
+        ],
+        "promesa_masculino": [
+          {
+            "puesto": 1,
+            "nombre": "ANGEL PEREZ SANCHEZ",
+            "club": "SPORTPLA KIDS ARROYOMOLINOS CD"
+          },
+          {
+            "puesto": 2,
+            "nombre": "MARCOS GONZALEZ MARTINEZ",
+            "club": "ACADEMIA CICLISTA C.D.E."
+          },
+          {
+            "puesto": 3,
+            "nombre": "NOE GARCIA MARTIN",
+            "club": "X-SAUCE C.D.E."
+          },
+          {
+            "puesto": 4,
+            "nombre": "LUCAS SANZ ALCOBER",
+            "club": "ALCARREÑA DE CICLISMO"
+          },
+          {
+            "puesto": 5,
+            "nombre": "ARITZ GARCIA BRISO-MONTIANO",
+            "club": "MTB COLMENAR VIEJO C.D.E."
+          },
+          {
+            "puesto": 10,
+            "nombre": "SAMUEL CAÑUELO VAZQUEZ",
+            "club": "MEJORADA C.C."
+          }
+        ],
+        "promesa_femenino": [
+          {
+            "puesto": 1,
+            "nombre": "HELENA RETAMOSA REVIEJO",
+            "club": "SPORTPLA KIDS ARROYOMOLINOS CD"
+          },
+          {
+            "puesto": 2,
+            "nombre": "INGRID BOTE ARIAS",
+            "club": "ESCUELA DE CICLISMO AZUQUECA E"
+          },
+          {
+            "puesto": 3,
+            "nombre": "JULIA MALDONADO TORO",
+            "club": "SPORTPLA KIDS ARROYOMOLINOS CD"
+          },
+          {
+            "puesto": 4,
+            "nombre": "SOFIA VALIENTE GRANDE",
+            "club": "ACADEMIA CICLISTA C.D.E."
+          },
+          {
+            "puesto": 5,
+            "nombre": "CLAUDIA DE LA FUENTE CERCAS",
+            "club": "VALDEIGLESIAS C.C."
+          }
+        ]
+      }
     },
     {
       "id": "x-sauce-series-2026",
       "name": "X-Sauce Series 2026",
       "season": 2026,
       "description": "Circuito X-Sauce Series centrado en carreras de escuelas.",
-      "generalClassificationUrl": "https://cronosportradio.es/g-live/g-live.html?f=../RESULTADOS26/GENERALES/arrastre%20kids.clax"
+      "generalClassificationUrl": "https://cronosportradio.es/g-live/g-live.html?f=../RESULTADOS26/GENERALES/arrastre%20kids.clax",
+      "generalStandingsByCategory": {}
     },
     {
       "id": "copa-madrid-escuelas-2026",
       "name": "Copa de Madrid Escuelas 2026",
       "season": 2026,
       "description": "Pruebas madrileñas de escuelas incluidas en el calendario.",
-      "generalClassificationUrl": "https://fmciclismo.com/es/smartweb/seccion/circuito/madrid/26XCOMADRIDESCUELAS"
+      "generalClassificationUrl": "",
+      "generalStandingsByCategory": {}
     },
     {
       "id": "mtb-escolar-guadalajara-2026",
       "name": "Mtb Escolar de Guadalajara 2026",
       "season": 2026,
       "description": "Circuito escolar no federado e independiente de las federaciones autonómicas.",
-      "generalClassificationUrl": "https://aciclismoinfantil.blogspot.com/"
+      "generalClassificationUrl": "https://aciclismoinfantil.blogspot.com/",
+      "generalStandingsByCategory": {}
     },
     {
       "id": "mtb-racing-cup-2026",
       "name": "MTB Racing Cup 2026",
       "season": 2026,
-      "description": "Nuevo campeonato federado organizado por Antonio y que incluye pruebas en Arroyomolinos, Los Molinos y la Ruta del Agua.",
-      "generalClassificationUrl": ""
+      "description": "Nuevo campeonato federado con pruebas en Arroyomolinos, Los Molinos y Ruta del Agua.",
+      "generalClassificationUrl": "",
+      "generalStandingsByCategory": {}
     }
   ],
   "races": [
@@ -192,7 +444,7 @@
       "technicalGuideUrl": "https://fmciclismo.com/index.php/smartweb/inscripciones/documentos/34562-COPA-MADRID-MTB-KIDS---X-SAUCE-SERIES-ALPEDRETE",
       "documentsUrl": "https://fmciclismo.com/index.php/smartweb/inscripciones/documentos/34562-COPA-MADRID-MTB-KIDS---X-SAUCE-SERIES-ALPEDRETE",
       "notes": "Inscripción y documentos verificados; clasificación aún no aplica porque la prueba es futura.",
-      "resultUrl": "https://fmciclismo.com/index.php/smartweb/inscripciones/clasificacion/34562-COPA-MADRID-MTB-KIDS---X-SAUCE-SERIES-ALPEDRETE"
+      "resultUrl": ""
     },
     {
       "id": "ciempozuelos-2026",
@@ -336,5 +588,34 @@
       "resultUrl": ""
     }
   ],
-  "lastUpdatedUtc": "2026-03-24T08:02:07.433266+00:00"
+  "lastUpdatedUtc": "2026-03-24T07:15:00Z",
+  "ccMejoradaRidersByCategory": {
+    "promesa_masculino": [
+      "SAMUEL CAÑUELO VÁZQUEZ"
+    ],
+    "promesa_femenino": [],
+    "principiante_masculino": [
+      "PABLO BERMEJO SÁNCHEZ",
+      "MARC DE LA BARRERA GUINDEL",
+      "MANUEL ESCRIBANO ARINERO"
+    ],
+    "principiante_femenino": [
+      "CELIA PORRAS MÉRIDA"
+    ],
+    "alevin_masculino": [
+      "IVÁN ESCALANTE MORÓN",
+      "HUGO GARCÍA DEL RÍO",
+      "MARCOS GARCÍA GONZÁLEZ",
+      "GUILLERMO SÁNCHEZ SÁNCHEZ"
+    ],
+    "alevin_femenino": [
+      "LÍA GARRIDO"
+    ],
+    "infantil_masculino": [
+      "MIGUEL HERVÁS ESTRINGANA",
+      "ASIER PORRAS MÉRIDA",
+      "NACHO TORRES"
+    ],
+    "infantil_femenino": []
+  }
 }

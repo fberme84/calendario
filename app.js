@@ -5,6 +5,7 @@ const APP_NAME = "Calendario Escuela CC Mejorada";
 let currentCalendarMonth = "";
 let lastUpdatedUtc = "";
 let dataLoaded = false;
+let ccMejoradaRidersByCategory = {};
 const APP_VERSION = window.APP_VERSION || "20260324-1";
 
 const monthNames = [
@@ -21,6 +22,7 @@ async function loadData() {
   const data = await response.json();
   championships = Array.isArray(data.championships) ? data.championships : [];
   races = Array.isArray(data.races) ? data.races : [];
+  ccMejoradaRidersByCategory = data.ccMejoradaRidersByCategory || {};
   lastUpdatedUtc = data.lastUpdatedUtc || "";
   dataLoaded = true;
 }
@@ -72,6 +74,99 @@ function formatLastUpdated(dateString) {
     dateStyle: "medium",
     timeStyle: "short"
   }).format(date);
+}
+
+const CATEGORY_LABELS = {
+  promesa_masculino: "Promesa masculino",
+  promesa_femenino: "Promesa femenino",
+  principiante_masculino: "Principiante masculino",
+  principiante_femenino: "Principiante femenino",
+  alevin_masculino: "Alevín masculino",
+  alevin_femenino: "Alevín femenino",
+  infantil_masculino: "Infantil masculino",
+  infantil_femenino: "Infantil femenino"
+};
+
+function normalizeText(value) {
+  return String(value || "")
+    .normalize("NFD")
+    .replace(/[̀-ͯ]/g, "")
+    .toUpperCase()
+    .replace(/\s+/g, " ")
+    .trim();
+}
+
+function getCategoryLabel(key) {
+  return CATEGORY_LABELS[key] || key || "Categoría";
+}
+
+function getMejoradaNormalizedSet(categoryKey) {
+  return new Set((ccMejoradaRidersByCategory?.[categoryKey] || []).map(normalizeText));
+}
+
+function splitGeneralStandings(categoryResults, categoryKey) {
+  const sorted = Array.isArray(categoryResults) ? [...categoryResults].sort((a, b) => (a.puesto || 9999) - (b.puesto || 9999)) : [];
+  const top5 = sorted.slice(0, 5);
+  const mejoradaSet = getMejoradaNormalizedSet(categoryKey);
+  const mejoradaAll = sorted.filter(item => mejoradaSet.has(normalizeText(item.nombre)));
+  const top5Names = new Set(top5.map(item => normalizeText(item.nombre)));
+  const mejoradaOutsideTop5 = mejoradaAll.filter(item => !top5Names.has(normalizeText(item.nombre)));
+  return { top5, mejoradaAll, mejoradaOutsideTop5 };
+}
+
+function renderStandingRows(items, compact = false) {
+  if (!items || !items.length) return `<div class="general-standings-empty">Sin datos.</div>`;
+  return `<ol class="general-standings-list${compact ? ' general-standings-list-compact' : ''}">${items.map(item => `
+    <li>
+      <span class="standing-main"><strong>${escapeHtml(String(item.puesto || '—'))}.</strong> ${escapeHtml(item.nombre || 'Sin nombre')}</span>
+      <span class="standing-club">${escapeHtml(item.club || '')}</span>
+    </li>
+  `).join('')}</ol>`;
+}
+
+function renderMejoradaRows(items) {
+  if (!items || !items.length) return `<div class="general-standings-empty">Sin corredores de CC Mejorada fuera del Top 5.</div>`;
+  return `<ul class="general-standings-mejorada">${items.map(item => `
+    <li><strong>${escapeHtml(String(item.puesto || '—'))}.</strong> ${escapeHtml(item.nombre || 'Sin nombre')}</li>
+  `).join('')}</ul>`;
+}
+
+function renderGeneralStandingsBlock(champ) {
+  const standings = champ?.generalStandingsByCategory || {};
+  const keys = Object.keys(standings).filter(key => Array.isArray(standings[key]) && standings[key].length);
+
+  const cards = keys.map(key => {
+    const summary = splitGeneralStandings(standings[key], key);
+    return `
+      <article class="general-standings-card">
+        <h3>${escapeHtml(getCategoryLabel(key))}</h3>
+        <div class="general-standings-subtitle">Top 5 general</div>
+        ${renderStandingRows(summary.top5, true)}
+        <div class="general-standings-subtitle">CC Mejorada</div>
+        ${renderMejoradaRows(summary.mejoradaOutsideTop5)}
+      </article>
+    `;
+  }).join('');
+
+  const empty = `
+    <div class="card empty">
+      Resumen de clasificación general pendiente de cargar.
+      ${champ?.generalClassificationUrl ? '<div style="margin-top:12px">' + championshipGeneralButton(champ) + '</div>' : ''}
+    </div>
+  `;
+
+  return `
+    <section class="general-standings-section">
+      <div class="section-head-inline">
+        <div>
+          <h2 class="section-title">Clasificación general del campeonato</h2>
+          <p class="small">Resumen automático: Top 5 de cada categoría y puestos de CC Mejorada fuera de ese Top 5.</p>
+        </div>
+        ${champ?.generalClassificationUrl ? `<div class="section-head-actions">${championshipGeneralButton(champ, 'secondary')}</div>` : ''}
+      </div>
+      ${cards ? `<div class="general-standings-grid">${cards}</div>` : empty}
+    </section>
+  `;
 }
 
 function sortRaces(items) {
@@ -740,6 +835,7 @@ function renderChampionshipDetail(championshipId) {
           ${championshipGeneralButton(champ)}
         </div>
       </div>
+      ${renderGeneralStandingsBlock(champ)}
       <div class="race-grid">
         ${champRaces.map(r => renderRaceCard(r, true, champ.id)).join("")}
       </div>
