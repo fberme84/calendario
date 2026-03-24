@@ -19,7 +19,7 @@
       "name": "Copa de Madrid Escuelas 2026",
       "season": 2026,
       "description": "Pruebas madrileñas de escuelas incluidas en el calendario.",
-      "generalClassificationUrl": ""
+      "generalClassificationUrl": "https://fmciclismo.com/es/smartweb/seccion/circuito/madrid/26XCOMADRIDESCUELAS"
     },
     {
       "id": "mtb-escolar-guadalajara-2026",
@@ -32,7 +32,7 @@
       "id": "mtb-racing-cup-2026",
       "name": "MTB Racing Cup 2026",
       "season": 2026,
-      "description": "Nuevo campeonato federado con pruebas en Arroyomolinos, Los Molinos y Ruta del Agua.",
+      "description": "Nuevo campeonato federado organizado por Antonio y que incluye pruebas en Arroyomolinos, Los Molinos y la Ruta del Agua.",
       "generalClassificationUrl": ""
     }
   ],
