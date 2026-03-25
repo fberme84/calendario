@@ -1872,3 +1872,55 @@ button {
   display: inline-block;
   text-align: right;
 }
+
+
+/* ajustes visuales clasificación */
+.standing-row {
+  padding: 4px 6px;
+  margin: 2px 0;
+  font-family: "Segoe UI", Arial, sans-serif;
+  font-size: 13px;
+}
+
+.standing-main {
+  line-height: 1.2;
+}
+
+.standing-name {
+  font-weight: 500;
+}
+
+.standing-meta {
+  font-size: 11px;
+  opacity: 0.7;
+}
+
+
+.external-link-icon {
+  display: inline-block;
+  margin-right: 6px;
+  font-size: 0.95em;
+  line-height: 1;
+}
+
+.standings-grid {
+  display: grid;
+  gap: 12px;
+}
+
+.standings-pair {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 12px;
+  align-items: start;
+}
+
+.standings-col {
+  min-width: 0;
+}
+
+@media (max-width: 900px) {
+  .standings-pair {
+    grid-template-columns: 1fr;
+  }
+}

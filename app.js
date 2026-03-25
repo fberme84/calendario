@@ -1,3 +1,13 @@
+
+function formatDisplayName(name) {
+  if (!name) return "";
+  const parts = name.split(" ").filter(Boolean);
+  if (parts.length < 2) return name;
+  const first = parts[parts.length - 1];
+  const rest = parts.slice(0, -1).join(" ");
+  return first + " " + rest;
+}
+
 let championships = [];
 let races = [];
 
@@ -79,7 +89,7 @@ function renderStandingsRow(item, categoryKey) {
       <span class="standing-position">${escapeHtml(String(item.position || "—"))}</span>
     </div>
     <div class="standing-main">
-      <div class="standing-name">${escapeHtml(item.name || "")}</div>
+      <div class="standing-name">${escapeHtml(formatDisplayName(item.name || ""))}</div>
       <div class="standing-meta">${escapeHtml(item.club || "")}</div>
     </div>
     <div class="standing-points">${escapeHtml(String(item.points ?? ""))} pts</div>
@@ -105,21 +115,27 @@ function renderGeneralCategoryBlock(categoryKey, items) {
 
 function renderGeneralStandingsSection(champ) {
   const standings = champ && champ.generalStandingsByCategory ? champ.generalStandingsByCategory : null;
-  const orderedKeys = [
-    'promesa_masculino','promesa_femenino','principiante_masculino','principiante_femenino',
-    'alevin_masculino','alevin_femenino','infantil_masculino','infantil_femenino'
+  const orderedPairs = [
+    ['promesa_masculino','promesa_femenino'],
+    ['principiante_masculino','principiante_femenino'],
+    ['alevin_masculino','alevin_femenino'],
+    ['infantil_masculino','infantil_femenino']
   ];
-  const hasAny = standings && orderedKeys.some(key => Array.isArray(standings[key]) && standings[key].length);
+  const hasAny = standings && orderedPairs.some(pair => pair.some(key => Array.isArray(standings[key]) && standings[key].length));
   return `
     <section class="card standings-card">
       <div class="standings-head">
         <div>
-          <h3>La marea amarilla en la clasificación</h3>
+          <h3>La marea amarilla</h3>
           <p class="small">Resumen de la general del campeonato: Top 5 y puestos de CC Mejorada sin salir a la web externa.</p>
         </div>
-        <div class="card-actions">${championshipGeneralButton(champ, 'secondary')}</div>
       </div>
-      ${hasAny ? orderedKeys.map(key => renderGeneralCategoryBlock(key, standings[key] || [])).join('') : `<div class="standings-empty">Pendiente de cargar la general acumulada de este campeonato.</div>`}
+      ${hasAny ? `<div class="standings-grid">${orderedPairs.map(pair => `
+        <div class="standings-pair">
+          <div class="standings-col">${renderGeneralCategoryBlock(pair[0], standings[pair[0]] || [])}</div>
+          <div class="standings-col">${renderGeneralCategoryBlock(pair[1], standings[pair[1]] || [])}</div>
+        </div>
+      `).join('')}</div>` : `<div class="standings-empty">Pendiente de cargar la general acumulada de este campeonato.</div>`}
     </section>
   `;
 }
@@ -328,7 +344,8 @@ function getChampionshipTitleColorClass(id) {
 
 function championshipGeneralButton(champ, variant = "secondary") {
   if (!champ || !champ.generalClassificationUrl) return "";
-  return linkButton(champ.generalClassificationUrl, "Clasificación general", variant);
+  const cls = variant === "secondary" ? "btn btn-secondary" : "btn btn-primary";
+  return `<a class="${cls}" href="${escapeHtml(champ.generalClassificationUrl)}" target="_blank" rel="noopener noreferrer">${externalLinkIcon()} Clasificación general oficial</a>`;
 }
 
 function renderChampionshipLogosByIds(ids, size = "sm") {
@@ -370,6 +387,11 @@ function escapeHtml(text) {
     .replaceAll(">", "&gt;")
     .replaceAll('"', "&quot;")
     .replaceAll("'", "&#39;");
+}
+
+
+function externalLinkIcon() {
+  return `<span class="external-link-icon" aria-hidden="true">↗</span>`;
 }
 
 function linkButton(url, label, variant = "primary") {
