@@ -1029,6 +1029,7 @@ function updateNav(route) {
   links.forEach(link => link.classList.remove("active"));
   let target = "#/";
   if (route.startsWith("#/calendario")) target = "#/calendario";
+  else if (route.startsWith("#/estadisticas")) target = "#/estadisticas";
   else if (route.startsWith("#/campeonatos") || route.startsWith("#/campeonato/") || route.startsWith("#/carrera/")) target = "#/campeonatos";
   const active = Array.from(links).find(link => link.getAttribute("href") === target);
   if (active) active.classList.add("active");
@@ -1045,6 +1046,8 @@ function render() {
     content = renderHome();
   } else if (hash === "#/calendario") {
     content = renderCalendar();
+  } else if (hash === "#/estadisticas") {
+    content = renderStatsPage();
   } else if (hash === "#/campeonatos") {
     content = renderChampionships();
   } else if (hash.startsWith("#/campeonato/")) {
@@ -1069,96 +1072,10 @@ function render() {
     document.getElementById("filterMonth").addEventListener("change", applyCalendarFilters);
     document.getElementById("filterText").addEventListener("input", applyCalendarFilters);
     applyCalendarFilters();
+  } else if (hash === "#/estadisticas") {
+    initStatsPage();
   }
 }
 
 
-window.addEventListener("hashchange", () => {
-  if (dataLoaded) render();
-});
-
-window.addEventListener("DOMContentLoaded", async () => {
-  renderLoading();
-  try {
-    await loadData();
-    render();
-  } catch (error) {
-    console.error(error);
-    renderLoadError(error);
-  }
-});
-
-function renderStatsPage() {
-  return `
-    <section class="page">
-      <div class="card">
-        <h2 class="section-title">Estadísticas</h2>
-        <p class="section-subtitle">Resumen de participación de la escuela CC Mejorada.</p>
-      </div>
-      <div class="card">
-        <h3>Resumen general</h3>
-        <div id="statsSummary"></div>
-      </div>
-      <div class="card">
-        <h3>Filtro por corredor</h3>
-        <select id="statsRiderFilter"></select>
-      </div>
-      <div class="card">
-        <h3>Detalle</h3>
-        <div id="statsDetail"></div>
-      </div>
-    </section>
-  `;
-}
-
-function getTotalRaces() { return getSchoolRaces().length; }
-
-function getRacesByChampionship() {
-  const counts = {};
-  getSchoolRaces().forEach(r => {
-    getRaceChampionshipIds(r).forEach(id => counts[id] = (counts[id]||0)+1);
-  });
-  return counts;
-}
-
-function renderStatsSummary() {
-  const total = getTotalRaces();
-  const byChamp = getRacesByChampionship();
-  return `
-    <div class="stats-grid">
-      <div class="stats-box"><span>Total carreras</span><strong>${total}</strong></div>
-      ${Object.entries(byChamp).map(([id,c])=>{
-        const champ = getChampionshipById(id);
-        return `<div class="stats-box"><span>${escapeHtml(champ?.name||id)}</span><strong>${c}</strong></div>`;
-      }).join("")}
-    </div>`;
-}
-
-function getAllMejoradaRiders() {
-  const s=new Set();
-  Object.values(ccMejoradaRidersByCategory||{}).forEach(l=>l.forEach(n=>s.add(n)));
-  return Array.from(s).sort();
-}
-
-function renderRiderFilter() {
-  const r=getAllMejoradaRiders();
-  return `<option value="">Todos</option>`+r.map(x=>`<option value="${x}">${x}</option>`).join("");
-}
-
-function renderStatsDetail(name){
-  const c=document.getElementById("statsDetail");
-  if(!c) return;
-  if(!name){ c.innerHTML=`<div class="empty">Selecciona un corredor</div>`; return;}
-  c.innerHTML=`<div class="stats-box"><strong>${name}</strong><div>Próximamente: estadísticas detalladas</div></div>`;
-}
-
-function initStatsPage(){
-  document.getElementById("statsSummary").innerHTML=renderStatsSummary();
-  const s=document.getElementById("statsRiderFilter");
-  s.innerHTML=renderRiderFilter();
-  s.addEventListener("change",()=>renderStatsDetail(s.value));
-  renderStatsDetail("");
-}
-
-window.addEventListener("hashchange",()=>{ if(location.hash.includes("estadisticas")) setTimeout(initStatsPage,0); });
-window.addEventListener("load",()=>{ if(location.hash.includes("estadisticas")) setTimeout(initStatsPage,0); });
+ });
