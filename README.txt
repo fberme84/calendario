@@ -262,3 +262,20 @@ Cómo cambiar la hora diaria:
 - Edita .github/workflows/update-data.yml
 - El cron está en UTC.
 - Ahora mismo: 05:15 UTC cada día.
+
+
+Añadido:
+- La portada muestra "Última actualización" leyendo lastUpdatedUtc desde data.json.
+- update_data.py escribe lastUpdatedUtc en cada ejecución.
+
+
+Corrección: recuperadas las tarjetas minimizadas/desplegables bajo el calendario.
+
+
+Corrección footer:
+- La fecha de última actualización vuelve a mostrarse una sola vez al final de la página.
+
+
+Corrección móvil rejilla:
+- En móvil, la vista mensual vuelve a mantener los 7 días de la semana en una sola fila.
+- Se compactan celdas y textos para que siga viéndose como calendario.

@@ -1,0 +1,4 @@
+localhost:8081 {
+    root * C:/VA_PORTAL/carreras-pablo
+    file_server
+}

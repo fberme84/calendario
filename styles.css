@@ -1924,3 +1924,24 @@ button {
     grid-template-columns: 1fr;
   }
 }
+
+
+/* fondo gris para corredores no Mejorada */
+.standing-row:not(.standing-mejorada) {
+  background-color: #f2f3f5;
+  border-radius: 6px;
+}
+
+/* mantener amarillo destacado */
+.standing-mejorada {
+  background-color: #fff3b0;
+  border-radius: 6px;
+}
+
+
+/* highlight pro: linea izquierda + fondo amarillo */
+.standing-mejorada {
+  background-color: #fff3b0;
+  border-left: 4px solid #facc15;
+  padding-left: 8px;
+}
