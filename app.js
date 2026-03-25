@@ -557,6 +557,51 @@ function renderRaceCard(race, compact = false, contextChampionshipId = null) {
 }
 
 
+
+function getFutureMonthsSummary(champValue = "", currentMonthValue = "", textValue = "") {
+  const currentMonth = Number(currentMonthValue || 0);
+  const monthCounts = {};
+  sortRaces(getSchoolRaces()).forEach(race => {
+    const date = parseDate(race.date);
+    if (!date) return;
+    const month = date.getMonth() + 1;
+    const textBlob = `${race.name} ${race.location} ${race.province}`.toLowerCase();
+    if (champValue && !raceBelongsToChampionship(race, champValue)) return;
+    if (textValue && !textBlob.includes(textValue)) return;
+    if (!currentMonth || month <= currentMonth) return;
+    monthCounts[month] = (monthCounts[month] || 0) + 1;
+  });
+  return Object.keys(monthCounts)
+    .map(Number)
+    .sort((a, b) => a - b)
+    .map(month => ({ month, label: monthNames[month], count: monthCounts[month] }));
+}
+
+function renderFutureMonthsHint(items) {
+  if (!items || !items.length) return "";
+  const next = items[0];
+  return `
+    <div class="card future-months-hint">
+      <div class="future-months-hint-main">
+        <div>
+          <strong>También hay carreras en meses siguientes</strong>
+          <div class="small">${items.map(item => `${escapeHtml(item.label)} (${item.count})`).join(" · ")}</div>
+        </div>
+        <button type="button" class="btn btn-secondary" onclick="jumpToMonth(${next.month})">Ir a ${escapeHtml(next.label)}</button>
+      </div>
+    </div>
+  `;
+}
+
+function jumpToMonth(month) {
+  const monthSelect = document.getElementById("filterMonth");
+  if (!monthSelect) return;
+  monthSelect.value = String(month);
+  currentCalendarMonth = String(month);
+  applyCalendarFilters();
+}
+window.jumpToMonth = jumpToMonth;
+
 function getFilteredSchoolRaces(champValue = "", monthValue = "", textValue = "") {
   return sortRaces(getSchoolRaces()).filter(race => {
     const date = parseDate(race.date);
@@ -790,6 +835,7 @@ function renderCalendar() {
         </div>
       </div>
       <div id="calendarMonthly"></div>
+      <div id="calendarFutureHint"></div>
       <div id="calendarResults" class="race-grid"></div>
     </section>
   `;
@@ -810,6 +856,11 @@ function applyCalendarFilters() {
 
   const monthly = document.getElementById("calendarMonthly");
   monthly.innerHTML = renderMonthlyGrid(filtered, effectiveMonthValue);
+
+  const futureHint = document.getElementById("calendarFutureHint");
+  if (futureHint) {
+    futureHint.innerHTML = renderFutureMonthsHint(getFutureMonthsSummary(champValue, effectiveMonthValue, textValue));
+  }
 
   const container = document.getElementById("calendarResults");
   container.innerHTML = filtered.length

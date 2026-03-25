@@ -1945,3 +1945,22 @@ button {
   border-left: 4px solid #facc15;
   padding-left: 8px;
 }
+
+
+.future-months-hint {
+  margin: 14px 0;
+}
+
+.future-months-hint-main {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 12px;
+}
+
+@media (max-width: 700px) {
+  .future-months-hint-main {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+}

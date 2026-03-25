@@ -2859,7 +2859,7 @@
     },
     {
       "id": "canredondo-guadalajara-2026",
-      "name": "Canredondo",
+      "name": "Canredondo · Escuelas + XCO",
       "date": "2026-06-06",
       "location": "Canredondo",
       "province": "Guadalajara",
@@ -2870,7 +2870,9 @@
       "technicalGuideUrl": "",
       "documentsUrl": "",
       "resultUrl": "",
-      "notes": "Escuelas y XCO. Pertenece a X-Sauce Series, pero no a Copa CLM ni al Circuito Infantil Escolar MTB."
+      "notes": "Escuelas y XCO. Pertenece a X-Sauce Series, pero no a Copa CLM ni al Circuito Infantil Escolar MTB.",
+      "categoryType": "escuelas",
+      "organizer": "MTB Ilarcuris C.D.E."
     },
     {
       "id": "ruta-del-agua-2026",
