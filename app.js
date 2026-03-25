@@ -1024,6 +1024,118 @@ function renderRaceDetail(raceId) {
   `;
 }
 
+
+function renderStatsPage() {
+  return `
+    <section class="page">
+      <div class="card">
+        <h2 class="section-title">Estadísticas</h2>
+        <p class="section-subtitle">Resumen de participación de la escuela CC Mejorada.</p>
+      </div>
+
+      <div class="card">
+        <h3>Resumen general</h3>
+        <div id="statsSummary"></div>
+      </div>
+
+      <div class="card">
+        <h3>Filtro por corredor</h3>
+        <select id="statsRiderFilter"></select>
+      </div>
+
+      <div class="card">
+        <h3>Detalle</h3>
+        <div id="statsDetail"></div>
+      </div>
+    </section>
+  `;
+}
+
+function getTotalRaces() {
+  return getSchoolRaces().length;
+}
+
+function getRacesByChampionship() {
+  const counts = {};
+  getSchoolRaces().forEach(race => {
+    getRaceChampionshipIds(race).forEach(champId => {
+      counts[champId] = (counts[champId] || 0) + 1;
+    });
+  });
+  return counts;
+}
+
+function renderStatsSummary() {
+  const total = getTotalRaces();
+  const byChamp = getRacesByChampionship();
+
+  return `
+    <div class="stats-grid">
+      <div class="stats-box">
+        <span>Total carreras</span>
+        <strong>${total}</strong>
+      </div>
+
+      ${Object.entries(byChamp).map(([id, count]) => {
+        const champ = getChampionshipById(id);
+        return `
+          <div class="stats-box">
+            <span>${escapeHtml(champ?.name || id)}</span>
+            <strong>${count}</strong>
+          </div>
+        `;
+      }).join("")}
+    </div>
+  `;
+}
+
+function getAllMejoradaRiders() {
+  const set = new Set();
+  Object.values(ccMejoradaRidersByCategory || {}).forEach(list => {
+    list.forEach(name => set.add(name));
+  });
+  return Array.from(set).sort((a, b) => a.localeCompare(b, "es"));
+}
+
+function renderRiderFilter() {
+  const riders = getAllMejoradaRiders();
+  return `
+    <option value="">Todos</option>
+    ${riders.map(r => `<option value="${escapeHtml(r)}">${escapeHtml(r)}</option>`).join("")}
+  `;
+}
+
+function renderStatsDetail(riderName) {
+  const container = document.getElementById("statsDetail");
+  if (!container) return;
+
+  if (!riderName) {
+    container.innerHTML = `<div class="empty">Selecciona un corredor</div>`;
+    return;
+  }
+
+  container.innerHTML = `
+    <div class="stats-box">
+      <strong>${escapeHtml(riderName)}</strong>
+      <div>Próximamente: estadísticas detalladas por corredor.</div>
+    </div>
+  `;
+}
+
+function initStatsPage() {
+  const summary = document.getElementById("statsSummary");
+  const select = document.getElementById("statsRiderFilter");
+  if (!summary || !select) return;
+
+  summary.innerHTML = renderStatsSummary();
+  select.innerHTML = renderRiderFilter();
+  select.addEventListener("change", () => {
+    renderStatsDetail(select.value);
+  });
+  renderStatsDetail("");
+}
+
+
 function updateNav(route) {
   const links = document.querySelectorAll(".nav a");
   links.forEach(link => link.classList.remove("active"));
@@ -1076,3 +1188,19 @@ function render() {
     initStatsPage();
   }
 }
+
+
+window.addEventListener("hashchange", () => {
+  if (dataLoaded) render();
+});
+
+window.addEventListener("DOMContentLoaded", async () => {
+  renderLoading();
+  try {
+    await loadData();
+    render();
+  } catch (error) {
+    console.error(error);
+    renderLoadError(error);
+  }
+});
