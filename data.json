@@ -1715,16 +1715,16 @@
             "points": 38
           },
           {
-            "position": 50,
-            "name": "Sanchez Sanchez Guillermo",
-            "club": "MEJORADA C.C.",
-            "points": 38
-          },
-          {
             "position": 51,
             "name": "Torres Sancho Hugo",
             "club": "EMTBM C.D.E.",
             "points": 38
+          },
+          {
+            "position": 51,
+            "name": "Sanchez Sanchez Guillermo",
+            "club": "MEJORADA C.C.",
+            "points": 20
           },
           {
             "position": 52,
@@ -2415,12 +2415,6 @@
             "points": 18
           },
           {
-            "position": 67,
-            "name": "Garcia Amaya Pablo",
-            "club": "MEJORADA C.C.",
-            "points": 12
-          },
-          {
             "position": 68,
             "name": "Guijarro Eduardo",
             "club": "INDEPENDIENTE",
@@ -2436,6 +2430,12 @@
             "position": 70,
             "name": "Sanchez Fraile Lucas",
             "club": "TODO BICI TORRIJOS",
+            "points": 12
+          },
+          {
+            "position": 71,
+            "name": "Garcia Amaya Pablo",
+            "club": "MEJORADA C.C.",
             "points": 12
           },
           {

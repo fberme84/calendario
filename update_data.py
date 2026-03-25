@@ -13,7 +13,7 @@ from bs4 import BeautifulSoup
 BASE_DIR = Path(__file__).resolve().parent
 DATA_PATH = BASE_DIR / "data.json"
 TIMEOUT = 30
-USER_AGENT = "CC-Mejorada-Updater/1.2"
+USER_AGENT = "CC-Mejorada-Updater/1.3"
 CATEGORY_MAP = {
     "PROMESAS": "promesa_masculino",
     "PROMESAS FEM.": "promesa_femenino",
@@ -35,12 +35,19 @@ DEFAULT_CATEGORY_KEYS = [
 ]
 MANUAL_STANDINGS_PATCHES = {
     "clm-xco-2026": {
-    "alevin_masculino": [
-        {"name": "Garcia Gonzalez Marcos", "club": "MEJORADA C.C.", "points": 54, "position": 41}
-    ],
-
+        "alevin_masculino": [
+            {"name": "Garcia Gonzalez Marcos", "club": "MEJORADA C.C.", "points": 54, "position": 41}
+        ],
         "infantil_masculino": [
             {"name": "Garcia Amaya Pablo", "club": "MEJORADA C.C.", "points": 12, "position": 30}
+        ]
+    },
+    "x-sauce-series-2026": {
+        "alevin_masculino": [
+            {"name": "Sanchez Sanchez Guillermo", "club": "MEJORADA C.C.", "points": 20, "position": 51}
+        ],
+        "infantil_masculino": [
+            {"name": "Garcia Amaya Pablo", "club": "MEJORADA C.C.", "points": 12, "position": 71}
         ]
     }
 }
@@ -214,6 +221,20 @@ def parse_yosoyciclista_standings(html_text: str) -> list[dict]:
 
 
 
+
+def upsert_patch_rows(rows: list[dict], patches: list[dict]) -> list[dict]:
+    by_name = {}
+    for row in rows or []:
+        key = normalize_text(row.get("name", ""))
+        if key:
+            by_name[key] = dict(row)
+    for patch in patches or []:
+        key = normalize_text(patch.get("name", ""))
+        if key:
+            by_name[key] = dict(patch)
+    merged = list(by_name.values())
+    return sorted(merged, key=lambda item: (int(item.get("position", 9999)), -int(item.get("points", 0)), normalize_text(item.get("name", ""))))
+
 def dedupe_rows_by_name(rows: list[dict]) -> list[dict]:
     best_by_name = {}
     for row in rows or []:
@@ -235,6 +256,11 @@ def apply_manual_standings_patches(champ_id: str, standings: dict) -> dict:
     patches_by_category = MANUAL_STANDINGS_PATCHES.get(champ_id) or {}
     if not patches_by_category:
         return standings
+
+    for category_key, patches in patches_by_category.items():
+        rows = list(standings.get(category_key) or [])
+        standings[category_key] = upsert_patch_rows(rows, patches)
+    return standings
 
     for category_key, patches in patches_by_category.items():
         rows = list(standings.get(category_key) or [])

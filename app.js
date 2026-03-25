@@ -24,6 +24,11 @@ const monthNames = [
 ];
 
 
+
+function getCurrentMonthValue() {
+  return String(new Date().getMonth() + 1);
+}
+
 async function loadData() {
   const response = await fetch(withAppVersion("./data.json"), { cache: "no-store" });
   if (!response.ok) {
@@ -34,6 +39,9 @@ async function loadData() {
   races = Array.isArray(data.races) ? data.races : [];
   ccMejoradaRidersByCategory = data.ccMejoradaRidersByCategory || {};
   lastUpdatedUtc = data.lastUpdatedUtc || "";
+  if (!currentCalendarMonth) {
+    currentCalendarMonth = getCurrentMonthValue();
+  }
   dataLoaded = true;
 }
 
@@ -761,7 +769,12 @@ function renderHome() {
 }
 
 function renderCalendar() {
-  const monthOptions = monthNames.map((m, i) => `<option value="${i === 0 ? "" : i}">${m}</option>`).join("");
+  const selectedMonth = currentCalendarMonth || getCurrentMonthValue();
+  const monthOptions = monthNames.map((m, i) => {
+    const value = i === 0 ? "" : String(i);
+    const selected = value === selectedMonth ? " selected" : "";
+    return `<option value="${value}"${selected}>${m}</option>`;
+  }).join("");
   return `
     <section class="page">
       <div class="card">
@@ -784,14 +797,19 @@ function renderCalendar() {
 
 function applyCalendarFilters() {
   const champValue = document.getElementById("filterChampionship").value;
-  const monthValue = document.getElementById("filterMonth").value;
-  currentCalendarMonth = monthValue || currentCalendarMonth;
+  const monthSelect = document.getElementById("filterMonth");
+  const rawMonthValue = monthSelect ? monthSelect.value : "";
+  const effectiveMonthValue = rawMonthValue || currentCalendarMonth || getCurrentMonthValue();
+  currentCalendarMonth = effectiveMonthValue;
+  if (monthSelect && monthSelect.value !== effectiveMonthValue) {
+    monthSelect.value = effectiveMonthValue;
+  }
   const textValue = document.getElementById("filterText").value.trim().toLowerCase();
 
-  const filtered = getFilteredSchoolRaces(champValue, monthValue, textValue);
+  const filtered = getFilteredSchoolRaces(champValue, effectiveMonthValue, textValue);
 
   const monthly = document.getElementById("calendarMonthly");
-  monthly.innerHTML = renderMonthlyGrid(filtered, monthValue);
+  monthly.innerHTML = renderMonthlyGrid(filtered, effectiveMonthValue);
 
   const container = document.getElementById("calendarResults");
   container.innerHTML = filtered.length
