@@ -1025,6 +1025,7 @@ function renderRaceDetail(raceId) {
 }
 
 
+
 function renderStatsPage() {
   return `
     <section class="page">
@@ -1044,7 +1045,7 @@ function renderStatsPage() {
       </div>
 
       <div class="card">
-        <h3>Detalle</h3>
+        <h3>Detalle del corredor</h3>
         <div id="statsDetail"></div>
       </div>
     </section>
@@ -1075,7 +1076,6 @@ function renderStatsSummary() {
         <span>Total carreras</span>
         <strong>${total}</strong>
       </div>
-
       ${Object.entries(byChamp).map(([id, count]) => {
         const champ = getChampionshipById(id);
         return `
@@ -1101,7 +1101,106 @@ function renderRiderFilter() {
   const riders = getAllMejoradaRiders();
   return `
     <option value="">Todos</option>
-    ${riders.map(r => `<option value="${escapeHtml(r)}">${escapeHtml(r)}</option>`).join("")}
+    ${riders.map(r => `<option value="${escapeHtml(r)}">${escapeHtml(formatDisplayName(r))}</option>`).join("")}
+  `;
+}
+
+function getRiderChampionshipStats(riderName) {
+  const normalizedTarget = normalizeText(riderName);
+  const results = [];
+
+  championships.forEach(champ => {
+    const standings = champ.generalStandingsByCategory || {};
+    Object.entries(standings).forEach(([categoryKey, rows]) => {
+      (rows || []).forEach(row => {
+        if (hasSameNameTokens(normalizedTarget, normalizeText(row.name || ""))) {
+          results.push({
+            championshipId: champ.id,
+            championshipName: champ.name,
+            categoryKey,
+            categoryLabel: getCategoryLabel(categoryKey),
+            position: Number(row.position || 0),
+            points: Number(row.points || 0),
+            club: row.club || "",
+            name: row.name || riderName
+          });
+        }
+      });
+    });
+  });
+
+  results.sort((a, b) => {
+    if (a.position !== b.position) return a.position - b.position;
+    return a.championshipName.localeCompare(b.championshipName, "es");
+  });
+
+  return results;
+}
+
+function renderRiderStatsCards(results) {
+  if (!results.length) {
+    return `<div class="empty">No hay clasificaciones generales cargadas para este corredor.</div>`;
+  }
+
+  const positions = results.map(item => item.position).filter(Boolean);
+  const totalPoints = results.reduce((sum, item) => sum + (item.points || 0), 0);
+  const championshipsCount = new Set(results.map(item => item.championshipId)).size;
+  const best = positions.length ? Math.min(...positions) : null;
+  const worst = positions.length ? Math.max(...positions) : null;
+  const avg = positions.length ? (positions.reduce((a, b) => a + b, 0) / positions.length) : null;
+
+  return `
+    <div class="stats-grid stats-grid-rider">
+      <div class="stats-box">
+        <span>Campeonatos</span>
+        <strong>${championshipsCount}</strong>
+      </div>
+      <div class="stats-box">
+        <span>Mejor puesto</span>
+        <strong>${best ? best + "º" : "—"}</strong>
+      </div>
+      <div class="stats-box">
+        <span>Peor puesto</span>
+        <strong>${worst ? worst + "º" : "—"}</strong>
+      </div>
+      <div class="stats-box">
+        <span>Media</span>
+        <strong>${avg ? avg.toFixed(1).replace(".", ",") + "º" : "—"}</strong>
+      </div>
+      <div class="stats-box">
+        <span>Puntos totales</span>
+        <strong>${totalPoints}</strong>
+      </div>
+    </div>
+  `;
+}
+
+function renderRiderStatsTable(results) {
+  if (!results.length) return "";
+
+  return `
+    <div class="stats-table-wrap">
+      <table class="stats-table">
+        <thead>
+          <tr>
+            <th>Campeonato</th>
+            <th>Categoría</th>
+            <th>Puesto</th>
+            <th>Puntos</th>
+          </tr>
+        </thead>
+        <tbody>
+          ${results.map(item => `
+            <tr>
+              <td>${escapeHtml(item.championshipName)}</td>
+              <td>${escapeHtml(item.categoryLabel)}</td>
+              <td>${escapeHtml(String(item.position || "—"))}º</td>
+              <td>${escapeHtml(String(item.points || 0))}</td>
+            </tr>
+          `).join("")}
+        </tbody>
+      </table>
+    </div>
   `;
 }
 
@@ -1114,11 +1213,12 @@ function renderStatsDetail(riderName) {
     return;
   }
 
+  const results = getRiderChampionshipStats(riderName);
+
   container.innerHTML = `
-    <div class="stats-box">
-      <strong>${escapeHtml(riderName)}</strong>
-      <div>Próximamente: estadísticas detalladas por corredor.</div>
-    </div>
+    <div class="stats-rider-title">${escapeHtml(formatDisplayName(riderName))}</div>
+    ${renderRiderStatsCards(results)}
+    ${renderRiderStatsTable(results)}
   `;
 }
 
@@ -1134,6 +1234,7 @@ function initStatsPage() {
   });
   renderStatsDetail("");
 }
+
 
 
 function updateNav(route) {
