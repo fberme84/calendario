@@ -1964,3 +1964,7 @@ button {
     align-items: flex-start;
   }
 }
+
+.stats-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(160px,1fr));gap:12px;}
+.stats-box{background:#f5f5f5;padding:12px;border-radius:8px;text-align:center;}
+.stats-box strong{font-size:18px;display:block;margin-top:6px;}
