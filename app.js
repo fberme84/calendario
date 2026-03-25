@@ -1076,6 +1076,3 @@ function render() {
     initStatsPage();
   }
 }
-
-
- });
