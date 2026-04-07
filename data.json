@@ -1201,12 +1201,6 @@
             "points": 24
           },
           {
-            "position": 61,
-            "name": "Monsalve Fernandez Ignacio",
-            "club": "INDEPENDIENTE",
-            "points": 22
-          },
-          {
             "position": 62,
             "name": "Perez Tapia Lorenzo",
             "club": "CACERES BIKE, E.C",
@@ -1721,10 +1715,10 @@
             "points": 38
           },
           {
-            "position": 51,
             "name": "Sanchez Sanchez Guillermo",
             "club": "MEJORADA C.C.",
-            "points": 20
+            "points": 20,
+            "position": 51
           },
           {
             "position": 52,
@@ -2433,10 +2427,10 @@
             "points": 12
           },
           {
-            "position": 71,
             "name": "Garcia Amaya Pablo",
             "club": "MEJORADA C.C.",
-            "points": 12
+            "points": 12,
+            "position": 71
           },
           {
             "position": 71,
@@ -2557,7 +2551,7 @@
         ]
       },
       "generalClassificationSourceType": "clax",
-      "generalClassificationDataUrl": "https://cronosportradio.es/RESULTADOS26/GENERALES/arrastre%20kids.clax"
+      "generalClassificationDataUrl": "https://cronosportradio.es/RESULTADOS26/GENERALES/arrastre kids.clax"
     },
     {
       "id": "copa-madrid-escuelas-2026",
@@ -2993,7 +2987,7 @@
       "technicalGuideUrl": "https://fmciclismo.com/index.php/smartweb/inscripciones/documentos/34562-COPA-MADRID-MTB-KIDS---X-SAUCE-SERIES-ALPEDRETE",
       "documentsUrl": "https://fmciclismo.com/index.php/smartweb/inscripciones/documentos/34562-COPA-MADRID-MTB-KIDS---X-SAUCE-SERIES-ALPEDRETE",
       "notes": "Inscripción y documentos verificados; clasificación aún no aplica porque la prueba es futura.",
-      "resultUrl": ""
+      "resultUrl": "https://fmciclismo.com/index.php/smartweb/inscripciones/clasificacion/34562-COPA-MADRID-MTB-KIDS---X-SAUCE-SERIES-ALPEDRETE"
     },
     {
       "id": "ciempozuelos-2026",
@@ -3154,7 +3148,7 @@
       "resultUrl": ""
     }
   ],
-  "lastUpdatedUtc": "2026-03-24T13:18:41.865469+00:00",
+  "lastUpdatedUtc": "2026-04-07T08:46:27.435736+00:00",
   "ccMejoradaRidersByCategory": {
     "promesa_masculino": [
       "SAMUEL CANUELO VAZQUEZ"
