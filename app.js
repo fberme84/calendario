@@ -142,8 +142,8 @@ function renderGeneralCategoryBlock(categoryKey, items) {
     <details class="standings-category">
       <summary>${escapeHtml(getCategoryLabel(categoryKey))}</summary>
       <div class="standings-subtitle">Top 5 general</div>
-      <div class="standings-list">${top5.map(item => renderStandingsRow(item, categoryKey, race)).join("")}</div>
-      ${mejoradaExtra.length ? `<div class="standings-subtitle">CC Mejorada</div><div class="standings-list">${mejoradaExtra.map(item => renderStandingsRow(item, categoryKey, race)).join("")}</div>` : ``}
+      <div class="standings-list">${top5.map(item => renderStandingsRow(item, categoryKey)).join("")}</div>
+      ${mejoradaExtra.length ? `<div class="standings-subtitle">CC Mejorada</div><div class="standings-list">${mejoradaExtra.map(item => renderStandingsRow(item, categoryKey)).join("")}</div>` : ``}
     </details>
   `;
 }
@@ -978,8 +978,8 @@ function renderRaceCategoryBlock(categoryKey, items, race) {
     <details class="standings-category">
       <summary>${escapeHtml(getCategoryLabel(categoryKey))}</summary>
       <div class="standings-subtitle">Top 5</div>
-      <div class="standings-list">${top5.map(item => renderStandingsRow(item, categoryKey, race)).join("")}</div>
-      ${mejoradaExtra.length ? `<div class="standings-subtitle">CC Mejorada</div><div class="standings-list">${mejoradaExtra.map(item => renderStandingsRow(item, categoryKey, race)).join("")}</div>` : ``}
+      <div class="standings-list">${top5.map(item => renderStandingsRow(item, categoryKey)).join("")}</div>
+      ${mejoradaExtra.length ? `<div class="standings-subtitle">CC Mejorada</div><div class="standings-list">${mejoradaExtra.map(item => renderStandingsRow(item, categoryKey)).join("")}</div>` : ``}
     </details>
   `;
 }
