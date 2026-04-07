@@ -2,8 +2,11 @@ name: Actualizar clasificaciones
 
 on:
   schedule:
-    - cron: '0 5 * * *'
+    - cron: '0 5 * * *'   # 7:00 en España (UTC+2)
   workflow_dispatch:
+
+permissions:
+  contents: write
 
 jobs:
   update-data:
@@ -12,6 +15,8 @@ jobs:
     steps:
       - name: Checkout repo
         uses: actions/checkout@v4
+        with:
+          persist-credentials: true
 
       - name: Setup Python
         uses: actions/setup-python@v5
@@ -20,19 +25,19 @@ jobs:
 
       - name: Instalar dependencias
         run: |
-          pip install -r requirements.txt
+          if [ -f requirements.txt ]; then pip install -r requirements.txt; fi
 
-      - name: Ejecutar actualización
+      - name: Ejecutar script
         run: |
           python update_data.py
 
       - name: Commit cambios
         run: |
-          git config user.name "github-actions"
-          git config user.email "actions@github.com"
+          git config user.name "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
           git add .
-          git commit -m "Actualización automática clasificaciones" || echo "Sin cambios"
+          git diff --cached --quiet || git commit -m "🔄 Actualización automática clasificaciones"
 
       - name: Push cambios
         run: |
-          git push
+          git push origin HEAD:main
