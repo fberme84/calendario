@@ -2731,8 +2731,234 @@
       "registrationUrl": "https://www.rockthesport.com/",
       "technicalGuideUrl": "",
       "documentsUrl": "",
-      "notes": "Prueba del Mtb Escolar de Guadalajara. Campeonato no federado. De momento solo está localizado el enlace general de inscripción en RockTheSport.",
-      "resultUrl": ""
+      "notes": "Prueba del Circuito Infantil Escolar MTB. Se ha cargado un resumen manual de clasificación a partir de los pantallazos revisados.",
+      "resultUrl": "https://sporthive.com/events/s/b32ef79d-c7a4-4ad9-af26-28249ccac7cc",
+      "raceResultsByCategory": {
+        "mi_promesa_masculino": [
+          {
+            "position": 1,
+            "name": "Aleix Viana De Las Heras",
+            "club": "",
+            "points": ""
+          },
+          {
+            "position": 2,
+            "name": "Noah Rojas Razola",
+            "club": "",
+            "points": ""
+          },
+          {
+            "position": 3,
+            "name": "Daniel De La Vega Gil",
+            "club": "",
+            "points": ""
+          },
+          {
+            "position": 4,
+            "name": "Diego Semitiel Butron",
+            "club": "",
+            "points": ""
+          },
+          {
+            "position": 5,
+            "name": "Hugo Calle Moya",
+            "club": "",
+            "points": ""
+          }
+        ],
+        "mi_promesa_femenino": [
+          {
+            "position": 1,
+            "name": "Olivia Ramirez Jimenez",
+            "club": "",
+            "points": ""
+          },
+          {
+            "position": 2,
+            "name": "Leire Bermejo Sanchez",
+            "club": "MEJORADA C.C.",
+            "points": ""
+          },
+          {
+            "position": 3,
+            "name": "Paula Sanz Alcober",
+            "club": "",
+            "points": ""
+          }
+        ],
+        "principiante_masculino": [
+          {
+            "position": 1,
+            "name": "Pablo Bermejo Sanchez",
+            "club": "MEJORADA C.C.",
+            "points": ""
+          },
+          {
+            "position": 2,
+            "name": "Yago Lopez Casa",
+            "club": "",
+            "points": ""
+          },
+          {
+            "position": 3,
+            "name": "Victor Sotoca Sotoca",
+            "club": "",
+            "points": ""
+          },
+          {
+            "position": 4,
+            "name": "Markel Ayuso Calleja",
+            "club": "",
+            "points": ""
+          },
+          {
+            "position": 5,
+            "name": "Erik Ochoa De Alda Cantador",
+            "club": "",
+            "points": ""
+          }
+        ],
+        "principiante_femenino": [
+          {
+            "position": 1,
+            "name": "Celia Porras Merida",
+            "club": "MEJORADA C.C.",
+            "points": ""
+          },
+          {
+            "position": 2,
+            "name": "Miriam Alcivar Romero",
+            "club": "",
+            "points": ""
+          }
+        ],
+        "alevin_masculino": [
+          {
+            "position": 1,
+            "name": "Alejandro Rodriguez Bermejo",
+            "club": "",
+            "points": ""
+          },
+          {
+            "position": 2,
+            "name": "Eneko Garcia Briso-Montiano",
+            "club": "",
+            "points": ""
+          },
+          {
+            "position": 3,
+            "name": "Javier De La Vega Gil",
+            "club": "",
+            "points": ""
+          },
+          {
+            "position": 4,
+            "name": "Raul Escribano Sanchez",
+            "club": "",
+            "points": ""
+          },
+          {
+            "position": 5,
+            "name": "Guillermo Sanchez Sanchez",
+            "club": "MEJORADA C.C.",
+            "points": ""
+          },
+          {
+            "position": 6,
+            "name": "Marcos Garcia Gonzalez",
+            "club": "MEJORADA C.C.",
+            "points": ""
+          }
+        ],
+        "alevin_femenino": [
+          {
+            "position": 1,
+            "name": "Alejandra Cristobal Herrero",
+            "club": "",
+            "points": ""
+          },
+          {
+            "position": 2,
+            "name": "Nerea Crespo Aguado",
+            "club": "",
+            "points": ""
+          }
+        ],
+        "infantil_masculino": [
+          {
+            "position": 1,
+            "name": "Francisco Rodriguez Bermejo",
+            "club": "",
+            "points": ""
+          },
+          {
+            "position": 2,
+            "name": "Adrian Crespo Aguado",
+            "club": "",
+            "points": ""
+          },
+          {
+            "position": 3,
+            "name": "Nacho Torres Sancho",
+            "club": "MEJORADA C.C.",
+            "points": ""
+          },
+          {
+            "position": 4,
+            "name": "Aaron Nicolas Fernandez",
+            "club": "",
+            "points": ""
+          },
+          {
+            "position": 5,
+            "name": "Asier Rodriguez Rios",
+            "club": "",
+            "points": ""
+          },
+          {
+            "position": 6,
+            "name": "Asier Porras Merida",
+            "club": "MEJORADA C.C.",
+            "points": ""
+          }
+        ],
+        "infantil_femenino": [
+          {
+            "position": 1,
+            "name": "Ariadna Bote Arias",
+            "club": "",
+            "points": ""
+          }
+        ],
+        "cadete_masculino": [
+          {
+            "position": 1,
+            "name": "Marcos Sebastian Blanco",
+            "club": "",
+            "points": ""
+          },
+          {
+            "position": 2,
+            "name": "Alejandro Hidalgo Martin-Loeches",
+            "club": "",
+            "points": ""
+          },
+          {
+            "position": 3,
+            "name": "Hugo Sanchez Sanchez",
+            "club": "MEJORADA C.C.",
+            "points": ""
+          }
+        ],
+        "cadete_femenino": [
+          {
+            "position": 1,
+            "name": "Jimena Alcivar Romero",
+            "club": "",
+            "points": ""
+          }
+        ]
+      }
     },
     {
       "id": "azuqueca-2026",
@@ -2957,6 +3183,14 @@
       "NACHO TORRES",
       "PABLO GARCIA AMAYA"
     ],
-    "infantil_femenino": []
+    "infantil_femenino": [],
+    "cadete_masculino": [
+      "HUGO SANCHEZ SANCHEZ"
+    ],
+    "cadete_femenino": [],
+    "mi_promesa_masculino": [],
+    "mi_promesa_femenino": [
+      "LEIRE BERMEJO SANCHEZ"
+    ]
   }
 }

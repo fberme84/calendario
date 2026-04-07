@@ -65,7 +65,11 @@ function getCategoryLabel(categoryKey) {
     alevin_masculino: "Alevín masculino",
     alevin_femenino: "Alevín femenino",
     infantil_masculino: "Infantil masculino",
-    infantil_femenino: "Infantil femenino"
+    infantil_femenino: "Infantil femenino",
+    cadete_masculino: "Cadete masculino",
+    cadete_femenino: "Cadete femenino",
+    mi_promesa_masculino: "Mini promesa masculino",
+    mi_promesa_femenino: "Mini promesa femenino"
   };
   return labels[categoryKey] || categoryKey;
 }
@@ -939,6 +943,54 @@ function renderChampionshipDetail(championshipId) {
 }
 
 
+
+function renderRaceCategoryBlock(categoryKey, items) {
+  const rows = Array.isArray(items) ? items : [];
+  if (!rows.length) {
+    return `<details class="standings-category"><summary>${escapeHtml(getCategoryLabel(categoryKey))}</summary><div class="standings-empty">Sin clasificación disponible.</div></details>`;
+  }
+  const top5 = rows.slice(0, 5);
+  const mejoradaExtra = rows.filter(item => isMejoradaRider(item.name, categoryKey, item.club) && !top5.some(t => normalizeText(t.name) === normalizeText(item.name)));
+  return `
+    <details class="standings-category">
+      <summary>${escapeHtml(getCategoryLabel(categoryKey))}</summary>
+      <div class="standings-subtitle">Top 5</div>
+      <div class="standings-list">${top5.map(item => renderStandingsRow(item, categoryKey)).join("")}</div>
+      ${mejoradaExtra.length ? `<div class="standings-subtitle">CC Mejorada</div><div class="standings-list">${mejoradaExtra.map(item => renderStandingsRow(item, categoryKey)).join("")}</div>` : ``}
+    </details>
+  `;
+}
+
+function renderRaceResultsSection(race) {
+  const results = race && race.raceResultsByCategory ? race.raceResultsByCategory : null;
+  const orderedPairs = [
+    ['mi_promesa_masculino','mi_promesa_femenino'],
+    ['principiante_masculino','principiante_femenino'],
+    ['alevin_masculino','alevin_femenino'],
+    ['infantil_masculino','infantil_femenino'],
+    ['cadete_masculino','cadete_femenino']
+  ];
+  const hasAny = results && orderedPairs.some(pair => pair.some(key => Array.isArray(results[key]) && results[key].length));
+  if (!hasAny) return "";
+  return `
+    <section class="card standings-card">
+      <div class="standings-head">
+        <div>
+          <h3>La marea amarilla</h3>
+          <p class="small">Resumen de la clasificación de la prueba: top 5 por categoría y corredores de CC Mejorada.</p>
+        </div>
+      </div>
+      <div class="standings-grid">${orderedPairs.map(pair => `
+        <div class="standings-pair">
+          <div class="standings-col">${renderRaceCategoryBlock(pair[0], results[pair[0]] || [])}</div>
+          <div class="standings-col">${renderRaceCategoryBlock(pair[1], results[pair[1]] || [])}</div>
+        </div>
+      `).join('')}</div>
+    </section>
+  `;
+}
+
+
 function renderRaceDetail(raceId) {
   const race = getRaceById(raceId);
   if (!race) return `<section class="page"><div class="card empty">Carrera no encontrada.</div></section>`;
@@ -1020,229 +1072,16 @@ function renderRaceDetail(raceId) {
         </div>
         ${renderChampionshipPills(race)}
       </div>
+      ${renderRaceResultsSection(race)}
     </section>
   `;
 }
-
-
-
-function renderStatsPage() {
-  return `
-    <section class="page">
-      <div class="card">
-        <h2 class="section-title">Estadísticas</h2>
-        <p class="section-subtitle">Resumen de participación de la escuela CC Mejorada.</p>
-      </div>
-
-      <div class="card">
-        <h3>Resumen general</h3>
-        <div id="statsSummary"></div>
-      </div>
-
-      <div class="card">
-        <h3>Filtro por corredor</h3>
-        <select id="statsRiderFilter"></select>
-      </div>
-
-      <div class="card">
-        <h3>Detalle del corredor</h3>
-        <div id="statsDetail"></div>
-      </div>
-    </section>
-  `;
-}
-
-function getTotalRaces() {
-  return getSchoolRaces().length;
-}
-
-function getRacesByChampionship() {
-  const counts = {};
-  getSchoolRaces().forEach(race => {
-    getRaceChampionshipIds(race).forEach(champId => {
-      counts[champId] = (counts[champId] || 0) + 1;
-    });
-  });
-  return counts;
-}
-
-function renderStatsSummary() {
-  const total = getTotalRaces();
-  const byChamp = getRacesByChampionship();
-
-  return `
-    <div class="stats-grid">
-      <div class="stats-box">
-        <span>Total carreras</span>
-        <strong>${total}</strong>
-      </div>
-      ${Object.entries(byChamp).map(([id, count]) => {
-        const champ = getChampionshipById(id);
-        return `
-          <div class="stats-box">
-            <span>${escapeHtml(champ?.name || id)}</span>
-            <strong>${count}</strong>
-          </div>
-        `;
-      }).join("")}
-    </div>
-  `;
-}
-
-function getAllMejoradaRiders() {
-  const set = new Set();
-  Object.values(ccMejoradaRidersByCategory || {}).forEach(list => {
-    list.forEach(name => set.add(name));
-  });
-  return Array.from(set).sort((a, b) => a.localeCompare(b, "es"));
-}
-
-function renderRiderFilter() {
-  const riders = getAllMejoradaRiders();
-  return `
-    <option value="">Todos</option>
-    ${riders.map(r => `<option value="${escapeHtml(r)}">${escapeHtml(formatDisplayName(r))}</option>`).join("")}
-  `;
-}
-
-function getRiderChampionshipStats(riderName) {
-  const normalizedTarget = normalizeText(riderName);
-  const results = [];
-
-  championships.forEach(champ => {
-    const standings = champ.generalStandingsByCategory || {};
-    Object.entries(standings).forEach(([categoryKey, rows]) => {
-      (rows || []).forEach(row => {
-        if (hasSameNameTokens(normalizedTarget, normalizeText(row.name || ""))) {
-          results.push({
-            championshipId: champ.id,
-            championshipName: champ.name,
-            categoryKey,
-            categoryLabel: getCategoryLabel(categoryKey),
-            position: Number(row.position || 0),
-            points: Number(row.points || 0),
-            club: row.club || "",
-            name: row.name || riderName
-          });
-        }
-      });
-    });
-  });
-
-  results.sort((a, b) => {
-    if (a.position !== b.position) return a.position - b.position;
-    return a.championshipName.localeCompare(b.championshipName, "es");
-  });
-
-  return results;
-}
-
-function renderRiderStatsCards(results) {
-  if (!results.length) {
-    return `<div class="empty">No hay clasificaciones generales cargadas para este corredor.</div>`;
-  }
-
-  const positions = results.map(item => item.position).filter(Boolean);
-  const totalPoints = results.reduce((sum, item) => sum + (item.points || 0), 0);
-  const championshipsCount = new Set(results.map(item => item.championshipId)).size;
-  const best = positions.length ? Math.min(...positions) : null;
-  const worst = positions.length ? Math.max(...positions) : null;
-  const avg = positions.length ? (positions.reduce((a, b) => a + b, 0) / positions.length) : null;
-
-  return `
-    <div class="stats-grid stats-grid-rider">
-      <div class="stats-box">
-        <span>Campeonatos</span>
-        <strong>${championshipsCount}</strong>
-      </div>
-      <div class="stats-box">
-        <span>Mejor puesto</span>
-        <strong>${best ? best + "º" : "—"}</strong>
-      </div>
-      <div class="stats-box">
-        <span>Peor puesto</span>
-        <strong>${worst ? worst + "º" : "—"}</strong>
-      </div>
-      <div class="stats-box">
-        <span>Media</span>
-        <strong>${avg ? avg.toFixed(1).replace(".", ",") + "º" : "—"}</strong>
-      </div>
-      <div class="stats-box">
-        <span>Puntos totales</span>
-        <strong>${totalPoints}</strong>
-      </div>
-    </div>
-  `;
-}
-
-function renderRiderStatsTable(results) {
-  if (!results.length) return "";
-
-  return `
-    <div class="stats-table-wrap">
-      <table class="stats-table">
-        <thead>
-          <tr>
-            <th>Campeonato</th>
-            <th>Categoría</th>
-            <th>Puesto</th>
-            <th>Puntos</th>
-          </tr>
-        </thead>
-        <tbody>
-          ${results.map(item => `
-            <tr>
-              <td>${escapeHtml(item.championshipName)}</td>
-              <td>${escapeHtml(item.categoryLabel)}</td>
-              <td>${escapeHtml(String(item.position || "—"))}º</td>
-              <td>${escapeHtml(String(item.points || 0))}</td>
-            </tr>
-          `).join("")}
-        </tbody>
-      </table>
-    </div>
-  `;
-}
-
-function renderStatsDetail(riderName) {
-  const container = document.getElementById("statsDetail");
-  if (!container) return;
-
-  if (!riderName) {
-    container.innerHTML = `<div class="empty">Selecciona un corredor</div>`;
-    return;
-  }
-
-  const results = getRiderChampionshipStats(riderName);
-
-  container.innerHTML = `
-    <div class="stats-rider-title">${escapeHtml(formatDisplayName(riderName))}</div>
-    ${renderRiderStatsCards(results)}
-    ${renderRiderStatsTable(results)}
-  `;
-}
-
-function initStatsPage() {
-  const summary = document.getElementById("statsSummary");
-  const select = document.getElementById("statsRiderFilter");
-  if (!summary || !select) return;
-
-  summary.innerHTML = renderStatsSummary();
-  select.innerHTML = renderRiderFilter();
-  select.addEventListener("change", () => {
-    renderStatsDetail(select.value);
-  });
-  renderStatsDetail("");
-}
-
-
 
 function updateNav(route) {
   const links = document.querySelectorAll(".nav a");
   links.forEach(link => link.classList.remove("active"));
   let target = "#/";
   if (route.startsWith("#/calendario")) target = "#/calendario";
-  else if (route.startsWith("#/estadisticas")) target = "#/estadisticas";
   else if (route.startsWith("#/campeonatos") || route.startsWith("#/campeonato/") || route.startsWith("#/carrera/")) target = "#/campeonatos";
   const active = Array.from(links).find(link => link.getAttribute("href") === target);
   if (active) active.classList.add("active");
@@ -1259,8 +1098,6 @@ function render() {
     content = renderHome();
   } else if (hash === "#/calendario") {
     content = renderCalendar();
-  } else if (hash === "#/estadisticas") {
-    content = renderStatsPage();
   } else if (hash === "#/campeonatos") {
     content = renderChampionships();
   } else if (hash.startsWith("#/campeonato/")) {
@@ -1285,8 +1122,6 @@ function render() {
     document.getElementById("filterMonth").addEventListener("change", applyCalendarFilters);
     document.getElementById("filterText").addEventListener("input", applyCalendarFilters);
     applyCalendarFilters();
-  } else if (hash === "#/estadisticas") {
-    initStatsPage();
   }
 }
 
