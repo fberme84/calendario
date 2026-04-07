@@ -93,8 +93,31 @@ function isMejoradaRider(name, categoryKey, club = "") {
   return list.some(savedName => hasSameNameTokens(savedName, name));
 }
 
-function renderStandingsRow(item, categoryKey) {
+
+function getGuadalajaraPointsByPosition(pos) {
+  const table = {
+    1: 100, 2: 75, 3: 60, 4: 50, 5: 45,
+    6: 40, 7: 35, 8: 30, 9: 27, 10: 25,
+    11: 22, 12: 20, 13: 17, 14: 15, 15: 12,
+    16: 10, 17: 9, 18: 8, 19: 7, 20: 6,
+    21: 5, 22: 4, 23: 3, 24: 2, 25: 1
+  };
+  return table[pos] || 0;
+}
+
+function renderStandingsRow(item, categoryKey, race = null) {
   const isMejorada = isMejoradaRider(item.name, categoryKey, item.club);
+  const hasRawPoints = item.points !== undefined && item.points !== null && String(item.points).trim() !== "";
+  const isGuadalajara = !!race && Array.isArray(race.championshipIds) && race.championshipIds.includes("mtb-escolar-guadalajara-2026");
+
+  let points = "";
+  if (hasRawPoints) {
+    points = String(item.points);
+  } else if (isGuadalajara) {
+    const calculated = getGuadalajaraPointsByPosition(Number(item.position || 0));
+    points = calculated ? String(calculated) : "";
+  }
+
   return `<div class="standing-row ${isMejorada ? "standing-mejorada" : ""}">
     <div class="standing-pos-wrap">
       ${isMejorada ? `<img class="standing-club-badge" src="${withAppVersion('img/escudo_cc_mejorada.png')}" alt="CC Mejorada">` : `<span class="standing-club-badge placeholder"></span>`}
@@ -104,7 +127,7 @@ function renderStandingsRow(item, categoryKey) {
       <div class="standing-name">${escapeHtml(formatDisplayName(item.name || ""))}</div>
       <div class="standing-meta">${escapeHtml(item.club || "")}</div>
     </div>
-    <div class="standing-points">${escapeHtml(String(item.points ?? ""))} pts</div>
+    ${points ? `<div class="standing-points">${escapeHtml(points)} pts</div>` : ``}
   </div>`;
 }
 
@@ -119,8 +142,8 @@ function renderGeneralCategoryBlock(categoryKey, items) {
     <details class="standings-category">
       <summary>${escapeHtml(getCategoryLabel(categoryKey))}</summary>
       <div class="standings-subtitle">Top 5 general</div>
-      <div class="standings-list">${top5.map(item => renderStandingsRow(item, categoryKey)).join("")}</div>
-      ${mejoradaExtra.length ? `<div class="standings-subtitle">CC Mejorada</div><div class="standings-list">${mejoradaExtra.map(item => renderStandingsRow(item, categoryKey)).join("")}</div>` : ``}
+      <div class="standings-list">${top5.map(item => renderStandingsRow(item, categoryKey, race)).join("")}</div>
+      ${mejoradaExtra.length ? `<div class="standings-subtitle">CC Mejorada</div><div class="standings-list">${mejoradaExtra.map(item => renderStandingsRow(item, categoryKey, race)).join("")}</div>` : ``}
     </details>
   `;
 }
@@ -944,7 +967,7 @@ function renderChampionshipDetail(championshipId) {
 
 
 
-function renderRaceCategoryBlock(categoryKey, items) {
+function renderRaceCategoryBlock(categoryKey, items, race) {
   const rows = Array.isArray(items) ? items : [];
   if (!rows.length) {
     return `<details class="standings-category"><summary>${escapeHtml(getCategoryLabel(categoryKey))}</summary><div class="standings-empty">Sin clasificación disponible.</div></details>`;
@@ -955,8 +978,8 @@ function renderRaceCategoryBlock(categoryKey, items) {
     <details class="standings-category">
       <summary>${escapeHtml(getCategoryLabel(categoryKey))}</summary>
       <div class="standings-subtitle">Top 5</div>
-      <div class="standings-list">${top5.map(item => renderStandingsRow(item, categoryKey)).join("")}</div>
-      ${mejoradaExtra.length ? `<div class="standings-subtitle">CC Mejorada</div><div class="standings-list">${mejoradaExtra.map(item => renderStandingsRow(item, categoryKey)).join("")}</div>` : ``}
+      <div class="standings-list">${top5.map(item => renderStandingsRow(item, categoryKey, race)).join("")}</div>
+      ${mejoradaExtra.length ? `<div class="standings-subtitle">CC Mejorada</div><div class="standings-list">${mejoradaExtra.map(item => renderStandingsRow(item, categoryKey, race)).join("")}</div>` : ``}
     </details>
   `;
 }
@@ -982,8 +1005,8 @@ function renderRaceResultsSection(race) {
       </div>
       <div class="standings-grid">${orderedPairs.map(pair => `
         <div class="standings-pair">
-          <div class="standings-col">${renderRaceCategoryBlock(pair[0], results[pair[0]] || [])}</div>
-          <div class="standings-col">${renderRaceCategoryBlock(pair[1], results[pair[1]] || [])}</div>
+          <div class="standings-col">${renderRaceCategoryBlock(pair[0], results[pair[0]] || [], race)}</div>
+          <div class="standings-col">${renderRaceCategoryBlock(pair[1], results[pair[1]] || [], race)}</div>
         </div>
       `).join('')}</div>
     </section>
