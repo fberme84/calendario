@@ -1,5 +1,5 @@
-window.APP_VERSION = "20260330-4";
-window.APP_VERSION = "20260330-4";\nwindow.APP_DATA = {
+window.APP_VERSION = "20260330-5";
+window.APP_VERSION = "20260330-5";\nwindow.APP_DATA = {
   "championships": [
     {
       "id": "clm-xco-2026",

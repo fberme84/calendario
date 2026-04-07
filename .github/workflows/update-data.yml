@@ -21,10 +21,16 @@ jobs:
         with:
           python-version: "3.11"
 
+      - name: Setup Chrome
+        id: setup-chrome
+        uses: browser-actions/setup-chrome@v1
+
       - name: Install dependencies
         run: pip install -r requirements.txt
 
       - name: Update data.json
+        env:
+          CHROME_BIN: ${{ steps.setup-chrome.outputs.chrome-path }}
         run: python update_data.py
 
       - name: Commit and push if changed

@@ -1,4 +1,5 @@
 #!/usr/bin/env python3
+import os
 import json
 import re
 import unicodedata
@@ -9,6 +10,12 @@ from urllib.parse import parse_qs, unquote, urljoin, urlparse
 
 import requests
 from bs4 import BeautifulSoup
+from selenium import webdriver
+from selenium.common.exceptions import TimeoutException
+from selenium.webdriver.chrome.options import Options
+from selenium.webdriver.common.by import By
+from selenium.webdriver.support import expected_conditions as EC
+from selenium.webdriver.support.ui import WebDriverWait
 
 BASE_DIR = Path(__file__).resolve().parent
 DATA_PATH = BASE_DIR / "data.json"
@@ -84,6 +91,83 @@ def fetch_text(url: str) -> str:
     response.raise_for_status()
     response.encoding = response.encoding or "utf-8"
     return response.text
+
+
+
+def fetch_rendered_html_with_selenium(url: str, wait_selector: str = "table") -> str:
+    options = Options()
+    options.add_argument("--headless=new")
+    options.add_argument("--no-sandbox")
+    options.add_argument("--disable-dev-shm-usage")
+    options.add_argument("--window-size=1600,1200")
+    chrome_bin = os.environ.get("CHROME_BIN")
+    if chrome_bin:
+        options.binary_location = chrome_bin
+
+    driver = webdriver.Chrome(options=options)
+    try:
+        driver.get(url)
+        WebDriverWait(driver, TIMEOUT).until(
+            EC.presence_of_element_located((By.CSS_SELECTOR, wait_selector))
+        )
+        return driver.page_source
+    finally:
+        driver.quit()
+
+
+def parse_yosoyciclista_table_html(html_text: str) -> list[dict]:
+    soup = BeautifulSoup(html_text, "html.parser")
+    table = soup.find("table")
+    if not table:
+        return []
+
+    rows = []
+    body_rows = table.find_all("tr")
+    for tr in body_rows:
+        cells = tr.find_all(["td", "th"])
+        if len(cells) < 4:
+            continue
+
+        pos_text = normalize_text(cells[0].get_text(" ", strip=True))
+        if not pos_text.isdigit():
+            continue
+
+        name_club_cell = cells[1]
+        raw_lines = [line.strip() for line in name_club_cell.get_text("\n", strip=True).splitlines() if line.strip()]
+        if not raw_lines:
+            continue
+
+        name = title_case_name(normalize_text(raw_lines[0].replace(",", " ")))
+        club = raw_lines[1] if len(raw_lines) > 1 else ""
+        total_text = normalize_text(cells[2].get_text(" ", strip=True))
+        total_points = int(total_text) if total_text.isdigit() else 0
+
+        rows.append({
+            "position": int(pos_text),
+            "name": name,
+            "club": club,
+            "points": total_points,
+        })
+
+    return dedupe_rows_by_name(rows)
+
+
+def parse_yosoyciclista_standings_with_selenium(url: str) -> list[dict]:
+    html_text = fetch_rendered_html_with_selenium(url, "table")
+    rows = parse_yosoyciclista_table_html(html_text)
+    if rows:
+        return rows
+    return parse_yosoyciclista_standings(html_text)
+
+
+def should_use_selenium_for_clm(html_text: str) -> bool:
+    text = normalize_text(BeautifulSoup(html_text, "html.parser").get_text(" ", strip=True))
+    # Si el HTML base no refleja la actualización reciente o no trae columnas avanzadas cargadas, probamos con Selenium.
+    if "PUBLICADA : 30 MAR 2026" in text or "PUBLICADA: 30 MAR 2026" in text:
+        return False
+    if "P2" not in text:
+        return True
+    return "PUBLICADA : 12 MAR 2026" in text or "PUBLICADA: 12 MAR 2026" in text
 
 
 def build_documents_url(registration_url: str) -> str | None:
@@ -308,7 +392,11 @@ def update_championship_general_standings(champ: dict) -> dict:
                 continue
             try:
                 html_text = fetch_text(url)
-                updated[category_key] = dedupe_rows_by_name(parse_yosoyciclista_standings(html_text))
+                if should_use_selenium_for_clm(html_text):
+                    print(f"HTML base incompleto para CLM · {category_key}. Probando con Selenium…")
+                    updated[category_key] = parse_yosoyciclista_standings_with_selenium(url)
+                else:
+                    updated[category_key] = dedupe_rows_by_name(parse_yosoyciclista_standings(html_text))
                 ok = ok or bool(updated[category_key])
                 print(f"General CLM actualizada: {champ.get('name')} · {category_key} ({len(updated[category_key])})")
             except Exception as exc:
