@@ -2646,33 +2646,51 @@
           },
           {
             "position": 2,
-            "name": "Hugo García del Río",
-            "club": "MEJORADA C.C.",
-            "points": 175
-          },
-          {
-            "position": 3,
             "name": "Eneko García Briso-Montiano",
             "club": "",
             "points": 135
           },
           {
-            "position": 4,
+            "position": 3,
             "name": "Javier de la Vega Gil",
             "club": "",
             "points": 100
           },
           {
-            "position": 5,
+            "position": 4,
             "name": "Guillermo Sánchez Sánchez",
             "club": "MEJORADA C.C.",
             "points": 80
+          },
+          {
+            "position": 5,
+            "name": "Hugo García del Río",
+            "club": "MEJORADA C.C.",
+            "points": 75
           },
           {
             "position": 6,
             "name": "Marcos García González",
             "club": "MEJORADA C.C.",
             "points": 60
+          },
+          {
+            "position": 7,
+            "name": "Jorge Frutos Cadalso",
+            "club": "",
+            "points": 50
+          },
+          {
+            "position": 8,
+            "name": "Raúl Escribano Sánchez",
+            "club": "",
+            "points": 50
+          },
+          {
+            "position": 9,
+            "name": "Pablo González Gutiérrez",
+            "club": "",
+            "points": 45
           }
         ],
         "alevin_femenino": [
