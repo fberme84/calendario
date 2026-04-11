@@ -2588,13 +2588,13 @@
         "principiante_masculino": [
           {
             "position": 1,
-            "name": "Pablo Bermejo Sanchez",
+            "name": "Pablo Bermejo Sánchez",
             "club": "MEJORADA C.C.",
             "points": 160
           },
           {
             "position": 2,
-            "name": "Yago Lopez Casas",
+            "name": "Yago López Casas",
             "club": "",
             "points": 150
           },
@@ -2606,13 +2606,13 @@
           },
           {
             "position": 4,
-            "name": "Victor Sotoca Sotoca",
+            "name": "Víctor Sotoca Sotoca",
             "club": "",
             "points": 95
           },
           {
             "position": 5,
-            "name": "Erik Ochoa De Alda Cantador",
+            "name": "Erik Ochoa de Alda Cantador",
             "club": "",
             "points": 90
           },
@@ -2620,65 +2620,91 @@
             "position": 6,
             "name": "Markel Ayuso Calleja",
             "club": "",
-            "points": 90
+            "points": 85
           }
         ],
-        "principiante_femenino": [],
+        "principiante_femenino": [
+          {
+            "position": 1,
+            "name": "Celia Porras Mérida",
+            "club": "MEJORADA C.C.",
+            "points": 200
+          },
+          {
+            "position": 2,
+            "name": "Miriam Alcívar Romero",
+            "club": "",
+            "points": 75
+          }
+        ],
         "alevin_masculino": [
           {
             "position": 1,
-            "name": "Alejandro Rodriguez Bermejo",
+            "name": "Alejandro Rodríguez Bermejo",
             "club": "",
             "points": 200
           },
           {
             "position": 2,
-            "name": "Eneko Garcia Briso-Montiano",
+            "name": "Hugo García del Río",
+            "club": "MEJORADA C.C.",
+            "points": 175
+          },
+          {
+            "position": 3,
+            "name": "Eneko García Briso-Montiano",
             "club": "",
             "points": 135
           },
           {
-            "position": 3,
-            "name": "Javier De La Vega Gil",
+            "position": 4,
+            "name": "Javier de la Vega Gil",
             "club": "",
             "points": 100
           },
           {
-            "position": 4,
-            "name": "Guillermo Sanchez Sanchez",
+            "position": 5,
+            "name": "Guillermo Sánchez Sánchez",
             "club": "MEJORADA C.C.",
             "points": 80
           },
           {
-            "position": 5,
-            "name": "Hugo Garcia Del Rio",
-            "club": "MEJORADA C.C.",
-            "points": 75
-          },
-          {
             "position": 6,
-            "name": "Marcos Garcia Gonzalez",
+            "name": "Marcos García González",
             "club": "MEJORADA C.C.",
             "points": 60
           }
         ],
-        "alevin_femenino": [],
+        "alevin_femenino": [
+          {
+            "position": 1,
+            "name": "Alejandra Cristóbal Herrero",
+            "club": "",
+            "points": 100
+          },
+          {
+            "position": 2,
+            "name": "Nerea Crespo Aguado",
+            "club": "",
+            "points": 75
+          }
+        ],
         "infantil_masculino": [
           {
             "position": 1,
-            "name": "Francisco Rodriguez Bermejo",
+            "name": "Francisco Rodríguez Bermejo",
             "club": "",
             "points": 175
           },
           {
             "position": 2,
-            "name": "Adrian Crespo Aguado",
+            "name": "Adrián Crespo Aguado",
             "club": "",
             "points": 135
           },
           {
             "position": 3,
-            "name": "Aaron Nicolas Fernandez",
+            "name": "Aarón Nicolás Fernández",
             "club": "",
             "points": 100
           },
@@ -2696,7 +2722,7 @@
           },
           {
             "position": 6,
-            "name": "Asier Porras Merida",
+            "name": "Asier Porras Mérida",
             "club": "MEJORADA C.C.",
             "points": 85
           }
@@ -2712,31 +2738,31 @@
         "cadete_masculino": [
           {
             "position": 1,
-            "name": "Alejandro Hidalgo Martin-Loeches",
+            "name": "Alejandro Hidalgo Martín-Loeches",
             "club": "",
             "points": 175
           },
           {
             "position": 2,
-            "name": "Hugo Sanchez Sanchez",
+            "name": "Hugo Sánchez Sánchez",
             "club": "MEJORADA C.C.",
             "points": 135
           },
           {
             "position": 3,
-            "name": "Marcos Sebastian Blanco",
+            "name": "Marcos Sebastián Blanco",
             "club": "",
             "points": 100
           },
           {
             "position": 4,
-            "name": "Ilan Sanchez Sanchez-Nieves",
+            "name": "Ilán Sánchez Sánchez-Nieves",
             "club": "",
             "points": 60
           },
           {
             "position": 5,
-            "name": "Victor Infantes Gonzalez",
+            "name": "Víctor Infantes González",
             "club": "",
             "points": 50
           }
@@ -2744,7 +2770,7 @@
         "cadete_femenino": [
           {
             "position": 1,
-            "name": "Jimena Alcivar Romero",
+            "name": "Jimena Alcívar Romero",
             "club": "",
             "points": 200
           }
