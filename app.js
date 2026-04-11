@@ -151,10 +151,12 @@ function renderGeneralCategoryBlock(categoryKey, items) {
 function renderGeneralStandingsSection(champ) {
   const standings = champ && champ.generalStandingsByCategory ? champ.generalStandingsByCategory : null;
   const orderedPairs = [
+    ['mi_promesa_masculino','mi_promesa_femenino'],
     ['promesa_masculino','promesa_femenino'],
     ['principiante_masculino','principiante_femenino'],
     ['alevin_masculino','alevin_femenino'],
-    ['infantil_masculino','infantil_femenino']
+    ['infantil_masculino','infantil_femenino'],
+    ['cadete_masculino','cadete_femenino']
   ];
   const hasAny = standings && orderedPairs.some(pair => pair.some(key => Array.isArray(standings[key]) && standings[key].length));
   return `
