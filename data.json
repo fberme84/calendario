@@ -2873,22 +2873,22 @@
   ],
   "races": [
     {
-	  "id": "quintanar-2026",
-	  "championshipIds": [
-		"clm-xco-2026"
-	  ],
-	  "categoryType": "mixta",
-	  "name": "Quintanar del Rey · Escuelas + XCO",
-	  "date": "2026-05-31",
-	  "location": "Quintanar del Rey",
-	  "province": "Cuenca",
-	  "organizer": "",
-	  "registrationUrl": "",
-	  "technicalGuideUrl": "",
-	  "documentsUrl": "",
-	  "notes": "4ª prueba de la Copa Castilla-La Mancha XCO 2026.",
-	  "resultUrl": ""
-	},
+      "id": "quintanar-2026",
+      "championshipIds": [
+        "clm-xco-2026"
+      ],
+      "categoryType": "mixta",
+      "name": "Quintanar del Rey · Escuelas + XCO",
+      "date": "2026-05-31",
+      "location": "Quintanar del Rey",
+      "province": "Cuenca",
+      "organizer": "",
+      "registrationUrl": "",
+      "technicalGuideUrl": "",
+      "documentsUrl": "",
+      "notes": "4ª prueba de la Copa Castilla-La Mancha XCO 2026.",
+      "resultUrl": ""
+    },
     {
       "id": "illescas-2026",
       "championshipIds": [
@@ -3712,7 +3712,7 @@
       "resultUrl": ""
     }
   ],
-  "lastUpdatedUtc": "2026-04-13T11:00:49.308228+00:00",
+  "lastUpdatedUtc": "2026-04-14T10:00:00.284357+00:00",
   "ccMejoradaRidersByCategory": {
     "promesa_masculino": [
       "SAMUEL CANUELO VAZQUEZ"
