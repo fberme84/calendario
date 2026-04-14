@@ -2575,392 +2575,16 @@
       "name": "Circuito Infantil Escolar MTB",
       "season": 2026,
       "description": "Circuito escolar no federado e independiente de las federaciones autonómicas.",
-      "generalClassificationUrl": "https://aciclismoinfantil.blogspot.com/",
+      "generalClassificationUrl": "https://drive.google.com/file/d/1rWCSs7KQzYj2XFdvsJL7k6yf3sqgbmmw/view",
       "generalStandingsByCategory": {
-        "promesa_masculino": [
-          {
-            "position": 1,
-            "name": "Lucas Sanz Alcober",
-            "club": "",
-            "points": 200
-          },
-          {
-            "position": 2,
-            "name": "Aritz García Briso-Montiano",
-            "club": "",
-            "points": 150
-          },
-          {
-            "position": 3,
-            "name": "Darío Ayuso Alejandre",
-            "club": "",
-            "points": 120
-          },
-          {
-            "position": 4,
-            "name": "Alex Almohalla Ropero",
-            "club": "",
-            "points": 95
-          },
-          {
-            "position": 5,
-            "name": "Mario Román Martínez",
-            "club": "",
-            "points": 80
-          },
-          {
-            "position": 9,
-            "name": "Samuel Cañuelo Vázquez",
-            "club": "MEJORADA C.C.",
-            "points": 50
-          }
-        ],
-        "promesa_femenino": [
-          {
-            "position": 1,
-            "name": "Ingrid Bote Arias",
-            "club": "",
-            "points": 200
-          },
-          {
-            "position": 2,
-            "name": "Amelia Kara Alvarez Chase",
-            "club": "",
-            "points": 125
-          },
-          {
-            "position": 3,
-            "name": "Nora Pariente Saez",
-            "club": "",
-            "points": 120
-          },
-          {
-            "position": 4,
-            "name": "Rocio Escribano Sanchez",
-            "club": "",
-            "points": 75
-          }
-        ],
-        "principiante_masculino": [
-          {
-            "position": 1,
-            "name": "Pablo Bermejo Sánchez",
-            "club": "MEJORADA C.C.",
-            "points": 160
-          },
-          {
-            "position": 2,
-            "name": "Yago López Casas",
-            "club": "",
-            "points": 150
-          },
-          {
-            "position": 3,
-            "name": "Mateo Lozano Alvarez",
-            "club": "",
-            "points": 100
-          },
-          {
-            "position": 4,
-            "name": "Víctor Sotoca Sotoca",
-            "club": "",
-            "points": 95
-          },
-          {
-            "position": 5,
-            "name": "Markel Ayuso Calleja",
-            "club": "",
-            "points": 90
-          },
-          {
-            "position": 6,
-            "name": "Erik Ochoa De Alda Cantador",
-            "club": "",
-            "points": 90
-          }
-        ],
-        "principiante_femenino": [
-          {
-            "position": 1,
-            "name": "Miriam Alcívar Romero",
-            "club": "",
-            "points": 175
-          },
-          {
-            "position": 2,
-            "name": "Celia Porras Mérida",
-            "club": "MEJORADA C.C.",
-            "points": 100
-          },
-          {
-            "position": 3,
-            "name": "Sofia Chivato Miguel",
-            "club": "",
-            "points": 75
-          },
-          {
-            "position": 4,
-            "name": "Daniela Casado Escribano",
-            "club": "",
-            "points": 60
-          },
-          {
-            "position": 5,
-            "name": "Carmen Canalejas García",
-            "club": "",
-            "points": 50
-          }
-        ],
-        "alevin_masculino": [
-          {
-            "position": 1,
-            "name": "Alejandro Rodríguez Bermejo",
-            "club": "",
-            "points": 200
-          },
-          {
-            "position": 2,
-            "name": "Eneko García Briso-Montiano",
-            "club": "",
-            "points": 135
-          },
-          {
-            "position": 3,
-            "name": "Javier De La Vega Gil",
-            "club": "",
-            "points": 100
-          },
-          {
-            "position": 4,
-            "name": "Guillermo Sánchez Sánchez",
-            "club": "MEJORADA C.C.",
-            "points": 80
-          },
-          {
-            "position": 5,
-            "name": "Hugo García Del Río",
-            "club": "MEJORADA C.C.",
-            "points": 75
-          },
-          {
-            "position": 6,
-            "name": "Jorge Frutos Cadalso",
-            "club": "",
-            "points": 50
-          },
-          {
-            "position": 7,
-            "name": "Raul Escribano Sanchez",
-            "club": "",
-            "points": 50
-          },
-          {
-            "position": 8,
-            "name": "Pau Català Hernandez",
-            "club": "",
-            "points": 49
-          },
-          {
-            "position": 9,
-            "name": "Pablo Gonzalez Gutierrez",
-            "club": "",
-            "points": 45
-          },
-          {
-            "position": 10,
-            "name": "Marcos Garcia González",
-            "club": "MEJORADA C.C.",
-            "points": 40
-          }
-        ],
-        "alevin_femenino": [
-          {
-            "position": 1,
-            "name": "Alejandra Cristóbal Herrero",
-            "club": "",
-            "points": 145
-          },
-          {
-            "position": 2,
-            "name": "Nerea Crespo Aguado",
-            "club": "",
-            "points": 135
-          },
-          {
-            "position": 3,
-            "name": "Lucía Nicolás Fernández",
-            "club": "",
-            "points": 100
-          },
-          {
-            "position": 4,
-            "name": "Alejandra Hernández Díaz",
-            "club": "",
-            "points": 100
-          },
-          {
-            "position": 5,
-            "name": "Carla Chivato Miguel",
-            "club": "",
-            "points": 75
-          }
-        ],
-        "infantil_masculino": [
-          {
-            "position": 1,
-            "name": "Francisco Rodríguez Bermejo",
-            "club": "",
-            "points": 175
-          },
-          {
-            "position": 2,
-            "name": "Adrián Crespo Aguado",
-            "club": "",
-            "points": 135
-          },
-          {
-            "position": 3,
-            "name": "Aarón Nicolás Fernández",
-            "club": "",
-            "points": 100
-          },
-          {
-            "position": 4,
-            "name": "Diego Torres Llerena",
-            "club": "",
-            "points": 100
-          },
-          {
-            "position": 5,
-            "name": "Nacho Torres Sancho",
-            "club": "MEJORADA C.C.",
-            "points": 95
-          },
-          {
-            "position": 6,
-            "name": "Asier Rodríguez Rios",
-            "club": "",
-            "points": 85
-          },
-          {
-            "position": 10,
-            "name": "Asier Porras Merida",
-            "club": "MEJORADA C.C.",
-            "points": 45
-          }
-        ],
-        "infantil_femenino": [
-          {
-            "position": 1,
-            "name": "Ariadna Bote Arias",
-            "club": "",
-            "points": 200
-          }
-        ],
-        "cadete_masculino": [
-          {
-            "position": 1,
-            "name": "Alejandro Hidalgo Martín-Loeches",
-            "club": "",
-            "points": 175
-          },
-          {
-            "position": 2,
-            "name": "Hugo Sánchez Sánchez",
-            "club": "MEJORADA C.C.",
-            "points": 135
-          },
-          {
-            "position": 3,
-            "name": "Marcos Sebastián Blanco",
-            "club": "",
-            "points": 100
-          },
-          {
-            "position": 4,
-            "name": "Ilán Sánchez Sánchez-Nieves",
-            "club": "",
-            "points": 60
-          },
-          {
-            "position": 5,
-            "name": "Victor Infantes Gonzalez",
-            "club": "",
-            "points": 50
-          }
-        ],
-        "cadete_femenino": [
-          {
-            "position": 1,
-            "name": "Jimena Alcívar Romero",
-            "club": "",
-            "points": 200
-          }
-        ],
-        "mi_promesa_masculino": [
-          {
-            "position": 1,
-            "name": "Noah Rojas Razola",
-            "club": "",
-            "points": 150
-          },
-          {
-            "position": 2,
-            "name": "Hugo Calle Moya",
-            "club": "",
-            "points": 105
-          },
-          {
-            "position": 3,
-            "name": "Aleix Viana De Las Heras",
-            "club": "",
-            "points": 100
-          },
-          {
-            "position": 4,
-            "name": "Alejandro Lozano Alvarez",
-            "club": "",
-            "points": 100
-          },
-          {
-            "position": 5,
-            "name": "Diego Semitiel Butron",
-            "club": "",
-            "points": 100
-          }
-        ],
-        "mi_promesa_femenino": [
-          {
-            "position": 1,
-            "name": "Olivia Ramírez Jimenez",
-            "club": "",
-            "points": 150
-          },
-          {
-            "position": 2,
-            "name": "Leire Bermejo Sánchez",
-            "club": "MEJORADA C.C.",
-            "points": 150
-          },
-          {
-            "position": 3,
-            "name": "Carlota Patiño Hierro",
-            "club": "",
-            "points": 100
-          },
-          {
-            "position": 4,
-            "name": "Paula Sanz Alcober",
-            "club": "",
-            "points": 90
-          },
-          {
-            "position": 5,
-            "name": "Candela Bayona Rodríguez",
-            "club": "",
-            "points": 60
-          }
-        ]
+        "promesa_masculino": [],
+        "promesa_femenino": [],
+        "principiante_masculino": [],
+        "principiante_femenino": [],
+        "alevin_masculino": [],
+        "alevin_femenino": [],
+        "infantil_masculino": [],
+        "infantil_femenino": []
       }
     },
     {
@@ -2989,14 +2613,14 @@
       ],
       "categoryType": "mixta",
       "name": "Quintanar del Rey · Escuelas + XCO",
-      "date": "2026-05-31",
+      "date": "",
       "location": "Quintanar del Rey",
       "province": "Cuenca",
       "organizer": "",
       "registrationUrl": "",
       "technicalGuideUrl": "",
       "documentsUrl": "",
-      "notes": "4ª prueba de la Copa Castilla-La Mancha XCO 2026.",
+      "notes": "Fecha y enlaces pendientes.",
       "resultUrl": ""
     },
     {
@@ -3345,7 +2969,7 @@
       "technicalGuideUrl": "",
       "documentsUrl": "",
       "notes": "Prueba del Mtb Escolar de Guadalajara. Campeonato no federado. Inscripción y guía técnica pendientes.",
-      "resultUrl": ""
+      "resultUrl": "https://sporthive.com/events/s/d9c2eeba-032c-437c-9b90-f7d3447f7e96"
     },
     {
       "id": "alpedrete-2026",
@@ -3394,7 +3018,7 @@
       "location": "Sigüenza",
       "province": "Guadalajara",
       "organizer": "",
-      "registrationUrl": "",
+      "registrationUrl": "https://www.rockthesport.com/es/evento/siguenza-circuito-infantil-escolar-mtb-guadalajara",
       "technicalGuideUrl": "",
       "documentsUrl": "",
       "notes": "Prueba del Mtb Escolar de Guadalajara. Campeonato no federado. Inscripción y guía técnica pendientes.",
