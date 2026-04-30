@@ -302,7 +302,7 @@ function raceBelongsToChampionship(race, championshipId) {
 
 // Escuela view: include explicit escuelas + mixta races (because they include escuelas)
 function isSchoolRace(race) {
-  return race.categoryType === "escuelas" || race.categoryType === "mixta";
+  return race.categoryType === "escuelas" || race.categoryType === "mixta" || race.categoryType === "ciclocross";
 }
 
 function getSchoolRaces() {
@@ -357,6 +357,8 @@ function getChampionshipColorClass(id) {
   if (id === "clm-xco-2026") return "champ-clm";
   if (id === "mtb-escolar-guadalajara-2026") return "champ-guadalajara";
   if (id === "mtb-racing-cup-2026") return "champ-racingcup";
+  if (id === "copa-madrid-cx-2026") return "champ-cx-madrid";
+  if (id === "cx-racing-cup-2026") return "champ-cx-racing";
   return "";
 }
 
@@ -376,6 +378,8 @@ function getChampionshipTitleColorClass(id) {
   if (id === "clm-xco-2026") return "title-clm";
   if (id === "mtb-escolar-guadalajara-2026") return "title-guadalajara";
   if (id === "mtb-racing-cup-2026") return "title-racingcup";
+  if (id === "copa-madrid-cx-2026") return "title-cx-madrid";
+  if (id === "cx-racing-cup-2026") return "title-cx-racing";
   return "";
 }
 
@@ -408,6 +412,8 @@ function getRaceCardClass(race, contextChampionshipId = null) {
   if (ids[0] === "clm-xco-2026") return "champ-single-clm";
   if (ids[0] === "mtb-escolar-guadalajara-2026") return "champ-single-guadalajara";
   if (ids[0] === "mtb-racing-cup-2026") return "champ-single-racingcup";
+  if (ids[0] === "copa-madrid-cx-2026") return "champ-single-cx-madrid";
+  if (ids[0] === "cx-racing-cup-2026") return "champ-single-cx-racing";
   return "";
 }
 

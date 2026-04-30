@@ -1964,3 +1964,60 @@ button {
     align-items: flex-start;
   }
 }
+
+
+/* Ciclocross */
+.champ-cx-madrid { background:#2b2f3a; color:#fff; }
+.champ-cx-racing { background:#ff8a00; color:#1f1300; }
+
+.race-card.champ-single-cx-madrid {
+  background: linear-gradient(135deg, rgba(43,47,58,0.14), rgba(255,255,255,0.96));
+  border-color: rgba(43,47,58,0.42);
+}
+
+.race-card.champ-single-cx-racing {
+  background: linear-gradient(135deg, rgba(255,138,0,0.18), rgba(255,255,255,0.96));
+  border-color: rgba(255,138,0,0.45);
+}
+
+.championship-card.champ-cx-madrid {
+  background:#f4f5f7;
+  border-color:#c5c8cf;
+}
+
+.championship-card.champ-cx-racing {
+  background:#fff6ea;
+  border-color:#ffc27a;
+}
+
+.championship-card.champ-cx-madrid h2,
+.championship-detail-head .title-cx-madrid {
+  color:#2b2f3a;
+}
+
+.championship-card.champ-cx-racing h2,
+.championship-detail-head .title-cx-racing {
+  color:#9a4b00;
+}
+
+.calendar-event.champ-single-cx-madrid {
+  background:#f1f2f4;
+  border-left:4px solid #2b2f3a;
+}
+
+.calendar-event.champ-single-cx-racing {
+  background:#fff1dc;
+  border-left:4px solid #ff8a00;
+}
+
+.home-champ-link.champ-cx-madrid {
+  background:#f4f5f7;
+  border-color:#c5c8cf;
+  color:#2b2f3a;
+}
+
+.home-champ-link.champ-cx-racing {
+  background:#fff4e5;
+  border-color:#ffc27a;
+  color:#9a4b00;
+}
