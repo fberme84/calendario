@@ -2603,26 +2603,25 @@
         "infantil_masculino": [],
         "infantil_femenino": []
       }
+    },
+    {
+      "id": "copa-madrid-cx-2026",
+      "name": "Copa Madrid Ciclocross 2026",
+      "season": 2026,
+      "description": "Calendario de carreras de ciclocross de la Copa Comunidad de Madrid CX 2026.",
+      "generalClassificationUrl": "",
+      "generalStandingsByCategory": {}
+    },
+    {
+      "id": "cx-racing-cup-2026",
+      "name": "Ciclocross Racing Cup 2026",
+      "season": 2026,
+      "description": "Precalendario de carreras de ciclocross Racing Cup 2026.",
+      "generalClassificationUrl": "",
+      "generalStandingsByCategory": {}
     }
   ],
   "races": [
-    {
-      "id": "quintanar-2026",
-      "championshipIds": [
-        "clm-xco-2026"
-      ],
-      "categoryType": "mixta",
-      "name": "Quintanar del Rey · Escuelas + XCO",
-      "date": "",
-      "location": "Quintanar del Rey",
-      "province": "Cuenca",
-      "organizer": "",
-      "registrationUrl": "",
-      "technicalGuideUrl": "",
-      "documentsUrl": "",
-      "notes": "Fecha y enlaces pendientes.",
-      "resultUrl": ""
-    },
     {
       "id": "illescas-2026",
       "championshipIds": [
@@ -3145,6 +3144,227 @@
       "technicalGuideUrl": "",
       "documentsUrl": "",
       "notes": "Pendiente de publicación oficial de la ficha.",
+      "resultUrl": ""
+    },
+    {
+      "id": "cx-racing-camarena-2026",
+      "championshipIds": [
+        "cx-racing-cup-2026"
+      ],
+      "categoryType": "ciclocross",
+      "name": "Camarena · Ciclocross Racing Cup",
+      "date": "2026-09-27",
+      "location": "Camarena",
+      "province": "Toledo",
+      "organizer": "",
+      "registrationUrl": "",
+      "technicalGuideUrl": "",
+      "documentsUrl": "",
+      "notes": "Ciclocross Racing Cup 2026. Sede por confirmar.",
+      "resultUrl": ""
+    },
+    {
+      "id": "cx-racing-almansa-2026",
+      "championshipIds": [
+        "cx-racing-cup-2026"
+      ],
+      "categoryType": "ciclocross",
+      "name": "Almansa · Ciclocross Racing Cup",
+      "date": "2026-10-03",
+      "location": "Almansa",
+      "province": "Albacete",
+      "organizer": "",
+      "registrationUrl": "",
+      "technicalGuideUrl": "",
+      "documentsUrl": "",
+      "notes": "Ciclocross Racing Cup 2026.",
+      "resultUrl": ""
+    },
+    {
+      "id": "cx-navalafuente-2026",
+      "championshipIds": [
+        "copa-madrid-cx-2026"
+      ],
+      "categoryType": "ciclocross",
+      "name": "Navalafuente · Ciclocross",
+      "date": "2026-10-04",
+      "location": "Navalafuente",
+      "province": "Madrid",
+      "organizer": "",
+      "registrationUrl": "",
+      "technicalGuideUrl": "",
+      "documentsUrl": "",
+      "notes": "Copa Madrid Ciclocross 2026.",
+      "resultUrl": ""
+    },
+    {
+      "id": "cx-racing-montiel-2026",
+      "championshipIds": [
+        "cx-racing-cup-2026"
+      ],
+      "categoryType": "ciclocross",
+      "name": "Montiel · Ciclocross Racing Cup",
+      "date": "2026-10-11",
+      "location": "Montiel",
+      "province": "Ciudad Real",
+      "organizer": "",
+      "registrationUrl": "",
+      "technicalGuideUrl": "",
+      "documentsUrl": "",
+      "notes": "Ciclocross Racing Cup 2026.",
+      "resultUrl": ""
+    },
+    {
+      "id": "cx-mejorada-campo-2026",
+      "championshipIds": [
+        "copa-madrid-cx-2026"
+      ],
+      "categoryType": "ciclocross",
+      "name": "Mejorada del Campo · Ciclocross",
+      "date": "2026-10-25",
+      "location": "Mejorada del Campo",
+      "province": "Madrid",
+      "organizer": "",
+      "registrationUrl": "",
+      "technicalGuideUrl": "",
+      "documentsUrl": "",
+      "notes": "Copa Madrid Ciclocross 2026.",
+      "resultUrl": ""
+    },
+    {
+      "id": "cx-racing-avila-2026",
+      "championshipIds": [
+        "cx-racing-cup-2026"
+      ],
+      "categoryType": "ciclocross",
+      "name": "Ávila · Ciclocross Racing Cup",
+      "date": "2026-11-07",
+      "location": "Ávila",
+      "province": "Ávila",
+      "organizer": "",
+      "registrationUrl": "",
+      "technicalGuideUrl": "",
+      "documentsUrl": "",
+      "notes": "Ciclocross Racing Cup 2026.",
+      "resultUrl": ""
+    },
+    {
+      "id": "cx-paracuellos-2026",
+      "championshipIds": [
+        "copa-madrid-cx-2026"
+      ],
+      "categoryType": "ciclocross",
+      "name": "Paracuellos del Jarama · Ciclocross",
+      "date": "2026-11-14",
+      "location": "Paracuellos del Jarama",
+      "province": "Madrid",
+      "organizer": "",
+      "registrationUrl": "",
+      "technicalGuideUrl": "",
+      "documentsUrl": "",
+      "notes": "Copa Madrid Ciclocross 2026.",
+      "resultUrl": ""
+    },
+    {
+      "id": "cx-torrejon-ardoz-2026",
+      "championshipIds": [
+        "copa-madrid-cx-2026"
+      ],
+      "categoryType": "ciclocross",
+      "name": "Torrejón de Ardoz · Ciclocross",
+      "date": "2026-11-15",
+      "location": "Torrejón de Ardoz",
+      "province": "Madrid",
+      "organizer": "",
+      "registrationUrl": "",
+      "technicalGuideUrl": "",
+      "documentsUrl": "",
+      "notes": "Copa Madrid Ciclocross 2026.",
+      "resultUrl": ""
+    },
+    {
+      "id": "cx-racing-los-molinos-2026",
+      "championshipIds": [
+        "cx-racing-cup-2026"
+      ],
+      "categoryType": "ciclocross",
+      "name": "Los Molinos · Ciclocross Racing Cup",
+      "date": "2026-11-21",
+      "location": "Los Molinos",
+      "province": "Madrid",
+      "organizer": "",
+      "registrationUrl": "",
+      "technicalGuideUrl": "",
+      "documentsUrl": "",
+      "notes": "Ciclocross Racing Cup 2026.",
+      "resultUrl": ""
+    },
+    {
+      "id": "cx-alalpardo-2026",
+      "championshipIds": [
+        "copa-madrid-cx-2026"
+      ],
+      "categoryType": "ciclocross",
+      "name": "Alalpardo · Ciclocross",
+      "date": "2026-11-29",
+      "location": "Alalpardo",
+      "province": "Madrid",
+      "organizer": "",
+      "registrationUrl": "",
+      "technicalGuideUrl": "",
+      "documentsUrl": "",
+      "notes": "Copa Madrid Ciclocross 2026.",
+      "resultUrl": ""
+    },
+    {
+      "id": "cx-coslada-2026",
+      "championshipIds": [
+        "copa-madrid-cx-2026"
+      ],
+      "categoryType": "ciclocross",
+      "name": "Coslada · Ciclocross",
+      "date": "2026-12-13",
+      "location": "Coslada",
+      "province": "Madrid",
+      "organizer": "",
+      "registrationUrl": "",
+      "technicalGuideUrl": "",
+      "documentsUrl": "",
+      "notes": "Copa Madrid Ciclocross 2026.",
+      "resultUrl": ""
+    },
+    {
+      "id": "cx-arroyomolinos-copa-espana-2027",
+      "championshipIds": [
+        "copa-madrid-cx-2026"
+      ],
+      "categoryType": "ciclocross",
+      "name": "Arroyomolinos · Ciclocross Copa de España",
+      "date": "2027-01-03",
+      "location": "Arroyomolinos",
+      "province": "Madrid",
+      "organizer": "",
+      "registrationUrl": "",
+      "technicalGuideUrl": "",
+      "documentsUrl": "",
+      "notes": "Copa Madrid Ciclocross 2026. Prueba señalada como Copa de España.",
+      "resultUrl": ""
+    },
+    {
+      "id": "quintanar-2026",
+      "championshipIds": [
+        "clm-xco-2026"
+      ],
+      "categoryType": "mixta",
+      "name": "Quintanar del Rey · Escuelas + XCO",
+      "date": "",
+      "location": "Quintanar del Rey",
+      "province": "Cuenca",
+      "organizer": "",
+      "registrationUrl": "",
+      "technicalGuideUrl": "",
+      "documentsUrl": "",
+      "notes": "Fecha y enlaces pendientes.",
       "resultUrl": ""
     }
   ],

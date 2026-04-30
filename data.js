@@ -1,29 +1,2625 @@
-window.APP_VERSION = "20260411-5";
-window.APP_VERSION = "20260411-5";\nwindow.APP_DATA = {
+window.APP_VERSION = "20260429-cx";
+window.APP_VERSION = "20260429-cx";\nwindow.APP_DATA = {
   "championships": [
     {
       "id": "clm-xco-2026",
       "name": "Copa Castilla-La Mancha XCO 2026",
       "season": 2026,
-      "description": "Pruebas del campeonato de Castilla-La Mancha que incluyen escuelas."
+      "description": "Pruebas del campeonato de Castilla-La Mancha que incluyen escuelas.",
+      "generalClassificationUrl": "https://yosoyciclista.com/index.php/es/smartweb/seccion/clasificacionescircuito/castillalamancha/2026/Copa_BTT_XC_CLM_Escuelas/6274-Principiantes",
+      "generalStandingsByCategory": {
+        "promesa_masculino": [
+          {
+            "position": 1,
+            "name": "Perez Sanchez Angel",
+            "club": "SPORTPLA KIDS ARROYOMOLINOS CD",
+            "points": 200
+          },
+          {
+            "position": 2,
+            "name": "Gonzalez Martinez Marcos",
+            "club": "ACADEMIA CICLISTA C.D.E.",
+            "points": 175
+          },
+          {
+            "position": 3,
+            "name": "Garcia Martin Noe",
+            "club": "X-SAUCE C.D.E.",
+            "points": 155
+          },
+          {
+            "position": 4,
+            "name": "Sanz Alcober Lucas",
+            "club": "ALCARREÑA DE CICLISMO",
+            "points": 140
+          },
+          {
+            "position": 5,
+            "name": "Garcia Briso-Montiano Aritz",
+            "club": "MTB COLMENAR VIEJO C.D.E.",
+            "points": 128
+          },
+          {
+            "position": 10,
+            "name": "Canuelo Vazquez Samuel",
+            "club": "MEJORADA C.C.",
+            "points": 88
+          }
+        ],
+        "promesa_femenino": [
+          {
+            "position": 1,
+            "name": "Retamosa Reviejo Helena",
+            "club": "SPORTPLA KIDS ARROYOMOLINOS CD",
+            "points": 200
+          },
+          {
+            "position": 2,
+            "name": "Bote Arias Ingrid",
+            "club": "ESCUELA DE CICLISMO AZUQUECA E",
+            "points": 175
+          },
+          {
+            "position": 3,
+            "name": "Maldonado Toro Julia",
+            "club": "SPORTPLA KIDS ARROYOMOLINOS CD",
+            "points": 155
+          },
+          {
+            "position": 4,
+            "name": "Valiente Grande Sofia",
+            "club": "ACADEMIA CICLISTA C.D.E.",
+            "points": 140
+          },
+          {
+            "position": 5,
+            "name": "De La Fuente Cercas Claudia",
+            "club": "VALDEIGLESIAS C.C.",
+            "points": 128
+          }
+        ],
+        "principiante_masculino": [
+          {
+            "position": 1,
+            "name": "De La Barrera Guindel Marc",
+            "club": "MEJORADA C.C.",
+            "points": 200
+          },
+          {
+            "position": 2,
+            "name": "Lozano Alvarez Mateo",
+            "club": "TR3CE BIKE CDE",
+            "points": 175
+          },
+          {
+            "position": 3,
+            "name": "Gamo Izquierdo David",
+            "club": "MTB COLMENAR VIEJO C.D.E.",
+            "points": 155
+          },
+          {
+            "position": 4,
+            "name": "Bermejo Sanchez Pablo",
+            "club": "MEJORADA C.C.",
+            "points": 140
+          },
+          {
+            "position": 5,
+            "name": "Rodriguez Barquero Oscar",
+            "club": "CACERES BIKE, E.C",
+            "points": 128
+          },
+          {
+            "position": 27,
+            "name": "Escribano Arinero Manuel",
+            "club": "MEJORADA C.C.",
+            "points": 16
+          }
+        ],
+        "principiante_femenino": [
+          {
+            "position": 1,
+            "name": "Porras Merida Celia",
+            "club": "MEJORADA C.C.",
+            "points": 200
+          },
+          {
+            "position": 2,
+            "name": "Blanco San Inocente Vera",
+            "club": "SPORTPLA KIDS ARROYOMOLINOS CD",
+            "points": 175
+          },
+          {
+            "position": 3,
+            "name": "Alcocer Llamas Vega",
+            "club": "SPORTPLA KIDS ARROYOMOLINOS CD",
+            "points": 155
+          },
+          {
+            "position": 4,
+            "name": "Balmaceda Blanco Violeta",
+            "club": "SAN SEBASTIAN DE LOS REYES U.C",
+            "points": 140
+          },
+          {
+            "position": 5,
+            "name": "Perez Del Val Sofia",
+            "club": "SPORTPLA KIDS ARROYOMOLINOS CD",
+            "points": 128
+          }
+        ],
+        "alevin_masculino": [
+          {
+            "position": 1,
+            "name": "Gonzalez Martinez Hector",
+            "club": "ACADEMIA CICLISTA C.D.E.",
+            "points": 200
+          },
+          {
+            "position": 2,
+            "name": "Alvarez Gil Asier",
+            "club": "SAN SEBASTIAN DE LOS REYES U.C",
+            "points": 175
+          },
+          {
+            "position": 3,
+            "name": "Garcia Del Rio Hugo",
+            "club": "MEJORADA C.C.",
+            "points": 155
+          },
+          {
+            "position": 4,
+            "name": "Escalante Moron Ivan",
+            "club": "MEJORADA C.C.",
+            "points": 140
+          },
+          {
+            "position": 5,
+            "name": "Korzynnikov Shypak Valentin",
+            "club": "SAN SEBASTIAN DE LOS REYES U.C",
+            "points": 128
+          },
+          {
+            "position": 36,
+            "name": "Sanchez Sanchez Guillermo",
+            "club": "MEJORADA C.C.",
+            "points": 10
+          },
+          {
+            "position": 41,
+            "name": "Garcia Gonzalez Marcos",
+            "club": "MEJORADA C.C.",
+            "points": 54
+          }
+        ],
+        "alevin_femenino": [
+          {
+            "position": 1,
+            "name": "Aguilera Cuartango Adriana",
+            "club": "ACADEMIA CICLISTA C.D.E.",
+            "points": 200
+          },
+          {
+            "position": 2,
+            "name": "Hernandez Diaz Alejandra",
+            "club": "SPORTPLA KIDS ARROYOMOLINOS CD",
+            "points": 175
+          },
+          {
+            "position": 3,
+            "name": "Sanchez-Quiñones Riesco Valeria",
+            "club": "SPORTPLA KIDS ARROYOMOLINOS CD",
+            "points": 155
+          },
+          {
+            "position": 4,
+            "name": "Ciordia Noriego Noa",
+            "club": "ALCARREÑA DE CICLISMO",
+            "points": 140
+          },
+          {
+            "position": 5,
+            "name": "Torres Llerena Paula",
+            "club": "PEDALBIKES CDE",
+            "points": 128
+          },
+          {
+            "position": 6,
+            "name": "Garrido Sanchez Lia",
+            "club": "MEJORADA C.C.",
+            "points": 120
+          }
+        ],
+        "infantil_masculino": [
+          {
+            "position": 1,
+            "name": "Saez Caballero Daniel",
+            "club": "ACADEMIA CICLISTA C.D.E.",
+            "points": 200
+          },
+          {
+            "position": 2,
+            "name": "Rey Pelayo Gonzalo Maria",
+            "club": "MTB ILARCURIS, C.D.E.",
+            "points": 175
+          },
+          {
+            "position": 3,
+            "name": "Torres Llerena Diego",
+            "club": "PEDALBIKES CDE",
+            "points": 155
+          },
+          {
+            "position": 4,
+            "name": "Diaz Lopez Daniel",
+            "club": "TR3CE BIKE CDE",
+            "points": 140
+          },
+          {
+            "position": 5,
+            "name": "Crespo Aguado Adrian",
+            "club": "MTB COLMENAR VIEJO C.D.E.",
+            "points": 128
+          },
+          {
+            "position": 14,
+            "name": "Porras Merida Asier",
+            "club": "MEJORADA C.C.",
+            "points": 64
+          },
+          {
+            "position": 22,
+            "name": "Hervas Estringana Miguel",
+            "club": "MEJORADA C.C.",
+            "points": 34
+          },
+          {
+            "position": 30,
+            "name": "Garcia Amaya Pablo",
+            "club": "MEJORADA C.C.",
+            "points": 12
+          },
+          {
+            "position": 31,
+            "name": "Torres Sancho Nacho",
+            "club": "MEJORADA C.C.",
+            "points": 10
+          }
+        ],
+        "infantil_femenino": [
+          {
+            "position": 1,
+            "name": "Martinez Perales Candela",
+            "club": "SAN SEBASTIAN DE LOS REYES U.C",
+            "points": 200
+          },
+          {
+            "position": 2,
+            "name": "Garzon Ranero Eva",
+            "club": "TR3CE BIKE CDE",
+            "points": 175
+          },
+          {
+            "position": 3,
+            "name": "Garcia Artiles Daida",
+            "club": "D3.4-EKIPARTE",
+            "points": 155
+          },
+          {
+            "position": 4,
+            "name": "Conde Capitan Vera",
+            "club": "MTB ILARCURIS, C.D.E.",
+            "points": 140
+          },
+          {
+            "position": 5,
+            "name": "Diaz Moreno Naia",
+            "club": "DAIMIEL CLUB CICLISTA",
+            "points": 128
+          }
+        ]
+      },
+      "generalClassificationUrlsByCategory": {
+        "alevin_masculino": "https://yosoyciclista.com/index.php/es/smartweb/seccion/clasificacionescircuito/castillalamancha/2026/Copa_BTT_XC_CLM_Escuelas/6249-Alevin",
+        "alevin_femenino": "https://yosoyciclista.com/index.php/es/smartweb/seccion/clasificacionescircuito/castillalamancha/2026/Copa_BTT_XC_CLM_Escuelas/6250-Alevin-Fem",
+        "infantil_masculino": "https://yosoyciclista.com/index.php/es/smartweb/seccion/clasificacionescircuito/castillalamancha/2026/Copa_BTT_XC_CLM_Escuelas/6261-Infantil",
+        "infantil_femenino": "https://yosoyciclista.com/index.php/es/smartweb/seccion/clasificacionescircuito/castillalamancha/2026/Copa_BTT_XC_CLM_Escuelas/6262-Infantil-Fem",
+        "principiante_masculino": "https://yosoyciclista.com/index.php/es/smartweb/seccion/clasificacionescircuito/castillalamancha/2026/Copa_BTT_XC_CLM_Escuelas/6274-Principiantes",
+        "principiante_femenino": "https://yosoyciclista.com/index.php/es/smartweb/seccion/clasificacionescircuito/castillalamancha/2026/Copa_BTT_XC_CLM_Escuelas/6275-Principiantes-Fem",
+        "promesa_masculino": "https://yosoyciclista.com/index.php/es/smartweb/seccion/clasificacionescircuito/castillalamancha/2026/Copa_BTT_XC_CLM_Escuelas/6276-Promesas",
+        "promesa_femenino": "https://yosoyciclista.com/index.php/es/smartweb/seccion/clasificacionescircuito/castillalamancha/2026/Copa_BTT_XC_CLM_Escuelas/6277-Promesas-Fem"
+      },
+      "generalClassificationSourceType": "yosoyciclista-circuito"
     },
     {
       "id": "x-sauce-series-2026",
       "name": "X-Sauce Series 2026",
       "season": 2026,
-      "description": "Circuito X-Sauce Series centrado en carreras de escuelas."
+      "description": "Circuito X-Sauce Series centrado en carreras de escuelas.",
+      "generalClassificationUrl": "https://cronosportradio.es/g-live/g-live.html?f=../RESULTADOS26/GENERALES/arrastre%20kids.clax",
+      "generalStandingsByCategory": {
+        "promesa_masculino": [
+          {
+            "position": 1,
+            "name": "Gonzalez Martinez Marcos",
+            "club": "ACADEMIA CICLISTA C.D.E.",
+            "points": 730
+          },
+          {
+            "position": 2,
+            "name": "Garcia Martin Noe",
+            "club": "X-SAUCE C.D.E.",
+            "points": 705
+          },
+          {
+            "position": 3,
+            "name": "Perez Sanchez Angel",
+            "club": "SPORTPLA KIDS ARROYOMOLINOS CD",
+            "points": 670
+          },
+          {
+            "position": 4,
+            "name": "Sanz Alcober Lucas",
+            "club": "ALCARREÑA DE CICLISMO",
+            "points": 563
+          },
+          {
+            "position": 5,
+            "name": "Garcia Briso-montiano Aritz",
+            "club": "MTB COLMENAR VIEJO C.D.E.",
+            "points": 440
+          },
+          {
+            "position": 6,
+            "name": "Canuelo Vazquez Samuel",
+            "club": "MEJORADA C.C.",
+            "points": 416
+          },
+          {
+            "position": 7,
+            "name": "De La Rua Hernandez Ruben",
+            "club": "TR3CE BIKE CDE",
+            "points": 380
+          },
+          {
+            "position": 8,
+            "name": "Munoz Ciria Martin",
+            "club": "VALDEIGLESIAS C.C.",
+            "points": 352
+          },
+          {
+            "position": 9,
+            "name": "Ayuso Alejandre Dario",
+            "club": "ALCARREÑA DE CICLISMO",
+            "points": 332
+          },
+          {
+            "position": 10,
+            "name": "Martin Perez Natalio",
+            "club": "TRY IT, C.D.",
+            "points": 300
+          },
+          {
+            "position": 11,
+            "name": "Aguilera Ballesteros Martin",
+            "club": "SPORTPLA KIDS ARROYOMOLINOS CD",
+            "points": 292
+          },
+          {
+            "position": 12,
+            "name": "Almohalla Ropero Alex",
+            "club": "ESCUELA DE CICLISMO AZUQUECA E",
+            "points": 260
+          },
+          {
+            "position": 13,
+            "name": "Barba Cubero Jaime",
+            "club": "GALAPAGAR C.C.",
+            "points": 256
+          },
+          {
+            "position": 14,
+            "name": "Lopez Garvia Adrian",
+            "club": "ALBERTO CONTADOR, C.D.C.",
+            "points": 228
+          },
+          {
+            "position": 15,
+            "name": "Hernandez Escudero Isaac",
+            "club": "PEDALBIKES CDE",
+            "points": 196
+          },
+          {
+            "position": 16,
+            "name": "Macarron Mendez-vigo Marco",
+            "club": "ENTRENAMIENTOCICLISMO.COM CDE",
+            "points": 184
+          },
+          {
+            "position": 17,
+            "name": "Carvajal Bejenari Diego",
+            "club": "PEDALBIKES CDE",
+            "points": 148
+          },
+          {
+            "position": 18,
+            "name": "Martinez Garcia Jorge",
+            "club": "BEMBIBRE BTT, C.D.",
+            "points": 140
+          },
+          {
+            "position": 19,
+            "name": "Rey Pelayo Gabriel",
+            "club": "MTB ILARCURIS, C.D.E.",
+            "points": 140
+          },
+          {
+            "position": 20,
+            "name": "Garcia Caballero Marcos",
+            "club": "MTB ILARCURIS, C.D.E.",
+            "points": 136
+          },
+          {
+            "position": 21,
+            "name": "Guisado Sanz Daniel",
+            "club": "SAN SEBASTIAN DE LOS REYES U.C",
+            "points": 136
+          },
+          {
+            "position": 22,
+            "name": "De La Cruz Molleja Oscar",
+            "club": "FAMMSA TEAM, C.D.E.",
+            "points": 132
+          },
+          {
+            "position": 23,
+            "name": "Parras Perez Lucas",
+            "club": "VALDEIGLESIAS C.C.",
+            "points": 130
+          },
+          {
+            "position": 24,
+            "name": "Fernandez De La Torre Jesus",
+            "club": "SPORTPLA KIDS ARROYOMOLINOS CD",
+            "points": 118
+          },
+          {
+            "position": 25,
+            "name": "Garcia Ortego Leo",
+            "club": "SAN SEBASTIAN DE LOS REYES U.C",
+            "points": 118
+          },
+          {
+            "position": 26,
+            "name": "Ospina Fiovaranti David",
+            "club": "ENTRENAMIENTOCICLISMO.COM CDE",
+            "points": 118
+          },
+          {
+            "position": 27,
+            "name": "Gonzalez Marquina Leo",
+            "club": "TR3CE BIKE CDE",
+            "points": 112
+          },
+          {
+            "position": 28,
+            "name": "Ciria Bidarra Nicolao",
+            "club": "X-SAUCE C.D.E.",
+            "points": 98
+          },
+          {
+            "position": 29,
+            "name": "Ortega Moran Carlos",
+            "club": "SPORTPLA KIDS ARROYOMOLINOS CD",
+            "points": 96
+          },
+          {
+            "position": 30,
+            "name": "San Matias Hellin Yeray",
+            "club": "TR3CE BIKE CDE",
+            "points": 88
+          },
+          {
+            "position": 31,
+            "name": "Castrejon Carmena Lucas",
+            "club": "MTB ILARCURIS, C.D.E.",
+            "points": 82
+          },
+          {
+            "position": 32,
+            "name": "Martin Evangelio Jaime",
+            "club": "SAN SEBASTIAN DE LOS REYES U.C",
+            "points": 80
+          },
+          {
+            "position": 33,
+            "name": "Pasamon Arias Efren",
+            "club": "VALDEIGLESIAS C.C.",
+            "points": 76
+          },
+          {
+            "position": 34,
+            "name": "Arias Gonzalez De Uzqueta Elias",
+            "club": "X-SAUCE C.D.E.",
+            "points": 72
+          },
+          {
+            "position": 35,
+            "name": "Lozano Alvarez Alejandro",
+            "club": "TR3CE BIKE CDE",
+            "points": 72
+          },
+          {
+            "position": 36,
+            "name": "Garcia Horcajo Marco",
+            "club": "INDEPENDIENTE",
+            "points": 68
+          },
+          {
+            "position": 37,
+            "name": "Losa De La Cueva Lucas",
+            "club": "INDEPENDIENTE",
+            "points": 68
+          },
+          {
+            "position": 38,
+            "name": "Narvaez Revilla Erich",
+            "club": "SAN SEBASTIAN DE LOS REYES U.C",
+            "points": 64
+          },
+          {
+            "position": 39,
+            "name": "Nogueira Santana Rodrigo",
+            "club": "INDEPENDIENTE",
+            "points": 64
+          },
+          {
+            "position": 40,
+            "name": "Guillen Garcia Leon",
+            "club": "SAN SEBASTIAN DE LOS REYES U.C",
+            "points": 54
+          },
+          {
+            "position": 41,
+            "name": "Chicon Santana Erik",
+            "club": "TR3CE BIKE CDE",
+            "points": 52
+          },
+          {
+            "position": 42,
+            "name": "Sanchez Bravo Sami",
+            "club": "VALDEIGLESIAS C.C.",
+            "points": 52
+          },
+          {
+            "position": 43,
+            "name": "Maestro San Roman Oliver",
+            "club": "VALDEIGLESIAS C.C.",
+            "points": 50
+          },
+          {
+            "position": 44,
+            "name": "Fernandez Rodriguez Hugo",
+            "club": "VALDEIGLESIAS C.C.",
+            "points": 48
+          },
+          {
+            "position": 45,
+            "name": "Macarron Lucas Guillermo Telmo",
+            "club": "ENTRENAMIENTOCICLISMO.COM CDE",
+            "points": 48
+          },
+          {
+            "position": 46,
+            "name": "Munoz Rodriguez Daniel",
+            "club": "ALCARREÑA DE CICLISMO",
+            "points": 46
+          },
+          {
+            "position": 47,
+            "name": "Losa De La Cueva Simon",
+            "club": "INDEPENDIENTE",
+            "points": 44
+          },
+          {
+            "position": 48,
+            "name": "Martin Britos David",
+            "club": "MTB ILARCURIS, C.D.E.",
+            "points": 42
+          },
+          {
+            "position": 49,
+            "name": "Fernandez Rey Jaime",
+            "club": "INDEPENDIENTE",
+            "points": 40
+          },
+          {
+            "position": 50,
+            "name": "Garcia Fernandez Marco",
+            "club": "X-SAUCE C.D.E.",
+            "points": 40
+          },
+          {
+            "position": 51,
+            "name": "Arija Medina Raul",
+            "club": "ENTRENAMIENTOCICLISMO.COM CDE",
+            "points": 38
+          },
+          {
+            "position": 52,
+            "name": "Rodriguez Torres Marcos",
+            "club": "SAN SEBASTIAN DE LOS REYES U.C",
+            "points": 38
+          },
+          {
+            "position": 53,
+            "name": "Durandeau Medina Juan",
+            "club": "X-SAUCE C.D.E.",
+            "points": 36
+          },
+          {
+            "position": 54,
+            "name": "Seijo Lopez Bruno",
+            "club": "SPORTPLA KIDS ARROYOMOLINOS CD",
+            "points": 36
+          },
+          {
+            "position": 55,
+            "name": "Galindo Del Campo Fabio",
+            "club": "MARISCOS CASTELLAR A.S.C., C.D",
+            "points": 32
+          },
+          {
+            "position": 56,
+            "name": "Blanco San Inocente Ares",
+            "club": "SPORTPLA KIDS ARROYOMOLINOS CD",
+            "points": 22
+          },
+          {
+            "position": 57,
+            "name": "Calle Moya Carlos",
+            "club": "ESCUELA DE CICLISMO AZUQUECA E",
+            "points": 22
+          },
+          {
+            "position": 58,
+            "name": "Fernandez Varas Martin",
+            "club": "INDEPENDIENTE",
+            "points": 22
+          },
+          {
+            "position": 59,
+            "name": "Hernandez Bartolome Gael",
+            "club": "INDEPENDIENTE",
+            "points": 22
+          },
+          {
+            "position": 60,
+            "name": "Fernandez Berrocal Miguel",
+            "club": "X-SAUCE C.D.E.",
+            "points": 20
+          },
+          {
+            "position": 61,
+            "name": "Martinez Feito Roi",
+            "club": "INDEPENDIENTE",
+            "points": 20
+          },
+          {
+            "position": 62,
+            "name": "Martinez Leiva Camarena Hugo",
+            "club": "PEDALBIKES CDE",
+            "points": 20
+          },
+          {
+            "position": 63,
+            "name": "Munoz Castro Daniel",
+            "club": "INDEPENDIENTE",
+            "points": 20
+          },
+          {
+            "position": 64,
+            "name": "Montero Aliaga Adam Emilio",
+            "club": "FUENLABRADA U.C.",
+            "points": 18
+          },
+          {
+            "position": 65,
+            "name": "Villalobos Galeano Manuel",
+            "club": "GALAPAGAR C.C.",
+            "points": 18
+          },
+          {
+            "position": 66,
+            "name": "Askew Moran Ivan",
+            "club": "INDEPENDIENTE",
+            "points": 16
+          },
+          {
+            "position": 67,
+            "name": "Campos Arroyo Pablo",
+            "club": "TODO BICI TORRIJOS",
+            "points": 16
+          },
+          {
+            "position": 68,
+            "name": "Del Viso Larrea Uriel",
+            "club": "INDEPENDIENTE",
+            "points": 16
+          },
+          {
+            "position": 69,
+            "name": "Padilla Trenado Eric",
+            "club": "INDEPENDIENTE",
+            "points": 16
+          },
+          {
+            "position": 70,
+            "name": "Calle Moya Hugo",
+            "club": "INDEPENDIENTE",
+            "points": 14
+          },
+          {
+            "position": 71,
+            "name": "Celis Aranda Adrian",
+            "club": "FUENLABRADA U.C.",
+            "points": 14
+          },
+          {
+            "position": 72,
+            "name": "De Las Heras Ignacio",
+            "club": "INDEPENDIENTE",
+            "points": 14
+          },
+          {
+            "position": 73,
+            "name": "Weis Vicente Tomas",
+            "club": "INDEPENDIENTE",
+            "points": 14
+          },
+          {
+            "position": 74,
+            "name": "De Las Heras Guillermo",
+            "club": "INDEPENDIENTE",
+            "points": 12
+          }
+        ],
+        "promesa_femenino": [
+          {
+            "position": 1,
+            "name": "Retamosa Reviejo Helena",
+            "club": "SPORTPLA KIDS ARROYOMOLINOS CD",
+            "points": 775
+          },
+          {
+            "position": 2,
+            "name": "Maldonado Toro Julia",
+            "club": "SPORTPLA KIDS ARROYOMOLINOS CD",
+            "points": 705
+          },
+          {
+            "position": 3,
+            "name": "De La Fuente Cercas Claudia",
+            "club": "VALDEIGLESIAS C.C.",
+            "points": 563
+          },
+          {
+            "position": 4,
+            "name": "Valiente Grande Sofia",
+            "club": "ACADEMIA CICLISTA C.D.E.",
+            "points": 450
+          },
+          {
+            "position": 5,
+            "name": "Barba Cubero Julietta",
+            "club": "GALAPAGAR C.C.",
+            "points": 328
+          },
+          {
+            "position": 6,
+            "name": "Sanchez Perez Ana",
+            "club": "ASOCIACION DEPORTIVA CAMARENA",
+            "points": 260
+          },
+          {
+            "position": 7,
+            "name": "Remon Siruckova Maria",
+            "club": "MTB COLMENAR VIEJO C.D.E.",
+            "points": 240
+          },
+          {
+            "position": 8,
+            "name": "Bote Arias Ingrid",
+            "club": "ESCUELA DE CICLISMO AZUQUECA E",
+            "points": 175
+          },
+          {
+            "position": 9,
+            "name": "Nogueira Santaba Cayetana",
+            "club": "INDEPENDIENTE",
+            "points": 128
+          }
+        ],
+        "principiante_masculino": [
+          {
+            "position": 1,
+            "name": "De La Barrera Guindel Marc",
+            "club": "MEJORADA C.C.",
+            "points": 730
+          },
+          {
+            "position": 2,
+            "name": "De La Rua Hernandez Daniel",
+            "club": "TR3CE BIKE CDE",
+            "points": 659
+          },
+          {
+            "position": 3,
+            "name": "Gamo Izquierdo David",
+            "club": "MTB COLMENAR VIEJO C.D.E.",
+            "points": 645
+          },
+          {
+            "position": 4,
+            "name": "Lozano Alvarez Mateo",
+            "club": "TR3CE BIKE CDE",
+            "points": 539
+          },
+          {
+            "position": 5,
+            "name": "Rodriguez Barquero Oscar",
+            "club": "CACERES BIKE, E.C",
+            "points": 496
+          },
+          {
+            "position": 6,
+            "name": "Martinez Rujas Unai",
+            "club": "GALAPAGAR C.C.",
+            "points": 456
+          },
+          {
+            "position": 7,
+            "name": "Del Pozo Moreno Hugo",
+            "club": "SPORTPLA KIDS ARROYOMOLINOS CD",
+            "points": 440
+          },
+          {
+            "position": 8,
+            "name": "Gonzalez Martin Enzo",
+            "club": "CACERES BIKE, E.C",
+            "points": 388
+          },
+          {
+            "position": 9,
+            "name": "Gil Sanchez Daniel",
+            "club": "SPORTPLA KIDS ARROYOMOLINOS CD",
+            "points": 332
+          },
+          {
+            "position": 10,
+            "name": "Bermejo Sanchez Pablo",
+            "club": "MEJORADA C.C.",
+            "points": 322
+          },
+          {
+            "position": 11,
+            "name": "Martin Nikolov Cristian",
+            "club": "ALBERTO CONTADOR, C.D.C.",
+            "points": 312
+          },
+          {
+            "position": 12,
+            "name": "Romo Garcia Samuel",
+            "club": "PEDALBIKES CDE",
+            "points": 272
+          },
+          {
+            "position": 13,
+            "name": "San Roman Garcia Luka",
+            "club": "FUENLABRADA U.C.",
+            "points": 240
+          },
+          {
+            "position": 14,
+            "name": "Jaro Martinez Lucas",
+            "club": "SPORTPLA KIDS ARROYOMOLINOS CD",
+            "points": 226
+          },
+          {
+            "position": 15,
+            "name": "Ciria Bidarra Leonardo",
+            "club": "X-SAUCE C.D.E.",
+            "points": 200
+          },
+          {
+            "position": 16,
+            "name": "Martin Romero Jorge",
+            "club": "TR3CE BIKE CDE",
+            "points": 196
+          },
+          {
+            "position": 17,
+            "name": "Albarran Godoy Eneko Herve",
+            "club": "RODRIGUEZ MAGRO, E.C.",
+            "points": 192
+          },
+          {
+            "position": 18,
+            "name": "Carceles Redondo Martin",
+            "club": "EMTBM C.D.E.",
+            "points": 172
+          },
+          {
+            "position": 19,
+            "name": "Ortega Cazorla Ruben",
+            "club": "TRICICLON C.D.",
+            "points": 155
+          },
+          {
+            "position": 20,
+            "name": "Maldonado Toro Axel",
+            "club": "SPORTPLA KIDS ARROYOMOLINOS CD",
+            "points": 150
+          },
+          {
+            "position": 21,
+            "name": "Torres Pascual Alvaro",
+            "club": "CACERES BIKE, E.C",
+            "points": 150
+          },
+          {
+            "position": 22,
+            "name": "Escribano Arinero Manuel",
+            "club": "MEJORADA C.C.",
+            "points": 138
+          },
+          {
+            "position": 23,
+            "name": "Alonso Ramirez Mario",
+            "club": "RODRIGUEZ MAGRO, E.C.",
+            "points": 118
+          },
+          {
+            "position": 24,
+            "name": "Munoz Ciria Rodrigo",
+            "club": "VALDEIGLESIAS C.C.",
+            "points": 116
+          },
+          {
+            "position": 25,
+            "name": "Pardo Galan Felix",
+            "club": "EMTBM C.D.E.",
+            "points": 116
+          },
+          {
+            "position": 26,
+            "name": "Ruiz Ruiz Martin",
+            "club": ". MTB FUENTE DEL MORO",
+            "points": 108
+          },
+          {
+            "position": 27,
+            "name": "Jurado Serrano Marco",
+            "club": "TR3CE BIKE CDE",
+            "points": 92
+          },
+          {
+            "position": 28,
+            "name": "Terron Martin Lucas",
+            "club": "CACERES BIKE, E.C",
+            "points": 92
+          },
+          {
+            "position": 29,
+            "name": "Garrido De Diego Marco",
+            "club": "SAN SEBASTIAN DE LOS REYES U.C",
+            "points": 90
+          },
+          {
+            "position": 30,
+            "name": "Lopez Serrano Kiziryan Lucas",
+            "club": "AMIGOS DEL PLATO GRANDE",
+            "points": 88
+          },
+          {
+            "position": 31,
+            "name": "Durandez Sanchez Mario",
+            "club": "SPORTPLA KIDS ARROYOMOLINOS CD",
+            "points": 86
+          },
+          {
+            "position": 32,
+            "name": "Macarron Mendez-vigo Lucas",
+            "club": "ENTRENAMIENTOCICLISMO.COM CDE",
+            "points": 80
+          },
+          {
+            "position": 33,
+            "name": "Pacheco Palazon Oriol",
+            "club": "TRICICLON C.D.",
+            "points": 80
+          },
+          {
+            "position": 34,
+            "name": "Chaparro Gonzalez Eduardo",
+            "club": "TR3CE BIKE CDE",
+            "points": 78
+          },
+          {
+            "position": 35,
+            "name": "Diez Rascon Nicolas",
+            "club": "X-SAUCE C.D.E.",
+            "points": 78
+          },
+          {
+            "position": 36,
+            "name": "Pineda Leuffen Adrian",
+            "club": "MTB COLMENAR VIEJO C.D.E.",
+            "points": 78
+          },
+          {
+            "position": 37,
+            "name": "Calvo Romero Mateo",
+            "club": "TR3CE BIKE CDE",
+            "points": 74
+          },
+          {
+            "position": 38,
+            "name": "Alonso Lopez Gonzalo",
+            "club": "ACADEMIA CICLISTA C.D.E.",
+            "points": 72
+          },
+          {
+            "position": 39,
+            "name": "Morcuende Chozas Dario",
+            "club": "TRY IT, C.D.",
+            "points": 70
+          },
+          {
+            "position": 40,
+            "name": "Moreno Alcolea Diego",
+            "club": "SAN SEBASTIAN DE LOS REYES U.C",
+            "points": 64
+          },
+          {
+            "position": 41,
+            "name": "Rubio Higueras Mario",
+            "club": "MTB COLMENAR VIEJO C.D.E.",
+            "points": 64
+          },
+          {
+            "position": 42,
+            "name": "Grande Alcauza Marcos",
+            "club": "SAN SEBASTIAN DE LOS REYES U.C",
+            "points": 62
+          },
+          {
+            "position": 43,
+            "name": "Ospina Fioravanti Samuel",
+            "club": "ENTRENAMIENTOCICLISMO.COM CDE",
+            "points": 62
+          },
+          {
+            "position": 44,
+            "name": "Carrillo Lopez Eloy",
+            "club": "PEDALBIKES CDE",
+            "points": 60
+          },
+          {
+            "position": 45,
+            "name": "Gomez Pedraza Nicolas",
+            "club": "TRY IT, C.D.",
+            "points": 56
+          },
+          {
+            "position": 46,
+            "name": "Gomez Martin Gael",
+            "club": "ENTRENAMIENTOCICLISMO.COM CDE",
+            "points": 52
+          },
+          {
+            "position": 47,
+            "name": "Guisado Sanz Marcos",
+            "club": "SAN SEBASTIAN DE LOS REYES U.C",
+            "points": 52
+          },
+          {
+            "position": 48,
+            "name": "Laguna Pelegrina Rodrigo",
+            "club": "ENTRENAMIENTOCICLISMO.COM CDE",
+            "points": 50
+          },
+          {
+            "position": 49,
+            "name": "Baos Cuenca Jan",
+            "club": "MTB COLMENAR VIEJO C.D.E.",
+            "points": 48
+          },
+          {
+            "position": 50,
+            "name": "Granados Rodriguez Angel",
+            "club": "ASOCIACION DEPORTIVA CAMARENA",
+            "points": 40
+          },
+          {
+            "position": 51,
+            "name": "Prado Pozo Adrian",
+            "club": "X-SAUCE C.D.E.",
+            "points": 40
+          },
+          {
+            "position": 52,
+            "name": "Dominguez Zambrana Adrian",
+            "club": "QALAT BIKE, C.D.",
+            "points": 32
+          },
+          {
+            "position": 53,
+            "name": "Gonzalez Rodriguez Victor",
+            "club": "MTB COLMENAR VIEJO C.D.E.",
+            "points": 32
+          },
+          {
+            "position": 54,
+            "name": "Castillo Perdiguero Mateo",
+            "club": "SAN SEBASTIAN DE LOS REYES U.C",
+            "points": 30
+          },
+          {
+            "position": 55,
+            "name": "Ramos Rebollo Mateo",
+            "club": "PEDALBIKES CDE",
+            "points": 30
+          },
+          {
+            "position": 56,
+            "name": "Diez Martin Pablo",
+            "club": "ACADEMIA CICLISTA C.D.E.",
+            "points": 28
+          },
+          {
+            "position": 57,
+            "name": "Monsalve Fernandez Ignacio",
+            "club": "INDEPENDIENTE",
+            "points": 28
+          },
+          {
+            "position": 58,
+            "name": "Rodriguez Perez Cristian",
+            "club": "AVANZA, A.D.",
+            "points": 28
+          },
+          {
+            "position": 59,
+            "name": "Roldan Bustos Marco",
+            "club": "MTB ILARCURIS, C.D.E.",
+            "points": 28
+          },
+          {
+            "position": 60,
+            "name": "Lopez Tortajada Miguel Angel",
+            "club": "MTB COLMENAR VIEJO C.D.E.",
+            "points": 24
+          },
+          {
+            "position": 62,
+            "name": "Perez Tapia Lorenzo",
+            "club": "CACERES BIKE, E.C",
+            "points": 22
+          },
+          {
+            "position": 63,
+            "name": "De La Cruz Hoyo Mateo",
+            "club": "TRY IT, C.D.",
+            "points": 20
+          },
+          {
+            "position": 64,
+            "name": "Llanos Sanchez Hugo",
+            "club": "X-SAUCE C.D.E.",
+            "points": 20
+          },
+          {
+            "position": 65,
+            "name": "Lacoba Pena Alex",
+            "club": "MTB COLMENAR VIEJO C.D.E.",
+            "points": 18
+          },
+          {
+            "position": 66,
+            "name": "Massaro Alejos Leo",
+            "club": "ENTRENAMIENTOCICLISMO.COM CDE",
+            "points": 18
+          },
+          {
+            "position": 67,
+            "name": "Collado Lopez De Lerena Lucas",
+            "club": "INDEPENDIENTE",
+            "points": 16
+          },
+          {
+            "position": 68,
+            "name": "Pineda Leuffen Nico",
+            "club": "INDEPENDIENTE",
+            "points": 16
+          },
+          {
+            "position": 69,
+            "name": "Collado De Lerena Lucas",
+            "club": "ACADEMIA CICLISTA C.D.E.",
+            "points": 14
+          },
+          {
+            "position": 70,
+            "name": "Diaz Martinez Izan",
+            "club": "MTB ILARCURIS, C.D.E.",
+            "points": 14
+          },
+          {
+            "position": 71,
+            "name": "Perez Tenorio Unai",
+            "club": "INDEPENDIENTE",
+            "points": 14
+          },
+          {
+            "position": 72,
+            "name": "Rubio Romero Arturo",
+            "club": "INDEPENDIENTE",
+            "points": 14
+          },
+          {
+            "position": 73,
+            "name": "Veracierta Alcala Luis",
+            "club": "VALDEPEÑAS CLUB CICLISTA",
+            "points": 14
+          },
+          {
+            "position": 74,
+            "name": "Carnero Schirbock Eric",
+            "club": "INDEPENDIENTE",
+            "points": 12
+          },
+          {
+            "position": 75,
+            "name": "Almoharin Salgado Rodrigo",
+            "club": "TRY IT, C.D.",
+            "points": 10
+          },
+          {
+            "position": 76,
+            "name": "Iniesta Iniesta Marco",
+            "club": "AMIGOS DEL PLATO GRANDE",
+            "points": 10
+          },
+          {
+            "position": 77,
+            "name": "Nozal Hernandez Bosco",
+            "club": ". MTB FUENTE DEL MORO",
+            "points": 10
+          },
+          {
+            "position": 78,
+            "name": "Porto Izquierdo Alejandro",
+            "club": ". MTB FUENTE DEL MORO",
+            "points": 10
+          }
+        ],
+        "principiante_femenino": [
+          {
+            "position": 1,
+            "name": "Porras Merida Celia",
+            "club": "MEJORADA C.C.",
+            "points": 800
+          },
+          {
+            "position": 2,
+            "name": "Blanco San Inocente Vera",
+            "club": "SPORTPLA KIDS ARROYOMOLINOS CD",
+            "points": 645
+          },
+          {
+            "position": 3,
+            "name": "Alcocer Llamas Vega",
+            "club": "SPORTPLA KIDS ARROYOMOLINOS CD",
+            "points": 458
+          },
+          {
+            "position": 4,
+            "name": "Chivato Miguel Sofia",
+            "club": "MTB COLMENAR VIEJO C.D.E.",
+            "points": 432
+          },
+          {
+            "position": 5,
+            "name": "Balmaceda Blanco Violeta",
+            "club": "SAN SEBASTIAN DE LOS REYES U.C",
+            "points": 415
+          },
+          {
+            "position": 6,
+            "name": "Parras Perez Alba",
+            "club": "VALDEIGLESIAS C.C.",
+            "points": 400
+          },
+          {
+            "position": 7,
+            "name": "Serrano Medina Adriana",
+            "club": "SPORTPLA KIDS ARROYOMOLINOS CD",
+            "points": 392
+          },
+          {
+            "position": 8,
+            "name": "Gonzalez Marquina Erika",
+            "club": "TR3CE BIKE CDE",
+            "points": 364
+          },
+          {
+            "position": 9,
+            "name": "Alonso Suarez Ruth",
+            "club": "RODRIGUEZ MAGRO, E.C.",
+            "points": 344
+          },
+          {
+            "position": 10,
+            "name": "Serrano Jaen Carlota",
+            "club": "X-SAUCE C.D.E.",
+            "points": 340
+          },
+          {
+            "position": 11,
+            "name": "Gonzalez Montes Laura",
+            "club": "SAN SEBASTIAN DE LOS REYES U.C",
+            "points": 328
+          },
+          {
+            "position": 12,
+            "name": "Perez Del Val Sofia",
+            "club": "SPORTPLA KIDS ARROYOMOLINOS CD",
+            "points": 256
+          },
+          {
+            "position": 13,
+            "name": "Catela Munoz Alba",
+            "club": "TALAVERA J. POLO CLUB CICLISTA",
+            "points": 228
+          },
+          {
+            "position": 14,
+            "name": "Alcivar Romero Miriam",
+            "club": "ALCARREÑA DE CICLISMO",
+            "points": 223
+          },
+          {
+            "position": 15,
+            "name": "Rubio Higueras Carla",
+            "club": "MTB COLMENAR VIEJO C.D.E.",
+            "points": 180
+          },
+          {
+            "position": 16,
+            "name": "Farinas Martinez Ugha",
+            "club": "BEMBIBRE BTT, C.D.",
+            "points": 175
+          },
+          {
+            "position": 17,
+            "name": "Prieto Garcia Carmen",
+            "club": "X-SAUCE C.D.E.",
+            "points": 160
+          },
+          {
+            "position": 18,
+            "name": "Rangel Moreno Ariana",
+            "club": "SAN SEBASTIAN DE LOS REYES U.C",
+            "points": 72
+          }
+        ],
+        "alevin_masculino": [
+          {
+            "position": 1,
+            "name": "Alvarez Gil Asier",
+            "club": "SAN SEBASTIAN DE LOS REYES U.C",
+            "points": 775
+          },
+          {
+            "position": 2,
+            "name": "Gonzalez Martinez Hector",
+            "club": "ACADEMIA CICLISTA C.D.E.",
+            "points": 705
+          },
+          {
+            "position": 3,
+            "name": "Korzynnikov Shypak Valentin",
+            "club": "SAN SEBASTIAN DE LOS REYES U.C",
+            "points": 578
+          },
+          {
+            "position": 4,
+            "name": "Rodriguez Bermejo Alejandro",
+            "club": "ALCARREÑA DE CICLISMO",
+            "points": 575
+          },
+          {
+            "position": 5,
+            "name": "Garcia Del Rio Hugo",
+            "club": "MEJORADA C.C.",
+            "points": 523
+          },
+          {
+            "position": 6,
+            "name": "Escalante Moron Ivan",
+            "club": "MEJORADA C.C.",
+            "points": 388
+          },
+          {
+            "position": 7,
+            "name": "Del Pozo Moreno Ivan",
+            "club": "SPORTPLA KIDS ARROYOMOLINOS CD",
+            "points": 384
+          },
+          {
+            "position": 8,
+            "name": "Valverde Alonso Alvaro",
+            "club": "ACADEMIA CICLISTA C.D.E.",
+            "points": 384
+          },
+          {
+            "position": 9,
+            "name": "Garcia Briso-montiano Eneko",
+            "club": "MTB COLMENAR VIEJO C.D.E.",
+            "points": 356
+          },
+          {
+            "position": 10,
+            "name": "Martin Array Jose",
+            "club": "MTB ILARCURIS, C.D.E.",
+            "points": 292
+          },
+          {
+            "position": 11,
+            "name": "Fernandez Carrasco Hugo",
+            "club": "ACADEMIA CICLISTA C.D.E.",
+            "points": 280
+          },
+          {
+            "position": 12,
+            "name": "Gonzalez Montes Mateo",
+            "club": "SAN SEBASTIAN DE LOS REYES U.C",
+            "points": 280
+          },
+          {
+            "position": 13,
+            "name": "Garcia Ortego Marco",
+            "club": "SAN SEBASTIAN DE LOS REYES U.C",
+            "points": 264
+          },
+          {
+            "position": 14,
+            "name": "Martin Roncero Dario",
+            "club": "TRY IT, C.D.",
+            "points": 264
+          },
+          {
+            "position": 15,
+            "name": "Serrano Jaen Gabriel",
+            "club": "X-SAUCE C.D.E.",
+            "points": 232
+          },
+          {
+            "position": 16,
+            "name": "Gonzalez Gutierrez Pablo",
+            "club": "MTB COLMENAR VIEJO C.D.E.",
+            "points": 226
+          },
+          {
+            "position": 17,
+            "name": "Bautista Abid Martin",
+            "club": "TR3CE BIKE CDE",
+            "points": 192
+          },
+          {
+            "position": 18,
+            "name": "Liberal Dorado Diego",
+            "club": "PEDALBIKES CDE",
+            "points": 176
+          },
+          {
+            "position": 19,
+            "name": "Gonjar Sanchez De Damaso Hugo",
+            "club": ". MTB FUENTE DEL MORO",
+            "points": 170
+          },
+          {
+            "position": 20,
+            "name": "Moreno Sanz Pablo",
+            "club": "SAN SEBASTIAN DE LOS REYES U.C",
+            "points": 144
+          },
+          {
+            "position": 21,
+            "name": "Conde Capitan Noel",
+            "club": "MTB ILARCURIS, C.D.E.",
+            "points": 132
+          },
+          {
+            "position": 22,
+            "name": "Serrano Medina Alonso",
+            "club": "SPORTPLA KIDS ARROYOMOLINOS CD",
+            "points": 132
+          },
+          {
+            "position": 23,
+            "name": "Gonzalez Martin Dario",
+            "club": "CACERES BIKE, E.C",
+            "points": 130
+          },
+          {
+            "position": 24,
+            "name": "Infantes Gomez David",
+            "club": "MAKINON BIKES MALAGA, C.D.",
+            "points": 128
+          },
+          {
+            "position": 25,
+            "name": "Jurado Serrano Pablo",
+            "club": "TR3CE BIKE CDE",
+            "points": 114
+          },
+          {
+            "position": 26,
+            "name": "Garcia Sanchez Enzo",
+            "club": "PROMESAL, C.D.C.",
+            "points": 112
+          },
+          {
+            "position": 27,
+            "name": "Blazquez Corral Ivan",
+            "club": "PEDALBIKES CDE",
+            "points": 110
+          },
+          {
+            "position": 28,
+            "name": "Tenhiala Urho Antero",
+            "club": "YELLOW MAD BMX, C.D.E.",
+            "points": 106
+          },
+          {
+            "position": 29,
+            "name": "Calero Serrano Alvaro",
+            "club": ". MTB FUENTE DEL MORO",
+            "points": 98
+          },
+          {
+            "position": 30,
+            "name": "Frias Rivero Guillermo",
+            "club": "SPORTPLA KIDS ARROYOMOLINOS CD",
+            "points": 96
+          },
+          {
+            "position": 31,
+            "name": "Roldan Diaz Sergio",
+            "club": "X-SAUCE C.D.E.",
+            "points": 96
+          },
+          {
+            "position": 32,
+            "name": "Martin Pasamontes Javier Manuel",
+            "club": "X-SAUCE C.D.E.",
+            "points": 84
+          },
+          {
+            "position": 33,
+            "name": "Garcia Yuste Aimar",
+            "club": "VALDEIGLESIAS C.C.",
+            "points": 82
+          },
+          {
+            "position": 34,
+            "name": "Garcia Martin Victor",
+            "club": "SAN SEBASTIAN DE LOS REYES U.C",
+            "points": 76
+          },
+          {
+            "position": 35,
+            "name": "Sancho Garcia Pau",
+            "club": "VILLAR, UC",
+            "points": 76
+          },
+          {
+            "position": 36,
+            "name": "Jimenez Rodriguez Nicolas",
+            "club": "STREAM BIKE, C.D.",
+            "points": 74
+          },
+          {
+            "position": 37,
+            "name": "Laguna Pelegrina Arturo",
+            "club": "ENTRENAMIENTOCICLISMO.COM CDE",
+            "points": 74
+          },
+          {
+            "position": 38,
+            "name": "Tejeda Hernandez Nicolas",
+            "club": "SAN SEBASTIAN DE LOS REYES U.C",
+            "points": 62
+          },
+          {
+            "position": 39,
+            "name": "Frutos Cadalso Jorge",
+            "club": "MTB COLMENAR VIEJO C.D.E.",
+            "points": 60
+          },
+          {
+            "position": 40,
+            "name": "Chicon Santana Alex",
+            "club": "TR3CE BIKE CDE",
+            "points": 56
+          },
+          {
+            "position": 41,
+            "name": "Garcia Gonzalez Marcos",
+            "club": "MEJORADA C.C.",
+            "points": 54
+          },
+          {
+            "position": 42,
+            "name": "Pasamon Arias Raul",
+            "club": "VALDEIGLESIAS C.C.",
+            "points": 52
+          },
+          {
+            "position": 43,
+            "name": "Elias Simarro Alejandro",
+            "club": "SAN SEBASTIAN DE LOS REYES U.C",
+            "points": 46
+          },
+          {
+            "position": 44,
+            "name": "Grande Alcauza Lucas",
+            "club": "SAN SEBASTIAN DE LOS REYES U.C",
+            "points": 46
+          },
+          {
+            "position": 45,
+            "name": "Escobar Haro Alvaro",
+            "club": "COSLADA U.C.",
+            "points": 44
+          },
+          {
+            "position": 46,
+            "name": "Segovia Albacete Manuel",
+            "club": "PEDALBIKES CDE",
+            "points": 44
+          },
+          {
+            "position": 47,
+            "name": "Aparicio Velasco Aitor",
+            "club": "SAN SEBASTIAN DE LOS REYES U.C",
+            "points": 40
+          },
+          {
+            "position": 48,
+            "name": "Catela Munoz David",
+            "club": "TALAVERA J. POLO CLUB CICLISTA",
+            "points": 38
+          },
+          {
+            "position": 49,
+            "name": "Gil Hernandez Lucas",
+            "club": "SAN SEBASTIAN DE LOS REYES U.C",
+            "points": 38
+          },
+          {
+            "position": 51,
+            "name": "Torres Sancho Hugo",
+            "club": "EMTBM C.D.E.",
+            "points": 38
+          },
+          {
+            "name": "Sanchez Sanchez Guillermo",
+            "club": "MEJORADA C.C.",
+            "points": 20,
+            "position": 51
+          },
+          {
+            "position": 52,
+            "name": "Yuste Dieguez Axel",
+            "club": "VALDEIGLESIAS C.C.",
+            "points": 38
+          },
+          {
+            "position": 53,
+            "name": "Aldalur Arellano Aimar",
+            "club": "INDEPENDIENTE",
+            "points": 36
+          },
+          {
+            "position": 54,
+            "name": "Villena Herrero Martin",
+            "club": "SAN SEBASTIAN DE LOS REYES U.C",
+            "points": 34
+          },
+          {
+            "position": 55,
+            "name": "Herrera Martin Diego",
+            "club": "MTB COLMENAR VIEJO C.D.E.",
+            "points": 32
+          },
+          {
+            "position": 56,
+            "name": "Plaza Hernandez David",
+            "club": "SAN SEBASTIAN DE LOS REYES U.C",
+            "points": 32
+          },
+          {
+            "position": 57,
+            "name": "Serrano Cano Maximo",
+            "club": "MTB COLMENAR VIEJO C.D.E.",
+            "points": 32
+          },
+          {
+            "position": 58,
+            "name": "Belinchon Breton Carlos",
+            "club": "FUENLABRADA U.C.",
+            "points": 30
+          },
+          {
+            "position": 59,
+            "name": "Sanchez Perez Ignacio",
+            "club": "ASOCIACION DEPORTIVA CAMARENA",
+            "points": 30
+          },
+          {
+            "position": 60,
+            "name": "Cedron Castro Jacobo",
+            "club": "FUENLABRADA U.C.",
+            "points": 28
+          },
+          {
+            "position": 61,
+            "name": "Mucundorfean Ivan",
+            "club": "MARISCOS CASTELLAR A.S.C., C.D",
+            "points": 26
+          },
+          {
+            "position": 62,
+            "name": "Organista Gonzalez Dario",
+            "club": "SAN SEBASTIAN DE LOS REYES U.C",
+            "points": 24
+          },
+          {
+            "position": 63,
+            "name": "Acedo Ballesteros Martin",
+            "club": "ENTRENAMIENTOCICLISMO.COM CDE",
+            "points": 22
+          },
+          {
+            "position": 64,
+            "name": "Alegre Lopez Dylan",
+            "club": "TRY IT, C.D.",
+            "points": 22
+          },
+          {
+            "position": 65,
+            "name": "Alvarez Prada Guillermo",
+            "club": "TR3CE BIKE CDE",
+            "points": 22
+          },
+          {
+            "position": 66,
+            "name": "Macarron Lucas Eduardo",
+            "club": "ENTRENAMIENTOCICLISMO.COM CDE",
+            "points": 20
+          },
+          {
+            "position": 67,
+            "name": "Rubio Fernandez Diego",
+            "club": "ESCUELA DE CICLISMO AZUQUECA E",
+            "points": 20
+          },
+          {
+            "position": 68,
+            "name": "Castellano Lopez Alvaro",
+            "club": "FUENLABRADA U.C.",
+            "points": 18
+          },
+          {
+            "position": 69,
+            "name": "Lopez Garcia Asier",
+            "club": "PEDALBIKES CDE",
+            "points": 18
+          },
+          {
+            "position": 70,
+            "name": "Moreno Alvarez Juan",
+            "club": "AMIGOS DEL PLATO GRANDE",
+            "points": 18
+          },
+          {
+            "position": 71,
+            "name": "Suarez Ramos Manuel",
+            "club": "ASOCIACION DEPORTIVA CAMARENA",
+            "points": 18
+          },
+          {
+            "position": 72,
+            "name": "Durandeau Medina Pedro",
+            "club": "X-SAUCE C.D.E.",
+            "points": 16
+          },
+          {
+            "position": 73,
+            "name": "Garcia Herrero Mario",
+            "club": "FUENLABRADA U.C.",
+            "points": 16
+          },
+          {
+            "position": 74,
+            "name": "Pumar Quintas Rodrigo",
+            "club": "INDEPENDIENTE",
+            "points": 16
+          },
+          {
+            "position": 75,
+            "name": "Serrano Colmenarejo Manuel",
+            "club": "MTB COLMENAR VIEJO C.D.E.",
+            "points": 16
+          },
+          {
+            "position": 76,
+            "name": "Alfaro Torres Pablo",
+            "club": "TR3CE BIKE CDE",
+            "points": 14
+          },
+          {
+            "position": 77,
+            "name": "Blasco Garcia Oscar",
+            "club": "SAN SEBASTIAN DE LOS REYES U.C",
+            "points": 14
+          },
+          {
+            "position": 78,
+            "name": "Maestro San Roman Alberto",
+            "club": "VALDEIGLESIAS C.C.",
+            "points": 14
+          },
+          {
+            "position": 79,
+            "name": "Navas Jimeno Alejandro",
+            "club": "INDEPENDIENTE",
+            "points": 12
+          },
+          {
+            "position": 80,
+            "name": "Villaseca Sotoca Martin",
+            "club": "INDEPENDIENTE",
+            "points": 12
+          },
+          {
+            "position": 81,
+            "name": "Couselo Garcia Oliver",
+            "club": "SAN SEBASTIAN DE LOS REYES U.C",
+            "points": 10
+          }
+        ],
+        "alevin_femenino": [
+          {
+            "position": 1,
+            "name": "Aguilera Cuartango Adriana",
+            "club": "ACADEMIA CICLISTA C.D.E.",
+            "points": 800
+          },
+          {
+            "position": 2,
+            "name": "Ciordia Noriego Noa",
+            "club": "ALCARREÑA DE CICLISMO",
+            "points": 630
+          },
+          {
+            "position": 3,
+            "name": "Hernandez Diaz Alejandra",
+            "club": "SPORTPLA KIDS ARROYOMOLINOS CD",
+            "points": 598
+          },
+          {
+            "position": 4,
+            "name": "Marti Terron Frida",
+            "club": "SAN SEBASTIAN DE LOS REYES U.C",
+            "points": 519
+          },
+          {
+            "position": 5,
+            "name": "Sanchez-quinones Riesco Valeria",
+            "club": "SPORTPLA KIDS ARROYOMOLINOS CD",
+            "points": 485
+          },
+          {
+            "position": 6,
+            "name": "Torres Llerena Paula",
+            "club": "PEDALBIKES CDE",
+            "points": 480
+          },
+          {
+            "position": 7,
+            "name": "Llorente Antolin Mia",
+            "club": "TR3CE BIKE CDE",
+            "points": 456
+          },
+          {
+            "position": 8,
+            "name": "Garrido Sanchez Lia",
+            "club": "MEJORADA C.C.",
+            "points": 352
+          },
+          {
+            "position": 9,
+            "name": "Crespo Aguado Nerea",
+            "club": "MTB COLMENAR VIEJO C.D.E.",
+            "points": 348
+          },
+          {
+            "position": 10,
+            "name": "Gallardo Rodriguez Lara",
+            "club": "PEDALBIKES CDE",
+            "points": 324
+          },
+          {
+            "position": 11,
+            "name": "Chivato Miguel Carla",
+            "club": "MTB COLMENAR VIEJO C.D.E.",
+            "points": 304
+          },
+          {
+            "position": 12,
+            "name": "Martinez Megias Vera",
+            "club": "PEDALBIKES CDE",
+            "points": 232
+          },
+          {
+            "position": 13,
+            "name": "Bernardino Vacas Blanca",
+            "club": "PEDALBIKES CDE",
+            "points": 200
+          },
+          {
+            "position": 14,
+            "name": "Sierra Vacas Vera",
+            "club": "PEDALBIKES CDE",
+            "points": 164
+          },
+          {
+            "position": 15,
+            "name": "Cantero Gonzalez Maria",
+            "club": "CACERES BIKE, E.C",
+            "points": 132
+          },
+          {
+            "position": 16,
+            "name": "Acosta Moro Cristina",
+            "club": "CACERES BIKE, E.C",
+            "points": 88
+          },
+          {
+            "position": 17,
+            "name": "Martinez Hurtado Carla",
+            "club": "CREVILLENT, CC",
+            "points": 80
+          },
+          {
+            "position": 18,
+            "name": "Lacoba Pena Daniela",
+            "club": "MTB COLMENAR VIEJO C.D.E.",
+            "points": 76
+          },
+          {
+            "position": 19,
+            "name": "Garcia Roman Lucia",
+            "club": "CACERES BIKE, E.C",
+            "points": 64
+          }
+        ],
+        "infantil_masculino": [
+          {
+            "position": 1,
+            "name": "Saez Caballero Daniel",
+            "club": "ACADEMIA CICLISTA C.D.E.",
+            "points": 800
+          },
+          {
+            "position": 2,
+            "name": "Rey Pelayo Gonzalo Maria",
+            "club": "MTB ILARCURIS, C.D.E.",
+            "points": 680
+          },
+          {
+            "position": 3,
+            "name": "Diaz Lopez Daniel",
+            "club": "TR3CE BIKE CDE",
+            "points": 567
+          },
+          {
+            "position": 4,
+            "name": "Torres Llerena Diego",
+            "club": "PEDALBIKES CDE",
+            "points": 550
+          },
+          {
+            "position": 5,
+            "name": "Rodriguez Bermejo Francisco",
+            "club": "ALCARREÑA DE CICLISMO",
+            "points": 504
+          },
+          {
+            "position": 6,
+            "name": "Vaquero Vecillas Gonzalo",
+            "club": "FUENLABRADA U.C.",
+            "points": 491
+          },
+          {
+            "position": 7,
+            "name": "Valiente Grande Sergio",
+            "club": "ACADEMIA CICLISTA C.D.E.",
+            "points": 400
+          },
+          {
+            "position": 8,
+            "name": "Segura Perez Marcos",
+            "club": "ACADEMIA CICLISTA C.D.E.",
+            "points": 380
+          },
+          {
+            "position": 9,
+            "name": "Lopez Molina Marcos",
+            "club": "TODO BICI TORRIJOS",
+            "points": 372
+          },
+          {
+            "position": 10,
+            "name": "Crespo Aguado Adrian",
+            "club": "MTB COLMENAR VIEJO C.D.E.",
+            "points": 368
+          },
+          {
+            "position": 11,
+            "name": "Morcuende Rosillo Daniel",
+            "club": "MTB ILARCURIS, C.D.E.",
+            "points": 332
+          },
+          {
+            "position": 12,
+            "name": "Cezon Lazaro Asier",
+            "club": "SAN SEBASTIAN DE LOS REYES U.C",
+            "points": 320
+          },
+          {
+            "position": 13,
+            "name": "Porras Merida Asier",
+            "club": "MEJORADA C.C.",
+            "points": 288
+          },
+          {
+            "position": 14,
+            "name": "Cruz Martin Alejandro",
+            "club": "KAZAJOZ CYCLING TEAM, C.D",
+            "points": 272
+          },
+          {
+            "position": 15,
+            "name": "Morillas Escobar Lucas",
+            "club": "MTB ILARCURIS, C.D.E.",
+            "points": 232
+          },
+          {
+            "position": 16,
+            "name": "Hervas Estringana Miguel",
+            "club": "MEJORADA C.C.",
+            "points": 212
+          },
+          {
+            "position": 17,
+            "name": "Del Alamo Romo Nestor",
+            "club": "MTB ILARCURIS, C.D.E.",
+            "points": 208
+          },
+          {
+            "position": 18,
+            "name": "Martinez Arevalo Alvaro",
+            "club": "TODO BICI TORRIJOS",
+            "points": 208
+          },
+          {
+            "position": 19,
+            "name": "Arija Medina Daniel",
+            "club": "SAN SEBASTIAN DE LOS REYES U.C",
+            "points": 180
+          },
+          {
+            "position": 20,
+            "name": "Rivero Juanes Hibai",
+            "club": "X-SAUCE C.D.E.",
+            "points": 132
+          },
+          {
+            "position": 21,
+            "name": "Martin Romero Victor",
+            "club": "TR3CE BIKE CDE",
+            "points": 126
+          },
+          {
+            "position": 22,
+            "name": "Rodriguez Rios Asier",
+            "club": "ALCARREÑA DE CICLISMO",
+            "points": 124
+          },
+          {
+            "position": 23,
+            "name": "Almansa Ceprian Adrian",
+            "club": "MTB ILARCURIS, C.D.E.",
+            "points": 112
+          },
+          {
+            "position": 24,
+            "name": "Canas Olivares Angel",
+            "club": "ALMAGREÑO CICLISTA",
+            "points": 112
+          },
+          {
+            "position": 25,
+            "name": "Gonzalez Gutierrez Nicolas",
+            "club": "MTB COLMENAR VIEJO C.D.E.",
+            "points": 108
+          },
+          {
+            "position": 26,
+            "name": "Bernardino Vacas Marcos",
+            "club": "PEDALBIKES CDE",
+            "points": 100
+          },
+          {
+            "position": 27,
+            "name": "Buenadicha Cobos Alexis",
+            "club": "KAZAJOZ CYCLING TEAM, C.D",
+            "points": 100
+          },
+          {
+            "position": 28,
+            "name": "Liberal Dorado Ivan",
+            "club": "PEDALBIKES CDE",
+            "points": 100
+          },
+          {
+            "position": 29,
+            "name": "Sabadell Rojo Alejandro",
+            "club": "TR3CE BIKE CDE",
+            "points": 82
+          },
+          {
+            "position": 30,
+            "name": "Blazquez Jimenez Oriol",
+            "club": "FUENLABRADA U.C.",
+            "points": 78
+          },
+          {
+            "position": 31,
+            "name": "Gallardo Rodriguez Joel",
+            "club": "PEDALBIKES CDE",
+            "points": 78
+          },
+          {
+            "position": 32,
+            "name": "Lopez Urvois David",
+            "club": "FUENLABRADA U.C.",
+            "points": 74
+          },
+          {
+            "position": 33,
+            "name": "Pacheco Palazon Francisco",
+            "club": "TRICICLON C.D.",
+            "points": 72
+          },
+          {
+            "position": 34,
+            "name": "Santiago Mierzejewski Leo",
+            "club": "PEDALBIKES CDE",
+            "points": 72
+          },
+          {
+            "position": 35,
+            "name": "Tenhiala Taisto Nestori",
+            "club": "YELLOW MAD BMX, C.D.E.",
+            "points": 72
+          },
+          {
+            "position": 36,
+            "name": "Retamosa Reviejo Alberto",
+            "club": "SPORTPLA KIDS ARROYOMOLINOS CD",
+            "points": 70
+          },
+          {
+            "position": 37,
+            "name": "Rodriguez Diaz Marcos",
+            "club": "MTB ILARCURIS, C.D.E.",
+            "points": 70
+          },
+          {
+            "position": 38,
+            "name": "Sabadell Rojo Rodrigo",
+            "club": "TR3CE BIKE CDE",
+            "points": 68
+          },
+          {
+            "position": 39,
+            "name": "Lizana Abades Jose",
+            "club": "TODO BICI TORRIJOS",
+            "points": 64
+          },
+          {
+            "position": 40,
+            "name": "Torres Sancho Nacho",
+            "club": "MEJORADA C.C.",
+            "points": 62
+          },
+          {
+            "position": 41,
+            "name": "Marquez Toribio Carlos",
+            "club": "FRANCISCO PIZARRO, A.D.C",
+            "points": 60
+          },
+          {
+            "position": 42,
+            "name": "Ferreira Escolar Diego",
+            "club": "SAN SEBASTIAN DE LOS REYES U.C",
+            "points": 58
+          },
+          {
+            "position": 43,
+            "name": "Chacon Cubillo Nicolas",
+            "club": "FUENLABRADA U.C.",
+            "points": 56
+          },
+          {
+            "position": 44,
+            "name": "Llorente Montero Izan",
+            "club": "TR3CE BIKE CDE",
+            "points": 56
+          },
+          {
+            "position": 45,
+            "name": "Gonzalez Montes Diego",
+            "club": "LAS LINDES, C.D.F.",
+            "points": 54
+          },
+          {
+            "position": 46,
+            "name": "Puebla Notario Sergio",
+            "club": "TODO BICI TORRIJOS",
+            "points": 54
+          },
+          {
+            "position": 47,
+            "name": "Cedron Castro Samuel",
+            "club": "FUENLABRADA U.C.",
+            "points": 50
+          },
+          {
+            "position": 48,
+            "name": "Belinchon Breton Felix",
+            "club": "FUENLABRADA U.C.",
+            "points": 48
+          },
+          {
+            "position": 49,
+            "name": "Rodriguez Reyes Jorge",
+            "club": "C.C. PICONERA",
+            "points": 44
+          },
+          {
+            "position": 50,
+            "name": "Garcia Yamada Kento",
+            "club": "MTB COLMENAR VIEJO C.D.E.",
+            "points": 42
+          },
+          {
+            "position": 51,
+            "name": "Munoz Rubio Enzo",
+            "club": "TALAVERA J. POLO CLUB CICLISTA",
+            "points": 42
+          },
+          {
+            "position": 52,
+            "name": "Tell Mediavilla Hugo",
+            "club": "ACADEMIA CICLISTA C.D.E.",
+            "points": 42
+          },
+          {
+            "position": 53,
+            "name": "Fernandez Martin Aran",
+            "club": "INDEPENDIENTE",
+            "points": 40
+          },
+          {
+            "position": 54,
+            "name": "Garcia Cabanas Sergio",
+            "club": "PEDALBIKES CDE",
+            "points": 40
+          },
+          {
+            "position": 55,
+            "name": "Sanchez Riesco Gonzalo",
+            "club": "SAN SEBASTIAN DE LOS REYES U.C",
+            "points": 40
+          },
+          {
+            "position": 56,
+            "name": "Maganto Herranz Adrian",
+            "club": "SAN SEBASTIAN DE LOS REYES U.C",
+            "points": 38
+          },
+          {
+            "position": 58,
+            "name": "Gonzalez Rodriguez Oliver",
+            "club": "MTB COLMENAR VIEJO C.D.E.",
+            "points": 34
+          },
+          {
+            "position": 59,
+            "name": "Trujillo Martin Joel",
+            "club": "TRY IT, C.D.",
+            "points": 32
+          },
+          {
+            "position": 60,
+            "name": "Serrano Colmenarejo David",
+            "club": "MTB COLMENAR VIEJO C.D.E.",
+            "points": 28
+          },
+          {
+            "position": 61,
+            "name": "Lopez Lopez Miguel",
+            "club": "ASOCIACION DEPORTIVA CAMARENA",
+            "points": 24
+          },
+          {
+            "position": 62,
+            "name": "Prieto Rivas Pablo",
+            "club": "ENTRENAMIENTOCICLISMO.COM CDE",
+            "points": 24
+          },
+          {
+            "position": 63,
+            "name": "Perez Novio Joel",
+            "club": "AVANZA, A.D.",
+            "points": 20
+          },
+          {
+            "position": 64,
+            "name": "Remon Sirucek Marcos",
+            "club": "SAN SEBASTIAN DE LOS REYES U.C",
+            "points": 20
+          },
+          {
+            "position": 65,
+            "name": "Garcia Valdivieso Lopez De Pablo Marcos",
+            "club": "AMIGOS DEL PLATO GRANDE",
+            "points": 18
+          },
+          {
+            "position": 66,
+            "name": "Nus Vidal Marti",
+            "club": "PALLARS CLUB BTT",
+            "points": 18
+          },
+          {
+            "position": 68,
+            "name": "Guijarro Eduardo",
+            "club": "INDEPENDIENTE",
+            "points": 12
+          },
+          {
+            "position": 69,
+            "name": "Salmeron Canton Nicolas",
+            "club": "ENTRENAMIENTOCICLISMO.COM CDE",
+            "points": 12
+          },
+          {
+            "position": 70,
+            "name": "Sanchez Fraile Lucas",
+            "club": "TODO BICI TORRIJOS",
+            "points": 12
+          },
+          {
+            "name": "Garcia Amaya Pablo",
+            "club": "MEJORADA C.C.",
+            "points": 12,
+            "position": 71
+          },
+          {
+            "position": 71,
+            "name": "Vega Fernandez Samuel",
+            "club": "ESCUELA CICLISMO PARACUELLOS",
+            "points": 12
+          }
+        ],
+        "infantil_femenino": [
+          {
+            "position": 1,
+            "name": "Martinez Perales Candela",
+            "club": "SAN SEBASTIAN DE LOS REYES U.C",
+            "points": 800
+          },
+          {
+            "position": 2,
+            "name": "Garcia Artiles Daida",
+            "club": "LOS SECOS, C.D.",
+            "points": 680
+          },
+          {
+            "position": 3,
+            "name": "Garzon Ranero Eva",
+            "club": "TR3CE BIKE CDE",
+            "points": 610
+          },
+          {
+            "position": 4,
+            "name": "Diaz Moreno Naia",
+            "club": "DAIMIEL CLUB CICLISTA",
+            "points": 508
+          },
+          {
+            "position": 5,
+            "name": "Francisco Sierra Angela",
+            "club": "PEDALBIKES CDE",
+            "points": 432
+          },
+          {
+            "position": 6,
+            "name": "Gutierrez Castillo Nora",
+            "club": "ACADEMIA CICLISTA C.D.E.",
+            "points": 384
+          },
+          {
+            "position": 7,
+            "name": "Conde Capitan Vera",
+            "club": "MTB ILARCURIS, C.D.E.",
+            "points": 372
+          },
+          {
+            "position": 8,
+            "name": "Gonzalez Del Barrio Pepa",
+            "club": "TR3CE BIKE CDE",
+            "points": 344
+          },
+          {
+            "position": 9,
+            "name": "Hristova Stankova Zlatina",
+            "club": "TR3CE BIKE CDE",
+            "points": 328
+          },
+          {
+            "position": 10,
+            "name": "Garcia Alberca Carla",
+            "club": "ACADEMIA CICLISTA C.D.E.",
+            "points": 312
+          },
+          {
+            "position": 11,
+            "name": "Lastras Bravo Yaiza",
+            "club": "VALDEIGLESIAS C.C.",
+            "points": 160
+          },
+          {
+            "position": 12,
+            "name": "Giraldez Alonso Uxia",
+            "club": "AVANZA, A.D.",
+            "points": 155
+          },
+          {
+            "position": 13,
+            "name": "Perez Del Val Mariela",
+            "club": "SAN SEBASTIAN DE LOS REYES U.C",
+            "points": 155
+          },
+          {
+            "position": 14,
+            "name": "Balmaceda Blanco Valentina",
+            "club": "SAN SEBASTIAN DE LOS REYES U.C",
+            "points": 128
+          },
+          {
+            "position": 15,
+            "name": "Guerra Melian Gabriela",
+            "club": "C.C. PICONERA",
+            "points": 128
+          },
+          {
+            "position": 16,
+            "name": "Tejada Velasco Valeria",
+            "club": "CACERES BIKE, E.C",
+            "points": 120
+          },
+          {
+            "position": 17,
+            "name": "Martin Perez Ariadna",
+            "club": "TRY IT, C.D.",
+            "points": 76
+          },
+          {
+            "position": 18,
+            "name": "Gil Castro Haizea",
+            "club": "STREAM BIKE, C.D.",
+            "points": 68
+          }
+        ]
+      },
+      "generalClassificationSourceType": "clax",
+      "generalClassificationDataUrl": "https://cronosportradio.es/RESULTADOS26/GENERALES/arrastre kids.clax"
     },
     {
       "id": "copa-madrid-escuelas-2026",
       "name": "Copa de Madrid Escuelas 2026",
       "season": 2026,
-      "description": "Pruebas madrileñas de escuelas incluidas en el calendario."
+      "description": "Pruebas madrileñas de escuelas incluidas en el calendario.",
+      "generalClassificationUrl": "",
+      "generalStandingsByCategory": {
+        "promesa_masculino": [],
+        "promesa_femenino": [],
+        "principiante_masculino": [],
+        "principiante_femenino": [],
+        "alevin_masculino": [],
+        "alevin_femenino": [],
+        "infantil_masculino": [],
+        "infantil_femenino": []
+      }
     },
     {
       "id": "mtb-escolar-guadalajara-2026",
       "name": "Circuito Infantil Escolar MTB",
       "season": 2026,
-      "description": "Circuito escolar no federado e independiente de las federaciones autonómicas."
+      "description": "Circuito escolar no federado e independiente de las federaciones autonómicas.",
+      "generalClassificationUrl": "https://drive.google.com/file/d/1rWCSs7KQzYj2XFdvsJL7k6yf3sqgbmmw/view",
+      "generalStandingsByCategory": {
+        "promesa_masculino": [],
+        "promesa_femenino": [],
+        "principiante_masculino": [],
+        "principiante_femenino": [],
+        "alevin_masculino": [],
+        "alevin_femenino": [],
+        "infantil_masculino": [],
+        "infantil_femenino": []
+      }
+    },
+    {
+      "id": "mtb-racing-cup-2026",
+      "name": "MTB Racing Cup 2026",
+      "season": 2026,
+      "description": "Nuevo campeonato federado con pruebas en Arroyomolinos, Los Molinos y Ruta del Agua.",
+      "generalClassificationUrl": "",
+      "generalStandingsByCategory": {
+        "promesa_masculino": [],
+        "promesa_femenino": [],
+        "principiante_masculino": [],
+        "principiante_femenino": [],
+        "alevin_masculino": [],
+        "alevin_femenino": [],
+        "infantil_masculino": [],
+        "infantil_femenino": []
+      }
+    },
+    {
+      "id": "copa-madrid-cx-2026",
+      "name": "Copa Madrid Ciclocross 2026",
+      "season": 2026,
+      "description": "Calendario de carreras de ciclocross de la Copa Comunidad de Madrid CX 2026.",
+      "generalClassificationUrl": "",
+      "generalStandingsByCategory": {}
+    },
+    {
+      "id": "cx-racing-cup-2026",
+      "name": "Ciclocross Racing Cup 2026",
+      "season": 2026,
+      "description": "Precalendario de carreras de ciclocross Racing Cup 2026.",
+      "generalClassificationUrl": "",
+      "generalStandingsByCategory": {}
     }
   ],
   "races": [
@@ -129,8 +2725,234 @@ window.APP_VERSION = "20260411-5";\nwindow.APP_DATA = {
       "registrationUrl": "https://www.rockthesport.com/",
       "technicalGuideUrl": "",
       "documentsUrl": "",
-      "notes": "Prueba del Mtb Escolar de Guadalajara. Campeonato no federado. De momento solo está localizado el enlace general de inscripción en RockTheSport.",
-      "resultUrl": ""
+      "notes": "Prueba del Circuito Infantil Escolar MTB. Se ha cargado un resumen manual de clasificación a partir de los pantallazos revisados.",
+      "resultUrl": "https://sporthive.com/events/s/b32ef79d-c7a4-4ad9-af26-28249ccac7cc",
+      "raceResultsByCategory": {
+        "mi_promesa_masculino": [
+          {
+            "position": 1,
+            "name": "Aleix Viana De Las Heras",
+            "club": "",
+            "points": ""
+          },
+          {
+            "position": 2,
+            "name": "Noah Rojas Razola",
+            "club": "",
+            "points": ""
+          },
+          {
+            "position": 3,
+            "name": "Daniel De La Vega Gil",
+            "club": "",
+            "points": ""
+          },
+          {
+            "position": 4,
+            "name": "Diego Semitiel Butron",
+            "club": "",
+            "points": ""
+          },
+          {
+            "position": 5,
+            "name": "Hugo Calle Moya",
+            "club": "",
+            "points": ""
+          }
+        ],
+        "mi_promesa_femenino": [
+          {
+            "position": 1,
+            "name": "Olivia Ramirez Jimenez",
+            "club": "",
+            "points": ""
+          },
+          {
+            "position": 2,
+            "name": "Leire Bermejo Sanchez",
+            "club": "MEJORADA C.C.",
+            "points": ""
+          },
+          {
+            "position": 3,
+            "name": "Paula Sanz Alcober",
+            "club": "",
+            "points": ""
+          }
+        ],
+        "principiante_masculino": [
+          {
+            "position": 1,
+            "name": "Pablo Bermejo Sanchez",
+            "club": "MEJORADA C.C.",
+            "points": ""
+          },
+          {
+            "position": 2,
+            "name": "Yago Lopez Casa",
+            "club": "",
+            "points": ""
+          },
+          {
+            "position": 3,
+            "name": "Victor Sotoca Sotoca",
+            "club": "",
+            "points": ""
+          },
+          {
+            "position": 4,
+            "name": "Markel Ayuso Calleja",
+            "club": "",
+            "points": ""
+          },
+          {
+            "position": 5,
+            "name": "Erik Ochoa De Alda Cantador",
+            "club": "",
+            "points": ""
+          }
+        ],
+        "principiante_femenino": [
+          {
+            "position": 1,
+            "name": "Celia Porras Merida",
+            "club": "MEJORADA C.C.",
+            "points": ""
+          },
+          {
+            "position": 2,
+            "name": "Miriam Alcivar Romero",
+            "club": "",
+            "points": ""
+          }
+        ],
+        "alevin_masculino": [
+          {
+            "position": 1,
+            "name": "Alejandro Rodriguez Bermejo",
+            "club": "",
+            "points": ""
+          },
+          {
+            "position": 2,
+            "name": "Eneko Garcia Briso-Montiano",
+            "club": "",
+            "points": ""
+          },
+          {
+            "position": 3,
+            "name": "Javier De La Vega Gil",
+            "club": "",
+            "points": ""
+          },
+          {
+            "position": 4,
+            "name": "Raul Escribano Sanchez",
+            "club": "",
+            "points": ""
+          },
+          {
+            "position": 5,
+            "name": "Guillermo Sanchez Sanchez",
+            "club": "MEJORADA C.C.",
+            "points": ""
+          },
+          {
+            "position": 6,
+            "name": "Marcos Garcia Gonzalez",
+            "club": "MEJORADA C.C.",
+            "points": ""
+          }
+        ],
+        "alevin_femenino": [
+          {
+            "position": 1,
+            "name": "Alejandra Cristobal Herrero",
+            "club": "",
+            "points": ""
+          },
+          {
+            "position": 2,
+            "name": "Nerea Crespo Aguado",
+            "club": "",
+            "points": ""
+          }
+        ],
+        "infantil_masculino": [
+          {
+            "position": 1,
+            "name": "Francisco Rodriguez Bermejo",
+            "club": "",
+            "points": ""
+          },
+          {
+            "position": 2,
+            "name": "Adrian Crespo Aguado",
+            "club": "",
+            "points": ""
+          },
+          {
+            "position": 3,
+            "name": "Nacho Torres Sancho",
+            "club": "MEJORADA C.C.",
+            "points": ""
+          },
+          {
+            "position": 4,
+            "name": "Aaron Nicolas Fernandez",
+            "club": "",
+            "points": ""
+          },
+          {
+            "position": 5,
+            "name": "Asier Rodriguez Rios",
+            "club": "",
+            "points": ""
+          },
+          {
+            "position": 6,
+            "name": "Asier Porras Merida",
+            "club": "MEJORADA C.C.",
+            "points": ""
+          }
+        ],
+        "infantil_femenino": [
+          {
+            "position": 1,
+            "name": "Ariadna Bote Arias",
+            "club": "",
+            "points": ""
+          }
+        ],
+        "cadete_masculino": [
+          {
+            "position": 1,
+            "name": "Marcos Sebastian Blanco",
+            "club": "",
+            "points": ""
+          },
+          {
+            "position": 2,
+            "name": "Alejandro Hidalgo Martin-Loeches",
+            "club": "",
+            "points": ""
+          },
+          {
+            "position": 3,
+            "name": "Hugo Sanchez Sanchez",
+            "club": "MEJORADA C.C.",
+            "points": ""
+          }
+        ],
+        "cadete_femenino": [
+          {
+            "position": 1,
+            "name": "Jimena Alcivar Romero",
+            "club": "",
+            "points": ""
+          }
+        ]
+      }
     },
     {
       "id": "azuqueca-2026",
@@ -147,7 +2969,7 @@ window.APP_VERSION = "20260411-5";\nwindow.APP_DATA = {
       "technicalGuideUrl": "",
       "documentsUrl": "",
       "notes": "Prueba del Mtb Escolar de Guadalajara. Campeonato no federado. Inscripción y guía técnica pendientes.",
-      "resultUrl": ""
+      "resultUrl": "https://sporthive.com/events/s/d9c2eeba-032c-437c-9b90-f7d3447f7e96"
     },
     {
       "id": "alpedrete-2026",
@@ -165,7 +2987,7 @@ window.APP_VERSION = "20260411-5";\nwindow.APP_DATA = {
       "technicalGuideUrl": "https://fmciclismo.com/index.php/smartweb/inscripciones/documentos/34562-COPA-MADRID-MTB-KIDS---X-SAUCE-SERIES-ALPEDRETE",
       "documentsUrl": "https://fmciclismo.com/index.php/smartweb/inscripciones/documentos/34562-COPA-MADRID-MTB-KIDS---X-SAUCE-SERIES-ALPEDRETE",
       "notes": "Inscripción y documentos verificados; clasificación aún no aplica porque la prueba es futura.",
-      "resultUrl": ""
+      "resultUrl": "https://fmciclismo.com/index.php/smartweb/inscripciones/clasificacion/34562-COPA-MADRID-MTB-KIDS---X-SAUCE-SERIES-ALPEDRETE"
     },
     {
       "id": "ciempozuelos-2026",
@@ -196,7 +3018,7 @@ window.APP_VERSION = "20260411-5";\nwindow.APP_DATA = {
       "location": "Sigüenza",
       "province": "Guadalajara",
       "organizer": "",
-      "registrationUrl": "",
+      "registrationUrl": "https://www.rockthesport.com/es/evento/siguenza-circuito-infantil-escolar-mtb-guadalajara",
       "technicalGuideUrl": "",
       "documentsUrl": "",
       "notes": "Prueba del Mtb Escolar de Guadalajara. Campeonato no federado. Inscripción y guía técnica pendientes.",
@@ -206,18 +3028,19 @@ window.APP_VERSION = "20260411-5";\nwindow.APP_DATA = {
       "id": "arroyomolinos-2026",
       "championshipIds": [
         "x-sauce-series-2026",
-        "copa-madrid-escuelas-2026"
+        "copa-madrid-escuelas-2026",
+        "mtb-racing-cup-2026"
       ],
       "categoryType": "escuelas",
       "name": "Arroyomolinos · Escuelas",
       "date": "2026-05-10",
       "location": "Arroyomolinos",
       "province": "Madrid",
-      "organizer": "",
+      "organizer": "Sportpla Kids Arroyomolinos C.D.E.",
       "registrationUrl": "",
       "technicalGuideUrl": "",
       "documentsUrl": "",
-      "notes": "Figura en la Copa de Madrid Escuelas, pero no está localizada la ficha exacta de 2026.",
+      "notes": "Prueba federada incluida en Copa de Madrid y también en MTB Racing Cup.",
       "resultUrl": ""
     },
     {
@@ -235,6 +3058,57 @@ window.APP_VERSION = "20260411-5";\nwindow.APP_DATA = {
       "technicalGuideUrl": "",
       "documentsUrl": "",
       "notes": "Pendiente de publicación de la ficha exacta.",
+      "resultUrl": ""
+    },
+    {
+      "id": "los-molinos-2026",
+      "championshipIds": [
+        "mtb-racing-cup-2026"
+      ],
+      "categoryType": "escuelas",
+      "name": "Los Molinos · MTB Racing Cup",
+      "date": "2026-05-30",
+      "location": "Los Molinos",
+      "province": "Madrid",
+      "organizer": "Teams Bikers C.D.E.",
+      "registrationUrl": "",
+      "technicalGuideUrl": "",
+      "documentsUrl": "",
+      "notes": "Prueba federada del calendario FMC: MTB Racing Cup Escuelas - III Trofeo MTB Los Molinos.",
+      "resultUrl": ""
+    },
+    {
+      "id": "canredondo-guadalajara-2026",
+      "name": "Canredondo · Escuelas + XCO",
+      "date": "2026-06-06",
+      "location": "Canredondo",
+      "province": "Guadalajara",
+      "championshipIds": [
+        "x-sauce-series-2026"
+      ],
+      "registrationUrl": "",
+      "technicalGuideUrl": "",
+      "documentsUrl": "",
+      "resultUrl": "",
+      "notes": "Escuelas y XCO. Pertenece a X-Sauce Series, pero no a Copa CLM ni al Circuito Infantil Escolar MTB.",
+      "categoryType": "escuelas",
+      "organizer": "MTB Ilarcuris C.D.E."
+    },
+    {
+      "id": "ruta-del-agua-2026",
+      "championshipIds": [
+        "mtb-racing-cup-2026"
+      ],
+      "categoryType": "escuelas",
+      "name": "Ruta del Agua · MTB Racing Cup",
+      "date": "2026-06-07",
+      "location": "Torrelaguna",
+      "province": "Madrid",
+      "organizer": "Multideporte Madrid C.D.E.",
+      "registrationUrl": "",
+      "technicalGuideUrl": "",
+      "documentsUrl": "",
+      "notes": "Prueba federada cargada dentro de MTB Racing Cup según la planificación indicada para el campeonato.",
       "resultUrl": ""
     },
     {
@@ -274,6 +3148,210 @@ window.APP_VERSION = "20260411-5";\nwindow.APP_DATA = {
       "resultUrl": ""
     },
     {
+      "id": "cx-racing-camarena-2026",
+      "championshipIds": [
+        "cx-racing-cup-2026"
+      ],
+      "categoryType": "ciclocross",
+      "name": "Camarena · Ciclocross Racing Cup",
+      "date": "2026-09-27",
+      "location": "Camarena",
+      "province": "Toledo",
+      "organizer": "",
+      "registrationUrl": "",
+      "technicalGuideUrl": "",
+      "documentsUrl": "",
+      "notes": "Ciclocross Racing Cup 2026. Sede por confirmar.",
+      "resultUrl": ""
+    },
+    {
+      "id": "cx-racing-almansa-2026",
+      "championshipIds": [
+        "cx-racing-cup-2026"
+      ],
+      "categoryType": "ciclocross",
+      "name": "Almansa · Ciclocross Racing Cup",
+      "date": "2026-10-03",
+      "location": "Almansa",
+      "province": "Albacete",
+      "organizer": "",
+      "registrationUrl": "",
+      "technicalGuideUrl": "",
+      "documentsUrl": "",
+      "notes": "Ciclocross Racing Cup 2026.",
+      "resultUrl": ""
+    },
+    {
+      "id": "cx-navalafuente-2026",
+      "championshipIds": [
+        "copa-madrid-cx-2026"
+      ],
+      "categoryType": "ciclocross",
+      "name": "Navalafuente · Ciclocross",
+      "date": "2026-10-04",
+      "location": "Navalafuente",
+      "province": "Madrid",
+      "organizer": "",
+      "registrationUrl": "",
+      "technicalGuideUrl": "",
+      "documentsUrl": "",
+      "notes": "Copa Madrid Ciclocross 2026.",
+      "resultUrl": ""
+    },
+    {
+      "id": "cx-racing-montiel-2026",
+      "championshipIds": [
+        "cx-racing-cup-2026"
+      ],
+      "categoryType": "ciclocross",
+      "name": "Montiel · Ciclocross Racing Cup",
+      "date": "2026-10-11",
+      "location": "Montiel",
+      "province": "Ciudad Real",
+      "organizer": "",
+      "registrationUrl": "",
+      "technicalGuideUrl": "",
+      "documentsUrl": "",
+      "notes": "Ciclocross Racing Cup 2026.",
+      "resultUrl": ""
+    },
+    {
+      "id": "cx-mejorada-campo-2026",
+      "championshipIds": [
+        "copa-madrid-cx-2026"
+      ],
+      "categoryType": "ciclocross",
+      "name": "Mejorada del Campo · Ciclocross",
+      "date": "2026-10-25",
+      "location": "Mejorada del Campo",
+      "province": "Madrid",
+      "organizer": "",
+      "registrationUrl": "",
+      "technicalGuideUrl": "",
+      "documentsUrl": "",
+      "notes": "Copa Madrid Ciclocross 2026.",
+      "resultUrl": ""
+    },
+    {
+      "id": "cx-racing-avila-2026",
+      "championshipIds": [
+        "cx-racing-cup-2026"
+      ],
+      "categoryType": "ciclocross",
+      "name": "Ávila · Ciclocross Racing Cup",
+      "date": "2026-11-07",
+      "location": "Ávila",
+      "province": "Ávila",
+      "organizer": "",
+      "registrationUrl": "",
+      "technicalGuideUrl": "",
+      "documentsUrl": "",
+      "notes": "Ciclocross Racing Cup 2026.",
+      "resultUrl": ""
+    },
+    {
+      "id": "cx-paracuellos-2026",
+      "championshipIds": [
+        "copa-madrid-cx-2026"
+      ],
+      "categoryType": "ciclocross",
+      "name": "Paracuellos del Jarama · Ciclocross",
+      "date": "2026-11-14",
+      "location": "Paracuellos del Jarama",
+      "province": "Madrid",
+      "organizer": "",
+      "registrationUrl": "",
+      "technicalGuideUrl": "",
+      "documentsUrl": "",
+      "notes": "Copa Madrid Ciclocross 2026.",
+      "resultUrl": ""
+    },
+    {
+      "id": "cx-torrejon-ardoz-2026",
+      "championshipIds": [
+        "copa-madrid-cx-2026"
+      ],
+      "categoryType": "ciclocross",
+      "name": "Torrejón de Ardoz · Ciclocross",
+      "date": "2026-11-15",
+      "location": "Torrejón de Ardoz",
+      "province": "Madrid",
+      "organizer": "",
+      "registrationUrl": "",
+      "technicalGuideUrl": "",
+      "documentsUrl": "",
+      "notes": "Copa Madrid Ciclocross 2026.",
+      "resultUrl": ""
+    },
+    {
+      "id": "cx-racing-los-molinos-2026",
+      "championshipIds": [
+        "cx-racing-cup-2026"
+      ],
+      "categoryType": "ciclocross",
+      "name": "Los Molinos · Ciclocross Racing Cup",
+      "date": "2026-11-21",
+      "location": "Los Molinos",
+      "province": "Madrid",
+      "organizer": "",
+      "registrationUrl": "",
+      "technicalGuideUrl": "",
+      "documentsUrl": "",
+      "notes": "Ciclocross Racing Cup 2026.",
+      "resultUrl": ""
+    },
+    {
+      "id": "cx-alalpardo-2026",
+      "championshipIds": [
+        "copa-madrid-cx-2026"
+      ],
+      "categoryType": "ciclocross",
+      "name": "Alalpardo · Ciclocross",
+      "date": "2026-11-29",
+      "location": "Alalpardo",
+      "province": "Madrid",
+      "organizer": "",
+      "registrationUrl": "",
+      "technicalGuideUrl": "",
+      "documentsUrl": "",
+      "notes": "Copa Madrid Ciclocross 2026.",
+      "resultUrl": ""
+    },
+    {
+      "id": "cx-coslada-2026",
+      "championshipIds": [
+        "copa-madrid-cx-2026"
+      ],
+      "categoryType": "ciclocross",
+      "name": "Coslada · Ciclocross",
+      "date": "2026-12-13",
+      "location": "Coslada",
+      "province": "Madrid",
+      "organizer": "",
+      "registrationUrl": "",
+      "technicalGuideUrl": "",
+      "documentsUrl": "",
+      "notes": "Copa Madrid Ciclocross 2026.",
+      "resultUrl": ""
+    },
+    {
+      "id": "cx-arroyomolinos-copa-espana-2027",
+      "championshipIds": [
+        "copa-madrid-cx-2026"
+      ],
+      "categoryType": "ciclocross",
+      "name": "Arroyomolinos · Ciclocross Copa de España",
+      "date": "2027-01-03",
+      "location": "Arroyomolinos",
+      "province": "Madrid",
+      "organizer": "",
+      "registrationUrl": "",
+      "technicalGuideUrl": "",
+      "documentsUrl": "",
+      "notes": "Copa Madrid Ciclocross 2026. Prueba señalada como Copa de España.",
+      "resultUrl": ""
+    },
+    {
       "id": "quintanar-2026",
       "championshipIds": [
         "clm-xco-2026"
@@ -291,5 +3369,43 @@ window.APP_VERSION = "20260411-5";\nwindow.APP_DATA = {
       "resultUrl": ""
     }
   ],
-  "lastUpdatedUtc": "2026-03-19T12:45:00Z"
+  "lastUpdatedUtc": "2026-04-30T07:38:06.551908+00:00",
+  "ccMejoradaRidersByCategory": {
+    "promesa_masculino": [
+      "SAMUEL CANUELO VAZQUEZ"
+    ],
+    "promesa_femenino": [],
+    "principiante_masculino": [
+      "PABLO BERMEJO SANCHEZ",
+      "MARC DE LA BARRERA GUINDEL",
+      "MANUEL ESCRIBANO ARINERO"
+    ],
+    "principiante_femenino": [
+      "CELIA PORRAS MERIDA"
+    ],
+    "alevin_masculino": [
+      "IVAN ESCALANTE MORON",
+      "HUGO GARCIA DEL RIO",
+      "MARCOS GARCIA GONZALEZ",
+      "GUILLERMO SANCHEZ SANCHEZ"
+    ],
+    "alevin_femenino": [
+      "LIA GARRIDO"
+    ],
+    "infantil_masculino": [
+      "MIGUEL HERVAS ESTRINGANA",
+      "ASIER PORRAS MERIDA",
+      "NACHO TORRES",
+      "PABLO GARCIA AMAYA"
+    ],
+    "infantil_femenino": [],
+    "cadete_masculino": [
+      "HUGO SANCHEZ SANCHEZ"
+    ],
+    "cadete_femenino": [],
+    "mi_promesa_masculino": [],
+    "mi_promesa_femenino": [
+      "LEIRE BERMEJO SANCHEZ"
+    ]
+  }
 };
