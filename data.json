@@ -2610,7 +2610,16 @@
       "season": 2026,
       "description": "Calendario de carreras de ciclocross de la Copa Comunidad de Madrid CX 2026.",
       "generalClassificationUrl": "",
-      "generalStandingsByCategory": {}
+      "generalStandingsByCategory": {
+        "promesa_masculino": [],
+        "promesa_femenino": [],
+        "principiante_masculino": [],
+        "principiante_femenino": [],
+        "alevin_masculino": [],
+        "alevin_femenino": [],
+        "infantil_masculino": [],
+        "infantil_femenino": []
+      }
     },
     {
       "id": "cx-racing-cup-2026",
@@ -2618,7 +2627,16 @@
       "season": 2026,
       "description": "Precalendario de carreras de ciclocross Racing Cup 2026.",
       "generalClassificationUrl": "",
-      "generalStandingsByCategory": {}
+      "generalStandingsByCategory": {
+        "promesa_masculino": [],
+        "promesa_femenino": [],
+        "principiante_masculino": [],
+        "principiante_femenino": [],
+        "alevin_masculino": [],
+        "alevin_femenino": [],
+        "infantil_masculino": [],
+        "infantil_femenino": []
+      }
     }
   ],
   "races": [
@@ -3368,7 +3386,7 @@
       "resultUrl": ""
     }
   ],
-  "lastUpdatedUtc": "2026-04-30T07:38:06.551908+00:00",
+  "lastUpdatedUtc": "2026-05-01T07:28:13.424595+00:00",
   "ccMejoradaRidersByCategory": {
     "promesa_masculino": [
       "SAMUEL CANUELO VAZQUEZ"
