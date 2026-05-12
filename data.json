@@ -3045,8 +3045,7 @@
       "id": "arroyomolinos-2026",
       "championshipIds": [
         "x-sauce-series-2026",
-        "copa-madrid-escuelas-2026",
-        "mtb-racing-cup-2026"
+        "copa-madrid-escuelas-2026"
       ],
       "categoryType": "escuelas",
       "name": "Arroyomolinos · Escuelas",
@@ -3110,23 +3109,6 @@
       "notes": "Escuelas y XCO. Pertenece a X-Sauce Series, pero no a Copa CLM ni al Circuito Infantil Escolar MTB.",
       "categoryType": "escuelas",
       "organizer": "MTB Ilarcuris C.D.E."
-    },
-    {
-      "id": "ruta-del-agua-2026",
-      "championshipIds": [
-        "mtb-racing-cup-2026"
-      ],
-      "categoryType": "escuelas",
-      "name": "Ruta del Agua · MTB Racing Cup",
-      "date": "2026-06-07",
-      "location": "Torrelaguna",
-      "province": "Madrid",
-      "organizer": "Multideporte Madrid C.D.E.",
-      "registrationUrl": "",
-      "technicalGuideUrl": "",
-      "documentsUrl": "",
-      "notes": "Prueba federada cargada dentro de MTB Racing Cup según la planificación indicada para el campeonato.",
-      "resultUrl": ""
     },
     {
       "id": "paracuellos-2026",
