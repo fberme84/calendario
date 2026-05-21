@@ -2871,6 +2871,40 @@
       "resultUrl": ""
     },
     {
+      "id": "cx-racing-tarazona-2026",
+      "championshipIds": [
+        "cx-racing-cup-2026"
+      ],
+      "categoryType": "ciclocross",
+      "name": "Tarazona (Zaragoza) · Ciclocross Racing Cup",
+      "date": "2026-12-19",
+      "location": "Tarazona",
+      "province": "Zaragoza",
+      "organizer": "",
+      "registrationUrl": "",
+      "technicalGuideUrl": "",
+      "documentsUrl": "",
+      "notes": "Ciclocross Racing Cup 2026.",
+      "resultUrl": ""
+    },
+     {
+      "id": "cx-racing-sesena-2026",
+      "championshipIds": [
+        "cx-racing-cup-2026"
+      ],
+      "categoryType": "ciclocross",
+      "name": "Seseña (Toledo) · Ciclocross Racing Cup",
+      "date": "2026-11-01",
+      "location": "Seseña",
+      "province": "Toledo",
+      "organizer": "",
+      "registrationUrl": "",
+      "technicalGuideUrl": "",
+      "documentsUrl": "",
+      "notes": "Ciclocross Racing Cup 2026.",
+      "resultUrl": ""
+    },
+    {
       "id": "cx-mejorada-campo-2026",
       "championshipIds": [
         "copa-madrid-cx-2026"
