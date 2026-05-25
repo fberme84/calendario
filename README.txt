@@ -257,6 +257,8 @@ Qué actualiza el script:
   - documentsUrl
   - resultUrl
 - Solo guarda esos enlaces si la URL responde correctamente.
+- Para clasificaciones de circuito en yosoyciclista (CLM), usa parseo HTML normal y, si detecta contenido incompleto, reintenta con Selenium para evitar quedarse con tablas vacías.
+- Para carreras ya celebradas con resultUrl de /inscripciones/clasificacion/, intenta extraer automáticamente top por categorías y guardar raceResultsByCategory en data.json.
 
 Cómo cambiar la hora diaria:
 - Edita .github/workflows/update-data.yml
