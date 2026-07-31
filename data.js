@@ -3222,7 +3222,7 @@ window.APP_VERSION = "20260429-cx2";\nwindow.APP_DATA = {
       ],
       "categoryType": "ciclocross",
       "name": "Mejorada del Campo · Ciclocross",
-      "date": "2026-10-25",
+      "date": "2026-11-22",
       "location": "Mejorada del Campo",
       "province": "Madrid",
       "organizer": "",
