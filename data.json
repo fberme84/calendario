@@ -30950,10 +30950,10 @@
       "province": "Madrid",
       "organizer": "",
       "registrationUrl": "https://fmciclismo.com/index.php/smartweb/inscripciones/prueba/34906-VIII-TROFEO-AYTO-NAVALAFUENTE---ESCUELAS---COPA-COMUNIDAD-DE-MADRID-DE-CICLOCROSS",
-      "technicalGuideUrl": "",
-      "documentsUrl": "",
+      "technicalGuideUrl": "https://fmciclismo.com/index.php/smartweb/inscripciones/documentos/34906-VIII-TROFEO-AYTO-NAVALAFUENTE---ESCUELAS---COPA-COMUNIDAD-DE-MADRID-DE-CICLOCROSS",
+      "documentsUrl": "https://fmciclismo.com/index.php/smartweb/inscripciones/documentos/34906-VIII-TROFEO-AYTO-NAVALAFUENTE---ESCUELAS---COPA-COMUNIDAD-DE-MADRID-DE-CICLOCROSS",
       "notes": "Copa Madrid Ciclocross 2026.",
-      "resultUrl": ""
+      "resultUrl": "https://fmciclismo.com/index.php/smartweb/inscripciones/clasificacion/34906-VIII-TROFEO-AYTO-NAVALAFUENTE---ESCUELAS---COPA-COMUNIDAD-DE-MADRID-DE-CICLOCROSS"
     },
     {
       "id": "cx-racing-montiel-2026",
@@ -31160,7 +31160,7 @@
       "resultUrl": ""
     }
   ],
-  "lastUpdatedUtc": "2026-09-13T10:13:42.853371+00:00",
+  "lastUpdatedUtc": "2026-09-14T10:28:21.611261+00:00",
   "ccMejoradaRidersByCategory": {
     "promesa_masculino": [
       "SAMUEL CANUELO VAZQUEZ"
