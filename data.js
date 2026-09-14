@@ -3192,7 +3192,7 @@ window.APP_VERSION = "20260429-cx2";\nwindow.APP_DATA = {
       "location": "Navalafuente",
       "province": "Madrid",
       "organizer": "",
-      "registrationUrl": "",
+      "registrationUrl": "https://fmciclismo.com/index.php/smartweb/inscripciones/prueba/34906-VIII-TROFEO-AYTO-NAVALAFUENTE---ESCUELAS---COPA-COMUNIDAD-DE-MADRID-DE-CICLOCROSS",
       "technicalGuideUrl": "",
       "documentsUrl": "",
       "notes": "Copa Madrid Ciclocross 2026.",

@@ -30939,40 +30939,6 @@
       "resultUrl": ""
     },
     {
-      "id": "cx-racing-camarena-2026",
-      "championshipIds": [
-        "cx-racing-cup-2026"
-      ],
-      "categoryType": "ciclocross",
-      "name": "Camarena · Ciclocross Racing Cup",
-      "date": "2026-09-27",
-      "location": "Camarena",
-      "province": "Toledo",
-      "organizer": "",
-      "registrationUrl": "",
-      "technicalGuideUrl": "",
-      "documentsUrl": "",
-      "notes": "Ciclocross Racing Cup 2026. Sede por confirmar.",
-      "resultUrl": ""
-    },
-    {
-      "id": "cx-racing-almansa-2026",
-      "championshipIds": [
-        "cx-racing-cup-2026"
-      ],
-      "categoryType": "ciclocross",
-      "name": "Almansa · Ciclocross Racing Cup",
-      "date": "2026-10-03",
-      "location": "Almansa",
-      "province": "Albacete",
-      "organizer": "",
-      "registrationUrl": "",
-      "technicalGuideUrl": "",
-      "documentsUrl": "",
-      "notes": "Ciclocross Racing Cup 2026.",
-      "resultUrl": ""
-    },
-    {
       "id": "cx-navalafuente-2026",
       "championshipIds": [
         "copa-madrid-cx-2026"
@@ -30983,7 +30949,7 @@
       "location": "Navalafuente",
       "province": "Madrid",
       "organizer": "",
-      "registrationUrl": "",
+      "registrationUrl": "https://fmciclismo.com/index.php/smartweb/inscripciones/prueba/34906-VIII-TROFEO-AYTO-NAVALAFUENTE---ESCUELAS---COPA-COMUNIDAD-DE-MADRID-DE-CICLOCROSS",
       "technicalGuideUrl": "",
       "documentsUrl": "",
       "notes": "Copa Madrid Ciclocross 2026.",
