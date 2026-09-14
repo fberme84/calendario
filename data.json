@@ -30939,6 +30939,40 @@
       "resultUrl": ""
     },
     {
+      "id": "cx-racing-camarena-2026",
+      "championshipIds": [
+        "cx-racing-cup-2026"
+      ],
+      "categoryType": "ciclocross",
+      "name": "Camarena · Ciclocross Racing Cup",
+      "date": "2026-09-27",
+      "location": "Camarena",
+      "province": "Toledo",
+      "organizer": "",
+      "registrationUrl": "",
+      "technicalGuideUrl": "",
+      "documentsUrl": "",
+      "notes": "Ciclocross Racing Cup 2026. Sede por confirmar.",
+      "resultUrl": ""
+    },
+    {
+      "id": "cx-racing-almansa-2026",
+      "championshipIds": [
+        "cx-racing-cup-2026"
+      ],
+      "categoryType": "ciclocross",
+      "name": "Almansa · Ciclocross Racing Cup",
+      "date": "2026-10-03",
+      "location": "Almansa",
+      "province": "Albacete",
+      "organizer": "",
+      "registrationUrl": "",
+      "technicalGuideUrl": "",
+      "documentsUrl": "",
+      "notes": "Ciclocross Racing Cup 2026.",
+      "resultUrl": ""
+    },
+    {
       "id": "cx-navalafuente-2026",
       "championshipIds": [
         "copa-madrid-cx-2026"
@@ -31160,7 +31194,7 @@
       "resultUrl": ""
     }
   ],
-  "lastUpdatedUtc": "2026-09-14T06:09:15.315611+00:00",
+  "lastUpdatedUtc": "2026-09-13T10:13:42.853371+00:00",
   "ccMejoradaRidersByCategory": {
     "promesa_masculino": [
       "SAMUEL CANUELO VAZQUEZ"
